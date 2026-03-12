@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // return view('frontend.index');
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
