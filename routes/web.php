@@ -10,6 +10,12 @@ Route::get('/', function () {
     // return view('auth.login');
 });
 
+Route::get('/admin/index', function () {
+    return view('backend.index');
+    // return view('auth.login');
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

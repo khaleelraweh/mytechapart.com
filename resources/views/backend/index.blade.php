@@ -5,7 +5,7 @@
   class="layout-navbar-fixed layout-menu-fixed layout-compact"
   dir="ltr"
   data-skin="default"
-  data-assets-path="../../assets/"
+  data-assets-path="../../backend/"
   data-template="vertical-menu-template-starter"
   data-bs-theme="light">
   <head>
@@ -19,7 +19,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('backend/img/favicon/favicon.ico') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,34 +28,34 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet" />
 
-    <link rel="stylesheet" href="../../assets/vendor/fonts/iconify-icons.css" />
+    <link rel="stylesheet" href="{{ asset('backend/vendor/fonts/iconify-icons.css') }}" />
 
     <!-- Core CSS -->
-    <!-- build:css assets/vendor/css/theme.css  -->
+    <!-- build:css backend/vendor/css/theme.css  -->
 
-    <link rel="stylesheet" href="../../assets/vendor/libs/pickr/pickr-themes.css" />
+    <link rel="stylesheet" href="{{ asset('backend/vendor/libs/pickr/pickr-themes.css') }}" />
 
-    <link rel="stylesheet" href="../../assets/vendor/css/core.css" />
-    <link rel="stylesheet" href="../../assets/css/demo.css" />
+    <link rel="stylesheet" href="{{ asset('backend/vendor/css/core.css') }}" />
+    <link rel="stylesheet" href="{{ asset('backend/css/demo.css') }}" />
 
     <!-- Vendors CSS -->
 
-    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="{{ asset('backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
     <!-- endbuild -->
 
     <!-- Page CSS -->
 
     <!-- Helpers -->
-    <script src="../../assets/vendor/js/helpers.js"></script>
+    <script src="{{ asset('backend/vendor/js/helpers.js') }}"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
 
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="../../assets/vendor/js/template-customizer.js"></script>
+    <script src="{{ asset('backend/vendor/js/template-customizer.js') }}"></script>
 
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
 
-    <script src="../../assets/js/config.js"></script>
+    <script src="{{ asset('backend/js/config.js') }}"></script>
   </head>
 
   <body>
@@ -66,7 +66,7 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu">
           <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
+            <a href="{{ url('index') }}" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <span class="text-primary">
                   <svg
@@ -131,13 +131,13 @@
           <ul class="menu-inner py-1">
             <!-- Page -->
             <li class="menu-item active">
-              <a href="index.html" class="menu-link">
+              <a href="{{ url('index') }}" class="menu-link">
                 <i class="menu-icon icon-base bx bx-home-smile"></i>
                 <div data-i18n="Page 1">Page 1</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="page-2.html" class="menu-link">
+              <a href="{{ url('page-2') }}" class="menu-link">
                 <i class="menu-icon icon-base bx bx-detail"></i>
                 <div data-i18n="Page 2">Page 2</div>
               </a>
@@ -217,7 +217,7 @@
                     href="javascript:void(0);"
                     data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="../../assets/img/avatars/1.png" alt class="rounded-circle" />
+                      <img src="{{ asset('backend/img/avatars/1.png') }}" alt class="rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -226,7 +226,7 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                              <img src="{{ asset('backend/img/avatars/1.png') }}" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
@@ -335,21 +335,21 @@
     <!-- / Layout wrapper -->
 
     <!-- Core JS -->
-    <!-- build:js assets/vendor/js/theme.js  -->
+    <!-- build:js backend/vendor/js/theme.js  -->
 
-    <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="{{ asset('backend/vendor/libs/jquery/jquery.js') }}"></script>
 
-    <script src="../../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../../assets/vendor/js/bootstrap.js"></script>
-    <script src="../../assets/vendor/libs/@algolia/autocomplete-js.js"></script>
+    <script src="{{ asset('backend/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ asset('backend/vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('backend/vendor/libs/@algolia/autocomplete-js.js') }}"></script>
 
-    <script src="../../assets/vendor/libs/pickr/pickr.js"></script>
+    <script src="{{ asset('backend/vendor/libs/pickr/pickr.js') }}"></script>
 
-    <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="{{ asset('backend/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
 
-    <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="{{ asset('backend/vendor/libs/hammer/hammer.js') }}"></script>
 
-    <script src="../../assets/vendor/js/menu.js"></script>
+    <script src="{{ asset('backend/vendor/js/menu.js') }}"></script>
 
     <!-- endbuild -->
 
@@ -357,7 +357,7 @@
 
     <!-- Main JS -->
 
-    <script src="../../assets/js/main.js"></script>
+    <script src="{{ asset('backend/js/main.js') }}"></script>
 
     <!-- Page JS -->
   </body>

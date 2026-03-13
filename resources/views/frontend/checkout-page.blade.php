@@ -19,7 +19,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,46 +28,46 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet" />
 
-    <link rel="stylesheet" href="../../assets/vendor/fonts/iconify-icons.css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/fonts/iconify-icons.css') }}" />
 
     <!-- Core CSS -->
     <!-- build:css assets/vendor/css/theme.css  -->
 
-    <link rel="stylesheet" href="../../assets/vendor/libs/pickr/pickr-themes.css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/pickr/pickr-themes.css') }}" />
 
-    <link rel="stylesheet" href="../../assets/vendor/css/core.css" />
-    <link rel="stylesheet" href="../../assets/css/demo.css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/core.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
 
-    <link rel="stylesheet" href="../../assets/vendor/css/pages/front-page.css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/pages/front-page.css') }}" />
 
     <!-- Vendors CSS -->
 
     <!-- endbuild -->
 
-    <link rel="stylesheet" href="../../assets/vendor/libs/select2/select2.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/bs-stepper/bs-stepper.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/raty-js/raty-js.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/@form-validation/form-validation.css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/select2/select2.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/bs-stepper/bs-stepper.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/raty-js/raty-js.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/@form-validation/form-validation.css') }}" />
 
     <!-- Page CSS -->
 
-    <link rel="stylesheet" href="../../assets/vendor/css/pages/wizard-ex-checkout.css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/pages/wizard-ex-checkout.css') }}" />
 
     <!-- Helpers -->
-    <script src="../../assets/vendor/js/helpers.js"></script>
+    <script src="{{ asset('assets/vendor/js/helpers.js') }}"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
 
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="../../assets/vendor/js/template-customizer.js"></script>
+    <script src="{{ asset('assets/vendor/js/template-customizer.js') }}"></script>
 
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
 
-    <script src="../../assets/js/front-config.js"></script>
+    <script src="{{ asset('assets/js/front-config.js') }}"></script>
   </head>
 
   <body>
-    <script src="../../assets/vendor/js/dropdown-hover.js"></script>
-    <script src="../../assets/vendor/js/mega-dropdown.js"></script>
+    <script src="{{ asset('assets/vendor/js/dropdown-hover.js') }}"></script>
+    <script src="{{ asset('assets/vendor/js/mega-dropdown.js') }}"></script>
     <!-- Navbar: Start -->
     <nav class="layout-navbar shadow-none py-0">
       <div class="container">
@@ -86,7 +86,7 @@
               <i class="icon-base bx bx-menu icon-lg align-middle text-heading fw-medium"></i>
             </button>
             <!-- Mobile menu toggle: End-->
-            <a href="landing-page.html" class="app-brand-link">
+            <a href="{{ url('landing-page') }}" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <span class="text-primary">
                   <svg
@@ -156,19 +156,19 @@
             </button>
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link fw-medium" aria-current="page" href="landing-page.html#landingHero">Home</a>
+                <a class="nav-link fw-medium" aria-current="page" href="{{ url('landing-page') }}#landingHero">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="landing-page.html#landingFeatures">Features</a>
+                <a class="nav-link fw-medium" href="{{ url('landing-page') }}#landingFeatures">Features</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="landing-page.html#landingTeam">Team</a>
+                <a class="nav-link fw-medium" href="{{ url('landing-page') }}#landingTeam">Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="landing-page.html#landingFAQ">FAQ</a>
+                <a class="nav-link fw-medium" href="{{ url('landing-page') }}#landingFAQ">FAQ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="landing-page.html#landingContact">Contact us</a>
+                <a class="nav-link fw-medium" href="{{ url('landing-page') }}#landingContact">Contact us</a>
               </li>
               <li class="nav-item mega-dropdown active">
                 <a
@@ -192,25 +192,25 @@
                       </div>
                       <ul class="nav flex-column">
                         <li class="nav-item">
-                          <a class="nav-link mega-dropdown-link" href="pricing-page.html">
+                          <a class="nav-link mega-dropdown-link" href="{{ url('pricing-page') }}">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             <span data-i18n="Pricing">Pricing</span>
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link mega-dropdown-link" href="payment-page.html">
+                          <a class="nav-link mega-dropdown-link" href="{{ url('payment-page') }}">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             <span data-i18n="Payment">Payment</span>
                           </a>
                         </li>
                         <li class="nav-item active">
-                          <a class="nav-link mega-dropdown-link" href="checkout-page.html">
+                          <a class="nav-link mega-dropdown-link" href="{{ url('checkout-page') }}">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             <span data-i18n="Checkout">Checkout</span>
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link mega-dropdown-link" href="help-center-landing.html">
+                          <a class="nav-link mega-dropdown-link" href="{{ url('help-center-landing') }}">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             <span data-i18n="Help Center">Help Center</span>
                           </a>
@@ -230,7 +230,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-login-basic.html"
+                            href="{{ url('auth-login-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Login (Basic)
@@ -239,7 +239,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-login-cover.html"
+                            href="{{ url('auth-login-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Login (Cover)
@@ -248,7 +248,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-register-basic.html"
+                            href="{{ url('auth-register-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Register (Basic)
@@ -257,7 +257,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-register-cover.html"
+                            href="{{ url('auth-register-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Register (Cover)
@@ -266,7 +266,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-register-multisteps.html"
+                            href="{{ url('auth-register-multisteps.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Register (Multi-steps)
@@ -275,7 +275,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-forgot-password-basic.html"
+                            href="{{ url('auth-forgot-password-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Forgot Password (Basic)
@@ -284,7 +284,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-forgot-password-cover.html"
+                            href="{{ url('auth-forgot-password-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Forgot Password (Cover)
@@ -293,7 +293,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-reset-password-basic.html"
+                            href="{{ url('auth-reset-password-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Reset Password (Basic)
@@ -302,7 +302,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-reset-password-cover.html"
+                            href="{{ url('auth-reset-password-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Reset Password (Cover)
@@ -323,7 +323,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/pages-misc-error.html"
+                            href="{{ url('pages-misc-error.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Error
@@ -332,7 +332,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/pages-misc-under-maintenance.html"
+                            href="{{ url('pages-misc-under-maintenance.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Under Maintenance
@@ -341,7 +341,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/pages-misc-comingsoon.html"
+                            href="{{ url('pages-misc-comingsoon.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Coming Soon
@@ -350,7 +350,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/pages-misc-not-authorized.html"
+                            href="{{ url('pages-misc-not-authorized.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Not Authorized
@@ -359,7 +359,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-verify-email-basic.html"
+                            href="{{ url('auth-verify-email-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Verify Email (Basic)
@@ -368,7 +368,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-verify-email-cover.html"
+                            href="{{ url('auth-verify-email-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Verify Email (Cover)
@@ -377,7 +377,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-two-steps-basic.html"
+                            href="{{ url('auth-two-steps-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Two Steps (Basic)
@@ -386,7 +386,7 @@
                         <li class="nav-item">
                           <a
                             class="nav-link mega-dropdown-link"
-                            href="../vertical-menu-template/auth-two-steps-cover.html"
+                            href="{{ url('auth-two-steps-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
                             Two Steps (Cover)
@@ -397,7 +397,7 @@
                     <div class="col-lg-4 d-none d-lg-block">
                       <div class="bg-body nav-img-col p-2">
                         <img
-                          src="../../assets/img/front-pages/misc/nav-item-col-img.png"
+                          src="{{ asset('assets/img/front-pages/misc/nav-item-col-img.png') }}"
                           alt="nav item col image"
                           class="w-100" />
                       </div>
@@ -406,7 +406,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="../vertical-menu-template/index.html" target="_blank">Admin</a>
+                <a class="nav-link fw-medium" href="{{ url('index.html') }}" target="_blank">Admin</a>
               </li>
             </ul>
           </div>
@@ -458,7 +458,7 @@
 
             <!-- navbar button: Start -->
             <li>
-              <a href="../vertical-menu-template/auth-login-cover.html" class="btn btn-primary" target="_blank"
+              <a href="{{ url('auth-login-cover.html') }}" class="btn btn-primary" target="_blank"
                 ><span class="tf-icons icon-base bx bx-log-in-circle scaleX-n1-rtl me-md-1"></span
                 ><span class="d-none d-md-block">Login/Register</span></a
               >
@@ -483,7 +483,7 @@
               <button type="button" class="step-trigger">
                 <span class="bs-stepper-icon">
                   <svg viewBox="0 0 60 60">
-                    <use xlink:href="../../assets/svg/icons/wizard-checkout-cart.svg#wizardCart"></use>
+                    <use xlink:href="{{ asset('assets/svg/icons/wizard-checkout-cart.svg#wizardCart') }}"></use>
                   </svg>
                 </span>
                 <span class="bs-stepper-label">Cart</span>
@@ -496,7 +496,7 @@
               <button type="button" class="step-trigger">
                 <span class="bs-stepper-icon">
                   <svg viewBox="0 0 60 60">
-                    <use xlink:href="../../assets/svg/icons/wizard-checkout-address.svg#wizardCheckoutAddress"></use>
+                    <use xlink:href="{{ asset('assets/svg/icons/wizard-checkout-address.svg#wizardCheckoutAddress') }}"></use>
                   </svg>
                 </span>
                 <span class="bs-stepper-label">Address</span>
@@ -509,7 +509,7 @@
               <button type="button" class="step-trigger">
                 <span class="bs-stepper-icon">
                   <svg viewBox="0 0 60 60">
-                    <use xlink:href="../../assets/svg/icons/wizard-checkout-payment.svg#wizardPayment"></use>
+                    <use xlink:href="{{ asset('assets/svg/icons/wizard-checkout-payment.svg#wizardPayment') }}"></use>
                   </svg>
                 </span>
                 <span class="bs-stepper-label">Payment</span>
@@ -522,7 +522,7 @@
               <button type="button" class="step-trigger">
                 <span class="bs-stepper-icon">
                   <svg viewBox="0 0 60 60">
-                    <use xlink:href="../../assets/svg/icons/wizard-checkout-confirmation.svg#wizardConfirm"></use>
+                    <use xlink:href="{{ asset('assets/svg/icons/wizard-checkout-confirmation.svg#wizardConfirm') }}"></use>
                   </svg>
                 </span>
                 <span class="bs-stepper-label">Confirmation</span>
@@ -563,7 +563,7 @@
                       <li class="list-group-item p-6">
                         <div class="d-flex gap-4 flex-sm-row flex-column align-items-center">
                           <div class="flex-shrink-0 d-flex align-items-center">
-                            <img src="../../assets/img/products/1.png" alt="google home" class="w-px-100" />
+                            <img src="{{ asset('assets/img/products/1.png') }}" alt="google home" class="w-px-100" />
                           </div>
                           <div class="flex-grow-1">
                             <div class="row text-center text-sm-start">
@@ -612,7 +612,7 @@
                       <li class="list-group-item p-6">
                         <div class="d-flex gap-4 flex-sm-row flex-column align-items-center">
                           <div class="flex-shrink-0 d-flex align-items-center">
-                            <img src="../../assets/img/products/2.png" alt="google home" class="w-px-100" />
+                            <img src="{{ asset('assets/img/products/2.png') }}" alt="google home" class="w-px-100" />
                           </div>
                           <div class="flex-grow-1">
                             <div class="row text-center text-sm-start">
@@ -874,7 +874,7 @@
                       <ul class="list-unstyled">
                         <li class="d-flex gap-4 align-items-center py-2 mb-4">
                           <div class="flex-shrink-0">
-                            <img src="../../assets/img/products/1.png" alt="google home" class="w-px-50" />
+                            <img src="{{ asset('assets/img/products/1.png') }}" alt="google home" class="w-px-50" />
                           </div>
                           <div class="flex-grow-1">
                             <p class="mb-0">
@@ -885,7 +885,7 @@
                         </li>
                         <li class="d-flex gap-4 align-items-center py-2">
                           <div class="flex-shrink-0">
-                            <img src="../../assets/img/products/2.png" alt="google home" class="w-px-50" />
+                            <img src="{{ asset('assets/img/products/2.png') }}" alt="google home" class="w-px-50" />
                           </div>
                           <div class="flex-grow-1">
                             <p class="mb-0">
@@ -1199,7 +1199,7 @@
                       <li class="list-group-item p-6">
                         <div class="d-flex gap-4 flex-sm-row flex-column">
                           <div class="flex-shrink-0">
-                            <img src="../../assets/img/products/1.png" alt="google home" class="w-px-75" />
+                            <img src="{{ asset('assets/img/products/1.png') }}" alt="google home" class="w-px-75" />
                           </div>
                           <div class="flex-grow-1">
                             <div class="row">
@@ -1227,7 +1227,7 @@
                       <li class="list-group-item p-6">
                         <div class="d-flex gap-4 flex-sm-row flex-column">
                           <div class="flex-shrink-0">
-                            <img src="../../assets/img/products/2.png" alt="google home" class="w-px-75" />
+                            <img src="{{ asset('assets/img/products/2.png') }}" alt="google home" class="w-px-75" />
                           </div>
                           <div class="flex-grow-1">
                             <div class="row">
@@ -1464,13 +1464,13 @@
     <footer class="landing-footer bg-body footer-text">
       <div class="footer-top position-relative overflow-hidden z-1">
         <img
-          src="../../assets/img/front-pages/backgrounds/footer-bg.png"
+          src="{{ asset('assets/img/front-pages/backgrounds/footer-bg.png') }}"
           alt="footer bg"
           class="footer-bg banner-bg-img z-n1" />
         <div class="container">
           <div class="row gx-0 gy-6 g-lg-10">
             <div class="col-lg-5">
-              <a href="landing-page.html" class="app-brand-link mb-6">
+              <a href="{{ url('landing-page') }}" class="app-brand-link mb-6">
                 <span class="app-brand-logo demo">
                   <span class="text-primary">
                     <svg
@@ -1547,21 +1547,21 @@
               <h6 class="footer-title mb-6">Demos</h6>
               <ul class="list-unstyled">
                 <li class="mb-4">
-                  <a href="../vertical-menu-template/" target="_blank" class="footer-link">Vertical Layout</a>
+                  <a href="{{ url('') }}" target="_blank" class="footer-link">Vertical Layout</a>
                 </li>
                 <li class="mb-4">
-                  <a href="../horizontal-menu-template/" target="_blank" class="footer-link">Horizontal Layout</a>
+                  <a href="{{ url('') }}" target="_blank" class="footer-link">Horizontal Layout</a>
                 </li>
                 <li class="mb-4">
-                  <a href="../vertical-menu-template-bordered/" target="_blank" class="footer-link">Bordered Layout</a>
+                  <a href="{{ url('') }}" target="_blank" class="footer-link">Bordered Layout</a>
                 </li>
                 <li class="mb-4">
-                  <a href="../vertical-menu-template-semi-dark/" target="_blank" class="footer-link"
+                  <a href="{{ url('-dark/') }}" target="_blank" class="footer-link"
                     >Semi Dark Layout</a
                   >
                 </li>
                 <li>
-                  <a href="../vertical-menu-template-dark/" target="_blank" class="footer-link">Dark Layout</a>
+                  <a href="{{ url('') }}" target="_blank" class="footer-link">Dark Layout</a>
                 </li>
               </ul>
             </div>
@@ -1569,21 +1569,21 @@
               <h6 class="footer-title mb-6">Pages</h6>
               <ul class="list-unstyled">
                 <li class="mb-4">
-                  <a href="pricing-page.html" class="footer-link">Pricing</a>
+                  <a href="{{ url('pricing-page') }}" class="footer-link">Pricing</a>
                 </li>
                 <li class="mb-4">
-                  <a href="payment-page.html" class="footer-link"
+                  <a href="{{ url('payment-page') }}" class="footer-link"
                     >Payment<span class="badge bg-primary ms-2">New</span></a
                   >
                 </li>
                 <li class="mb-4">
-                  <a href="checkout-page.html" class="footer-link">Checkout</a>
+                  <a href="{{ url('checkout-page') }}" class="footer-link">Checkout</a>
                 </li>
                 <li class="mb-4">
-                  <a href="help-center-landing.html" class="footer-link">Help Center</a>
+                  <a href="{{ url('help-center-landing') }}" class="footer-link">Help Center</a>
                 </li>
                 <li>
-                  <a href="../vertical-menu-template/auth-login-cover.html" target="_blank" class="footer-link"
+                  <a href="{{ url('auth-login-cover.html') }}" target="_blank" class="footer-link"
                     >Login/Register</a
                   >
                 </li>
@@ -1592,10 +1592,10 @@
             <div class="col-lg-3 col-md-4">
               <h6 class="footer-title mb-6">Download our app</h6>
               <a href="javascript:void(0);" class="d-block mb-4"
-                ><img src="../../assets/img/front-pages/landing-page/apple-icon.png" alt="apple icon"
+                ><img src="{{ asset('assets/img/front-pages/landing-page/apple-icon.png') }}" alt="apple icon"
               /></a>
               <a href="javascript:void(0);" class="d-block"
-                ><img src="../../assets/img/front-pages/landing-page/google-play-icon.png" alt="google play icon"
+                ><img src="{{ asset('assets/img/front-pages/landing-page/google-play-icon.png') }}" alt="google play icon"
               /></a>
             </div>
           </div>
@@ -1664,31 +1664,31 @@
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/theme.js  -->
 
-    <script src="../../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../../assets/vendor/js/bootstrap.js"></script>
-    <script src="../../assets/vendor/libs/@algolia/autocomplete-js.js"></script>
+    <script src="{{ asset('assets/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/@algolia/autocomplete-js.js') }}"></script>
 
-    <script src="../../assets/vendor/libs/pickr/pickr.js"></script>
+    <script src="{{ asset('assets/vendor/libs/pickr/pickr.js') }}"></script>
 
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../../assets/vendor/libs/select2/select2.js"></script>
-    <script src="../../assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
-    <script src="../../assets/vendor/libs/raty-js/raty-js.js"></script>
-    <script src="../../assets/vendor/libs/cleave-zen/cleave-zen.js"></script>
-    <script src="../../assets/vendor/libs/@form-validation/popular.js"></script>
-    <script src="../../assets/vendor/libs/@form-validation/bootstrap5.js"></script>
-    <script src="../../assets/vendor/libs/@form-validation/auto-focus.js"></script>
+    <script src="{{ asset('assets/vendor/libs/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/select2/select2.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/bs-stepper/bs-stepper.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/raty-js/raty-js.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/cleave-zen/cleave-zen.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/@form-validation/popular.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/@form-validation/bootstrap5.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/@form-validation/auto-focus.js') }}"></script>
 
     <!-- Main JS -->
 
-    <script src="../../assets/js/front-main.js"></script>
+    <script src="{{ asset('assets/js/front-main.js') }}"></script>
 
     <!-- Page JS -->
 
-    <script src="../../assets/js/modal-add-new-address.js"></script>
-    <script src="../../assets/js/wizard-ex-checkout.js"></script>
+    <script src="{{ asset('assets/js/modal-add-new-address.js') }}"></script>
+    <script src="{{ asset('assets/js/wizard-ex-checkout.js') }}"></script>
   </body>
 </html>
