@@ -507,14 +507,14 @@
                     src="{{ asset('frontend/img/front-pages/landing-page/hero-dashboard-light.png') }}"
                     alt="hero dashboard"
                     class="animation-img"
-                    data-app-light-img="{{ asset('frontend/img/front-pages/landing-page/hero-dashboard-light.png') }}"
-                    data-app-dark-img="{{ asset('frontend/img/front-pages/landing-page/hero-dashboard-dark.png') }}" />
+                    data-app-light-img="front-pages/landing-page/hero-dashboard-light.png"
+                    data-app-dark-img="front-pages/landing-page/hero-dashboard-dark.png" />
                   <img
                     src="{{ asset('frontend/img/front-pages/landing-page/hero-elements-light.png') }}"
                     alt="hero elements"
                     class="position-absolute hero-elements-img animation-img top-0 start-0"
-                    data-app-light-img="{{ asset('frontend/img/front-pages/landing-page/hero-elements-light.png') }}"
-                    data-app-dark-img="{{ asset('frontend/img/front-pages/landing-page/hero-elements-dark.png') }}" />
+                    data-app-light-img="front-pages/landing-page/hero-elements-light.png"
+                    data-app-dark-img="front-pages/landing-page/hero-elements-dark.png" />
                 </div>
               </a>
             </div>
@@ -911,40 +911,40 @@
                     src="{{ asset('frontend/img/front-pages/branding/logo_1-light.png') }}"
                     alt="client logo"
                     class="client-logo"
-                    data-app-light-img="{{ asset('frontend/img/front-pages/branding/logo_1-light.png') }}"
-                    data-app-dark-img="{{ asset('frontend/img/front-pages/branding/logo_1-dark.png') }}" />
+                    data-app-light-img="front-pages/branding/logo_1-light.png"
+                    data-app-dark-img="front-pages/branding/logo_1-dark.png" />
                 </div>
                 <div class="swiper-slide">
                   <img
                     src="{{ asset('frontend/img/front-pages/branding/logo_2-light.png') }}"
                     alt="client logo"
                     class="client-logo"
-                    data-app-light-img="{{ asset('frontend/img/front-pages/branding/logo_2-light.png') }}"
-                    data-app-dark-img="{{ asset('frontend/img/front-pages/branding/logo_2-dark.png') }}" />
+                    data-app-light-img="front-pages/branding/logo_2-light.png"
+                    data-app-dark-img="front-pages/branding/logo_2-dark.png" />
                 </div>
                 <div class="swiper-slide">
                   <img
                     src="{{ asset('frontend/img/front-pages/branding/logo_3-light.png') }}"
                     alt="client logo"
                     class="client-logo"
-                    data-app-light-img="{{ asset('frontend/img/front-pages/branding/logo_3-light.png') }}"
-                    data-app-dark-img="{{ asset('frontend/img/front-pages/branding/logo_3-dark.png') }}" />
+                    data-app-light-img="front-pages/branding/logo_3-light.png"
+                    data-app-dark-img="front-pages/branding/logo_3-dark.png" />
                 </div>
                 <div class="swiper-slide">
                   <img
                     src="{{ asset('frontend/img/front-pages/branding/logo_4-light.png') }}"
                     alt="client logo"
                     class="client-logo"
-                    data-app-light-img="{{ asset('frontend/img/front-pages/branding/logo_4-light.png') }}"
-                    data-app-dark-img="{{ asset('frontend/img/front-pages/branding/logo_4-dark.png') }}" />
+                    data-app-light-img="front-pages/branding/logo_4-light.png"
+                    data-app-dark-img="front-pages/branding/logo_4-dark.png" />
                 </div>
                 <div class="swiper-slide">
                   <img
                     src="{{ asset('frontend/img/front-pages/branding/logo_5-light.png') }}"
                     alt="client logo"
                     class="client-logo"
-                    data-app-light-img="{{ asset('frontend/img/front-pages/branding/logo_5-light.png') }}"
-                    data-app-dark-img="{{ asset('frontend/img/front-pages/branding/logo_5-dark.png') }}" />
+                    data-app-light-img="front-pages/branding/logo_5-light.png"
+                    data-app-dark-img="front-pages/branding/logo_5-dark.png" />
                 </div>
               </div>
             </div>
@@ -1620,8 +1620,8 @@
           src="{{ asset('frontend/img/front-pages/backgrounds/cta-bg-light.png') }}"
           class="position-absolute bottom-0 end-0 scaleX-n1-rtl h-100 w-100 z-n1"
           alt="cta image"
-          data-app-light-img="{{ asset('frontend/img/front-pages/backgrounds/cta-bg-light.png') }}"
-          data-app-dark-img="{{ asset('frontend/img/front-pages/backgrounds/cta-bg-dark.png') }}" />
+          data-app-light-img="front-pages/backgrounds/cta-bg-light.png"
+          data-app-dark-img="front-pages/backgrounds/cta-bg-dark.png" />
         <div class="container">
           <div class="row align-items-center gy-12">
             <div class="col-lg-6 text-start text-sm-center text-lg-start">
