@@ -5,7 +5,7 @@
   class="layout-navbar-fixed layout-wide"
   dir="ltr"
   data-skin="default"
-  data-assets-path="{{ asset('frontend/') }}"
+  data-assets-path="{{ asset('frontend') }}/"
   data-template="front-pages"
   data-bs-theme="light">
   <head>
