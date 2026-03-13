@@ -15,6 +15,11 @@ Route::get('/admin/index', function () {
     // return view('auth.login');
 });
 
+Route::get('/comingsoon', function () {
+    return view('blanks.comingsoon');
+    // return view('auth.login');
+});
+
 
 Auth::routes();
 
