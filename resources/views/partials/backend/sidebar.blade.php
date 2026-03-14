@@ -76,6 +76,27 @@
                 <div data-i18n="Page 2">Page 2</div>
               </a>
             </li>
+            </li>
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Access Control</span>
+            </li>
+            <li class="menu-item {{ request()->routeIs('backend.users.*') ? 'active' : '' }}">
+              <a href="{{ route('backend.users.index') }}" class="menu-link">
+                <i class="menu-icon icon-base bx bx-user"></i>
+                <div data-i18n="Users">Users</div>
+              </a>
+            </li>
+            <li class="menu-item {{ request()->routeIs('backend.roles.*') ? 'active' : '' }}">
+              <a href="{{ route('backend.roles.index') }}" class="menu-link">
+                <i class="menu-icon icon-base bx bx-shield"></i>
+                <div data-i18n="Roles">Roles</div>
+              </a>
+            </li>
+            <li class="menu-item {{ request()->routeIs('backend.permissions.*') ? 'active' : '' }}">
+              <a href="{{ route('backend.permissions.index') }}" class="menu-link">
+                <i class="menu-icon icon-base bx bx-key"></i>
+                <div data-i18n="Permissions">Permissions</div>
+              </a>
+            </li>
           </ul>
-        </aside>
         </aside>
