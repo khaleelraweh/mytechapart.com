@@ -8,7 +8,7 @@
         <div class="container">
           <div class="row gx-0 gy-6 g-lg-10">
             <div class="col-lg-5">
-              <a href="{{ url('landing-page') }}" class="app-brand-link mb-6">
+              <a href="{{ url('/') }}" class="app-brand-link mb-6">
                 <span class="app-brand-logo demo">
                   <span class="text-primary">
                     <svg
@@ -121,7 +121,7 @@
                   <a href="{{ url('help-center-landing') }}" class="footer-link">Help Center</a>
                 </li>
                 <li>
-                  <a href="{{ url('auth-login-cover.html') }}" target="_blank" class="footer-link"
+                  <a href="{{ route('login') }}" target="_blank" class="footer-link"
                     >Login/Register</a
                   >
                 </li>

@@ -31,7 +31,7 @@
               </div>
             </div>
             <div id="heroDashboardAnimation" class="hero-animation-img">
-              <a href="{{ url('app-ecommerce-dashboard.html') }}" target="_blank">
+              <a href="{{ route('backend.index') }}" target="_blank">
                 <div id="heroAnimationImg" class="position-relative hero-dashboard-img">
                   <img
                     src="{{ asset('frontend/img/front-pages/landing-page/hero-dashboard-light.png') }}"

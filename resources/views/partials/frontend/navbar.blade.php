@@ -16,7 +16,7 @@
               <i class="icon-base bx bx-menu icon-lg align-middle text-heading fw-medium"></i>
             </button>
             <!-- Mobile menu toggle: End-->
-            <a href="{{ url('landing-page') }}" class="app-brand-link">
+            <a href="{{ url('/') }}" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <span class="text-primary">
                   <svg
@@ -86,19 +86,19 @@
             </button>
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link fw-medium" aria-current="page" href="{{ url('landing-page') }}#landingHero">Home</a>
+                <a class="nav-link fw-medium" aria-current="page" href="{{ url('/') }}#landingHero">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="{{ url('landing-page') }}#landingFeatures">Features</a>
+                <a class="nav-link fw-medium" href="{{ url('/') }}#landingFeatures">Features</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="{{ url('landing-page') }}#landingTeam">Team</a>
+                <a class="nav-link fw-medium" href="{{ url('/') }}#landingTeam">Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="{{ url('landing-page') }}#landingFAQ">FAQ</a>
+                <a class="nav-link fw-medium" href="{{ url('/') }}#landingFAQ">FAQ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="{{ url('landing-page') }}#landingContact">Contact us</a>
+                <a class="nav-link fw-medium" href="{{ url('/') }}#landingContact">Contact us</a>
               </li>
               <li class="nav-item mega-dropdown">
                 <a
@@ -336,7 +336,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="{{ url('index.html') }}" target="_blank">Admin</a>
+                <a class="nav-link fw-medium" href="{{ route('backend.index') }}" target="_blank">Admin</a>
               </li>
             </ul>
           </div>
@@ -388,7 +388,7 @@
 
             <!-- navbar button: Start -->
             <li>
-              <a href="{{ url('auth-login-cover.html') }}" class="btn btn-primary" target="_blank"
+              <a href="{{ route('login') }}" class="btn btn-primary" target="_blank"
                 ><span class="tf-icons icon-base bx bx-log-in-circle scaleX-n1-rtl me-md-1"></span
                 ><span class="d-none d-md-block">Login/Register</span></a
               >
