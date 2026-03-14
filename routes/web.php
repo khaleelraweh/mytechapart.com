@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [FrontendController::class, 'index'])->name('frontend.index');
+
 Route::get('/admin/index', [BackendController::class, 'index'])->name('backend.index');
 Route::get('/admin/login', [BackendController::class, 'login'])->name('backend.login');
+Route::get('/admin/forgot-password', [BackendController::class, 'forgot_password'])->name('backend.forgot_password');
 
 
 

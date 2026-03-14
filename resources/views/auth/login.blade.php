@@ -73,14 +73,14 @@
               <button type="submit" class="btn btn-primary d-grid w-100">Sign in</button>
             </form>
 
-            <p class="text-center">
+            {{-- <p class="text-center">
               <span>New on our platform?</span>
               <a href="{{ route('register') }}">
                 <span>Create an account</span>
               </a>
-            </p>
+            </p> --}}
 
-            <div class="divider my-6">
+            {{-- <div class="divider my-6">
               <div class="divider-text">or</div>
             </div>
 
@@ -100,7 +100,7 @@
               <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-google-plus">
                 <i class="icon-base bx bxl-google icon-20px"></i>
               </a>
-            </div>
+            </div> --}}
           </div>
         </div>
         <!-- /Login -->
