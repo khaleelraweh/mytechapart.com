@@ -1,6 +1,6 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu">
           <div class="app-brand demo">
-            <a href="{{ url('index') }}" class="app-brand-link">
+            <a href="{{ route('backend.index') }}" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <span class="text-primary">
                   <svg
@@ -65,9 +65,9 @@
           <ul class="menu-inner py-1">
             <!-- Page -->
             <li class="menu-item active">
-              <a href="{{ url('index') }}" class="menu-link">
+              <a href="{{ route('backend.index') }}" class="menu-link">
                 <i class="menu-icon icon-base bx bx-home-smile"></i>
-                <div data-i18n="Page 1">Page 1</div>
+                <div data-i18n="Dashboard">Dashboard</div>
               </a>
             </li>
             <li class="menu-item">
