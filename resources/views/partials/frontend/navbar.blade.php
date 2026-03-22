@@ -400,7 +400,7 @@
             @guest
             <!-- navbar button: Start -->
             <li class="d-none d-lg-block">
-              <a href="{{ route('login') }}" class="btn btn-primary" target="_blank"
+              <a href="{{ route('backend.login') }}" class="btn btn-primary" target="_blank"
                 ><span class="tf-icons icon-base bx bx-log-in-circle scaleX-n1-rtl me-md-1"></span
                 ><span class="d-none d-md-block">{{ __('frontend.login_register') }}</span></a
               >
