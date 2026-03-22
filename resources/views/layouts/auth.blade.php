@@ -1,9 +1,10 @@
 <!doctype html>
 
 <html
-  lang="en"
+  lang="{{ app()->getLocale() }}"
   class="layout-wide customizer-hide"
-  dir="ltr"
+  dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"
+
   data-skin="default"
   data-assets-path="{{ asset('frontend') }}/"
   data-template="vertical-menu-template"
@@ -128,7 +129,8 @@
             </svg>
           </span>
         </span>
-        <span class="app-brand-text demo text-heading fw-bold">Sneat</span>
+        <span class="app-brand-text demo text-heading fw-bold">{{ __('frontend.brand_name') }}</span>
+
       </a>
       <!-- /Logo -->
       <div class="authentication-inner row m-0">

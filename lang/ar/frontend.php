@@ -189,5 +189,6 @@ return [
     'made_with'       => 'صُنع بـ ❤️ من أجل ويب أفضل.',
     'fullname_placeholder' => 'جون',
     'email_placeholder' => 'johndoe@gmail.com',
-
+    'well_documented' => 'موثق جيداً',
 ];
+

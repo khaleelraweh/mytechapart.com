@@ -1,9 +1,10 @@
 <!doctype html>
 
 <html
-  lang="en"
+  lang="{{ app()->getLocale() }}"
   class="layout-wide customizer-hide"
-  dir="ltr"
+  dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"
+
   data-skin="default"
   data-assets-path="{{ asset('frontend') }}/"
   data-template="vertical-menu-template"

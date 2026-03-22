@@ -1,9 +1,10 @@
 <!doctype html>
 
 <html
-  lang="en"
+  lang="{{ app()->getLocale() }}"
   class="layout-navbar-fixed layout-wide"
-  dir="ltr"
+  dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"
+
   data-skin="default"
   data-assets-path="{{ asset('frontend') }}/"
   data-template="front-pages"

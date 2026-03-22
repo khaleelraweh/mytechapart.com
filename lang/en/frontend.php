@@ -188,5 +188,6 @@ return [
     'made_with'       => 'Made with ❤️ for a better web.',
     'fullname_placeholder' => 'john',
     'email_placeholder' => 'johndoe@gmail.com',
-
+    'well_documented' => 'Well Documented',
 ];
+
