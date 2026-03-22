@@ -8,8 +8,10 @@
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb breadcrumb-style1 mb-2">
                 <li class="breadcrumb-item">
-                  <a href="javascript:void(0);">{{ __('help-center-article.help_centre') }}</a>
+                  <a href="{{ route('frontend.help_center') }}">{{ __('help-center-article.help_centre') }}</a>
+
                 </li>
+
                 <li class="breadcrumb-item">
                   <a href="javascript:void(0);">{{ __('help-center-article.buying_and_item_support') }}</a>
                 </li>

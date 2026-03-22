@@ -56,7 +56,9 @@
                     </svg>
                     <h5 class="my-3">{{ __('help-center.getting_started') }}</h5>
                     <p class="mb-3">{{ __('help-center.getting_started_desc') }}</p>
-                    <a class="btn btn-sm btn-label-primary" href="{{ url('help-center-article') }}">{{ __('help-center.read_more') }}</a>
+                    <a class="btn btn-sm btn-label-primary" href="{{ route('frontend.help_center_article') }}">{{ __('help-center.read_more') }}</a>
+
+
                   </div>
                 </div>
               </div>
@@ -88,7 +90,9 @@
                     </svg>
                     <h5 class="my-3">{{ __('help-center.first_steps') }}</h5>
                     <p class="mb-3">{{ __('help-center.first_steps_desc') }}</p>
-                    <a class="btn btn-sm btn-label-primary" href="{{ url('help-center-article') }}">{{ __('help-center.read_more') }}</a>
+                    <a class="btn btn-sm btn-label-primary" href="{{ route('frontend.help_center_article') }}">{{ __('help-center.read_more') }}</a>
+
+
                   </div>
                 </div>
               </div>
@@ -120,7 +124,9 @@
                     </svg>
                     <h5 class="my-3">{{ __('help-center.add_external_content') }}</h5>
                     <p class="mb-3">{{ __('help-center.add_external_content_desc') }}</p>
-                    <a class="btn btn-sm btn-label-primary" href="{{ url('help-center-article') }}">{{ __('help-center.read_more') }}</a>
+                    <a class="btn btn-sm btn-label-primary" href="{{ route('frontend.help_center_article') }}">{{ __('help-center.read_more') }}</a>
+
+
                   </div>
                 </div>
               </div>

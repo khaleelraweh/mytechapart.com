@@ -68,7 +68,7 @@
                   </svg>
                 </span>
               </span>
-              <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">Sneat</span>
+              <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">{{ __('frontend.brand_name') }}</span>
             </a>
           </div>
           <!-- Menu logo wrapper: End -->
@@ -118,31 +118,31 @@
                             ><i class="icon-base bx bx-grid-alt"></i
                           ></span>
                         </div>
-                        <span class="ps-1">Other</span>
+                        <span class="ps-1">{{ __('frontend.other') }}</span>
                       </div>
                       <ul class="nav flex-column">
                         <li class="nav-item">
-                          <a class="nav-link mega-dropdown-link" href="{{ url('pricing-page') }}">
+                          <a class="nav-link mega-dropdown-link" href="{{ route('frontend.pricing') }}">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            <span data-i18n="Pricing">Pricing</span>
+                            <span data-i18n="Pricing">{{ __('frontend.pricing') }}</span>
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link mega-dropdown-link" href="{{ url('payment-page') }}">
+                          <a class="nav-link mega-dropdown-link" href="{{ route('frontend.payment') }}">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            <span data-i18n="Payment">Payment</span>
+                            <span data-i18n="Payment">{{ __('frontend.payment') }}</span>
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link mega-dropdown-link" href="{{ url('checkout-page') }}">
+                          <a class="nav-link mega-dropdown-link" href="{{ route('frontend.checkout') }}">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            <span data-i18n="Checkout">Checkout</span>
+                            <span data-i18n="Checkout">{{ __('frontend.checkout') }}</span>
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link mega-dropdown-link" href="{{ url('help-center-landing') }}">
+                          <a class="nav-link mega-dropdown-link" href="{{ route('frontend.help_center') }}">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            <span data-i18n="Help Center">Help Center</span>
+                            <span data-i18n="Help Center">{{ __('frontend.help_center') }}</span>
                           </a>
                         </li>
                       </ul>
@@ -154,7 +154,7 @@
                             ><i class="icon-base bx bx-lock-open icon-lg"></i
                           ></span>
                         </div>
-                        <span class="ps-1">Auth Demo</span>
+                        <span class="ps-1">{{ __('frontend.auth_demo') }}</span>
                       </div>
                       <ul class="nav flex-column">
                         <li class="nav-item">
@@ -163,7 +163,7 @@
                             href="{{ url('auth-login-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Login (Basic)
+                            {{ __('frontend.login_basic') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -172,7 +172,7 @@
                             href="{{ url('auth-login-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Login (Cover)
+                            {{ __('frontend.login_cover') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -181,7 +181,7 @@
                             href="{{ url('auth-register-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Register (Basic)
+                            {{ __('frontend.register_basic') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -190,7 +190,7 @@
                             href="{{ url('auth-register-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Register (Cover)
+                            {{ __('frontend.register_cover') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -199,7 +199,7 @@
                             href="{{ url('auth-register-multisteps.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Register (Multi-steps)
+                            {{ __('frontend.register_multi') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -208,7 +208,7 @@
                             href="{{ url('auth-forgot-password-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Forgot Password (Basic)
+                            {{ __('frontend.forgot_password_basic') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -217,7 +217,7 @@
                             href="{{ url('auth-forgot-password-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Forgot Password (Cover)
+                            {{ __('frontend.forgot_password_cover') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -226,7 +226,7 @@
                             href="{{ url('auth-reset-password-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Reset Password (Basic)
+                            {{ __('frontend.reset_password_basic') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -235,7 +235,7 @@
                             href="{{ url('auth-reset-password-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Reset Password (Cover)
+                            {{ __('frontend.reset_password_cover') }}
                           </a>
                         </li>
                       </ul>
@@ -247,7 +247,7 @@
                             ><i class="icon-base bx bx-image-alt icon-lg"></i
                           ></span>
                         </div>
-                        <span class="ps-1">Other</span>
+                        <span class="ps-1">{{ __('frontend.other') }}</span>
                       </div>
                       <ul class="nav flex-column">
                         <li class="nav-item">
@@ -256,7 +256,7 @@
                             href="{{ url('pages-misc-error.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Error
+                            {{ __('frontend.error') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -265,7 +265,7 @@
                             href="{{ url('pages-misc-under-maintenance.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Under Maintenance
+                            {{ __('frontend.under_maintenance') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -274,7 +274,7 @@
                             href="{{ url('pages-misc-comingsoon.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Coming Soon
+                            {{ __('frontend.coming_soon') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -283,7 +283,7 @@
                             href="{{ url('pages-misc-not-authorized.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Not Authorized
+                            {{ __('frontend.not_authorized') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -292,7 +292,7 @@
                             href="{{ url('auth-verify-email-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Verify Email (Basic)
+                            {{ __('frontend.verify_email_basic') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -301,7 +301,7 @@
                             href="{{ url('auth-verify-email-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Verify Email (Cover)
+                            {{ __('frontend.verify_email_cover') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -310,7 +310,7 @@
                             href="{{ url('auth-two-steps-basic.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Two Steps (Basic)
+                            {{ __('frontend.two_steps_basic') }}
                           </a>
                         </li>
                         <li class="nav-item">
@@ -319,7 +319,7 @@
                             href="{{ url('auth-two-steps-cover.html') }}"
                             target="_blank">
                             <i class="icon-base bx bx-radio-circle me-1"></i>
-                            Two Steps (Cover)
+                            {{ __('frontend.two_steps_cover') }}
                           </a>
                         </li>
                       </ul>
@@ -355,7 +355,7 @@
                 href="javascript:void(0);"
                 data-bs-toggle="dropdown">
                 <i class="icon-base bx bx-sun icon-lg theme-icon-active"></i>
-                <span class="d-none ms-2" id="nav-theme-text">Toggle theme</span>
+                <span class="d-none ms-2" id="nav-theme-text">{{ __('frontend.toggle_theme') }}</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-theme-text">
                 <li>
@@ -364,7 +364,7 @@
                     class="dropdown-item align-items-center active"
                     data-bs-theme-value="light"
                     aria-pressed="false">
-                    <span><i class="icon-base bx bx-sun icon-md me-3" data-icon="sun"></i>Light</span>
+                    <span><i class="icon-base bx bx-sun icon-md me-3" data-icon="sun"></i>{{ __('frontend.light') }}</span>
                   </button>
                 </li>
                 <li>
@@ -373,7 +373,7 @@
                     class="dropdown-item align-items-center"
                     data-bs-theme-value="dark"
                     aria-pressed="true">
-                    <span><i class="icon-base bx bx-moon icon-md me-3" data-icon="moon"></i>Dark</span>
+                    <span><i class="icon-base bx bx-moon icon-md me-3" data-icon="moon"></i>{{ __('frontend.dark') }}</span>
                   </button>
                 </li>
                 <li>
@@ -382,7 +382,7 @@
                     class="dropdown-item align-items-center"
                     data-bs-theme-value="system"
                     aria-pressed="false">
-                    <span><i class="icon-base bx bx-desktop icon-md me-3" data-icon="desktop"></i>System</span>
+                    <span><i class="icon-base bx bx-desktop icon-md me-3" data-icon="desktop"></i>{{ __('frontend.system') }}</span>
                   </button>
                 </li>
               </ul>

@@ -70,7 +70,7 @@
             {{ __('frontend.features_subtitle') }}
           </h4>
           <p class="text-center mb-12">
-            Not just a set of tools, the package includes ready-to-deploy conceptual application.
+            {{ __('frontend.features_main_desc') }}
           </p>
           <div class="features-icon-wrapper row gx-0 gy-6 g-sm-12">
             <div class="col-lg-4 col-sm-6 text-center features-icon-box">
@@ -88,9 +88,9 @@
                     stroke-linejoin="round" />
                 </svg>
               </div>
-              <h5 class="mb-2">Quality Code</h5>
+              <h5 class="mb-2">{{ __('frontend.quality_code') }}</h5>
               <p class="features-icon-description">
-                Code structure that all developers will easily understand and fall in love with.
+                {{ __('frontend.quality_code_desc_long') }}
               </p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center features-icon-box">
@@ -109,9 +109,9 @@
                     fill="currentColor" />
                 </svg>
               </div>
-              <h5 class="mb-2">Continuous Updates</h5>
+              <h5 class="mb-2">{{ __('frontend.continuous_updates') }}</h5>
               <p class="features-icon-description">
-                Free updates for the next 12 months, including new demos and features.
+                {{ __('frontend.continuous_updates_desc_long') }}
               </p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center features-icon-box">
@@ -128,9 +128,9 @@
                     fill="currentColor" />
                 </svg>
               </div>
-              <h5 class="mb-2">Starter-Kit</h5>
+              <h5 class="mb-2">{{ __('frontend.starter_kit') }}</h5>
               <p class="features-icon-description">
-                Start your project quickly without having to remove unnecessary features.
+                {{ __('frontend.starter_kit_desc') }}
               </p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center features-icon-box">
@@ -148,9 +148,9 @@
                     stroke-linejoin="round" />
                 </svg>
               </div>
-              <h5 class="mb-2">API Ready</h5>
+              <h5 class="mb-2">{{ __('frontend.api_ready') }}</h5>
               <p class="features-icon-description">
-                Just change the endpoint and see your own data loaded within seconds.
+                {{ __('frontend.api_ready_desc') }}
               </p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center features-icon-box">
@@ -168,8 +168,8 @@
                     stroke-linejoin="round" />
                 </svg>
               </div>
-              <h5 class="mb-2">Excellent Support</h5>
-              <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
+              <h5 class="mb-2">{{ __('frontend.excellent_support') }}</h5>
+              <p class="features-icon-description">{{ __('frontend.excellent_support_desc') }}</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center features-icon-box">
               <div class="text-center mb-4 text-primary">
@@ -185,8 +185,8 @@
                     fill="currentColor" />
                 </svg>
               </div>
-              <h5 class="mb-2">Well Documented</h5>
-              <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
+              <h5 class="mb-2">{{ __('frontend.well_documented') }}</h5>
+              <p class="features-icon-description">{{ __('frontend.excellent_support_desc') }}</p>
             </div>
           </div>
         </div>
@@ -200,11 +200,11 @@
           <div class="row align-items-center gx-0 gy-4 g-lg-5 mb-5 pb-md-5">
             <div class="col-md-6 col-lg-5 col-xl-3">
               <div class="mb-4">
-                <span class="badge bg-label-primary">Real Customers Reviews</span>
+                <span class="badge bg-label-primary">{{ __('frontend.reviews_badge') }}</span>
               </div>
               <h4 class="mb-1">
                 <span class="position-relative fw-extrabold z-1"
-                  >What people say
+                  >{{ __('frontend.reviews_title') }}
                   <img
                     src="{{ asset('frontend/img/front-pages/icons/section-title-icon.png') }}"
                     alt="laptop charging"
@@ -212,9 +212,9 @@
                 </span>
               </h4>
               <p class="mb-5 mb-md-12">
-                See what our customers have to<br class="d-none d-xl-block" />
-                say about their experience.
+                {{ __('frontend.reviews_subtitle') }}
               </p>
+
               <div class="landing-reviews-btns">
                 <button id="reviews-previous-btn" class="btn btn-icon btn-label-primary reviews-btn me-3" type="button">
                   <i class="icon-base bx bx-chevron-left icon-md scaleX-n1-rtl"></i>
@@ -487,19 +487,19 @@
       <section id="landingTeam" class="section-py landing-team">
         <div class="container">
           <div class="text-center mb-4">
-            <span class="badge bg-label-primary">Our Great Team</span>
+            <span class="badge bg-label-primary">{{ __('frontend.team_badge') }}</span>
           </div>
           <h4 class="text-center mb-1">
             <span class="position-relative fw-extrabold z-1"
-              >Supported
+              >{{ __('frontend.supported') }}
               <img
                 src="{{ asset('frontend/img/front-pages/icons/section-title-icon.png') }}"
                 alt="laptop charging"
                 class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
             </span>
-            by Real People
+            {{ __('frontend.supported_by') }}
           </h4>
-          <p class="text-center mb-md-11 pb-0 pb-xl-12">Who is behind these great-looking interfaces?</p>
+          <p class="text-center mb-md-11 pb-0 pb-xl-12">{{ __('frontend.team_subtitle') }}</p>
           <div class="row gy-12 mt-2">
             <div class="col-lg-3 col-sm-6">
               <div class="card mt-3 mt-lg-0 shadow-none">
@@ -512,7 +512,7 @@
                 </div>
                 <div class="card-body border border-top-0 border-primary-subtle text-center py-5">
                   <h5 class="card-title mb-0">Sophie Gilbert</h5>
-                  <p class="text-body-secondary mb-0">Project Manager</p>
+                  <p class="text-body-secondary mb-0">{{ __('frontend.project_manager') }}</p>
                 </div>
               </div>
             </div>
@@ -526,7 +526,7 @@
                 </div>
                 <div class="card-body border border-top-0 border-info-subtle text-center py-5">
                   <h5 class="card-title mb-0">Paul Miles</h5>
-                  <p class="text-body-secondary mb-0">UI Designer</p>
+                  <p class="text-body-secondary mb-0">{{ __('frontend.ui_designer') }}</p>
                 </div>
               </div>
             </div>
@@ -541,7 +541,7 @@
                 </div>
                 <div class="card-body border border-top-0 border-danger-subtle text-center py-5">
                   <h5 class="card-title mb-0">Nannie Ford</h5>
-                  <p class="text-body-secondary mb-0">Development Lead</p>
+                  <p class="text-body-secondary mb-0">{{ __('frontend.development_lead') }}</p>
                 </div>
               </div>
             </div>
@@ -556,7 +556,7 @@
                 </div>
                 <div class="card-body border border-top-0 border-success-subtle text-center py-5">
                   <h5 class="card-title mb-0">Chris Watkins</h5>
-                  <p class="text-body-secondary mb-0">Marketing Manager</p>
+                  <p class="text-body-secondary mb-0">{{ __('frontend.marketing_manager') }}</p>
                 </div>
               </div>
             </div>
@@ -569,39 +569,38 @@
       <section id="landingPricing" class="section-py bg-body landing-pricing">
         <div class="container">
           <div class="text-center mb-4">
-            <span class="badge bg-label-primary">Pricing Plans</span>
+            <span class="badge bg-label-primary">{{ __('frontend.pricing_badge') }}</span>
           </div>
           <h4 class="text-center mb-1">
             <span class="position-relative fw-extrabold z-1"
-              >Tailored pricing plans
+              >{{ __('frontend.pricing_title') }}
               <img
                 src="{{ asset('frontend/img/front-pages/icons/section-title-icon.png') }}"
                 alt="laptop charging"
                 class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
             </span>
-            designed for you
+            {{ __('frontend.pricing_subtitle') }}
           </h4>
           <p class="text-center pb-2 mb-7">
-            All plans include 40+ advanced tools and features to boost your product.<br />Choose the best plan to fit
-            your needs.
+            {{ __('frontend.pricing_desc') }}
           </p>
           <div class="text-center mb-12">
             <div class="position-relative d-inline-block pt-3 pt-md-0">
               <label class="switch switch-sm switch-primary me-0">
-                <span class="switch-label fs-6 text-body me-3">Pay Monthly</span>
+                <span class="switch-label fs-6 text-body me-3">{{ __('frontend.pay_monthly') }}</span>
                 <input type="checkbox" class="switch-input price-duration-toggler" checked />
                 <span class="switch-toggle-slider">
                   <span class="switch-on"></span>
                   <span class="switch-off"></span>
                 </span>
-                <span class="switch-label fs-6 text-body ms-3">Pay Annual</span>
+                <span class="switch-label fs-6 text-body ms-3">{{ __('frontend.pay_annual') }}</span>
               </label>
               <div class="pricing-plans-item position-absolute d-flex">
                 <img
                   src="{{ asset('frontend/img/front-pages/icons/pricing-plans-arrow.png') }}"
                   alt="pricing plans arrow"
                   class="scaleX-n1-rtl" />
-                <span class="fw-medium mt-2 ms-1"> Save 25%</span>
+                <span class="fw-medium mt-2 ms-1"> {{ __('frontend.save_25') }}</span>
               </div>
             </div>
           </div>
@@ -615,11 +614,11 @@
                       src="{{ asset('frontend/img/front-pages/icons/paper-airplane.png') }}"
                       alt="paper airplane icon"
                       class="mb-8 pb-2" />
-                    <h4 class="mb-0">Basic</h4>
+                    <h4 class="mb-0">{{ __('pricing.basic') }}</h4>
                     <div class="d-flex align-items-center justify-content-center">
                       <span class="price-monthly h2 text-primary fw-extrabold mb-0">$19</span>
                       <span class="price-yearly h2 text-primary fw-extrabold mb-0 d-none">$14</span>
-                      <sub class="h6 text-body-secondary mb-n1 ms-1">/mo</sub>
+                      <sub class="h6 text-body-secondary mb-n1 ms-1">{{ __('frontend.per_month') }}</sub>
                     </div>
                     <div class="position-relative pt-2">
                       <div class="price-yearly text-body-secondary price-yearly-toggle d-none">$ 168 / year</div>
@@ -633,7 +632,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Timeline
+                        {{ __('pricing.basic_f1') }}
                       </h6>
                     </li>
                     <li>
@@ -641,7 +640,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Basic search
+                        {{ __('pricing.basic_f2') }}
                       </h6>
                     </li>
                     <li>
@@ -649,7 +648,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Live chat widget
+                        {{ __('pricing.basic_f3') }}
                       </h6>
                     </li>
                     <li>
@@ -657,7 +656,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Email marketing
+                        {{ __('pricing.basic_f4') }}
                       </h6>
                     </li>
                     <li>
@@ -665,7 +664,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Custom Forms
+                        {{ __('pricing.basic_f5') }}
                       </h6>
                     </li>
                     <li>
@@ -673,7 +672,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Traffic analytics
+                        {{ __('pricing.basic_f6') }}
                       </h6>
                     </li>
                     <li>
@@ -681,12 +680,13 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Basic Support
+                        {{ __('pricing.basic_f7') }}
                       </h6>
                     </li>
                   </ul>
                   <div class="d-grid mt-8">
-                    <a href="{{ url('payment-page') }}" class="btn btn-label-primary">Get Started</a>
+                    <a href="{{ route('frontend.payment') }}" class="btn btn-label-primary">{{ __('frontend.get_started') }}</a>
+
                   </div>
                 </div>
               </div>
@@ -699,11 +699,11 @@
                 <div class="card-header">
                   <div class="text-center">
                     <img src="{{ asset('frontend/img/front-pages/icons/plane.png') }}" alt="plane icon" class="mb-8 pb-2" />
-                    <h4 class="mb-0">Team</h4>
+                    <h4 class="mb-0">{{ __('pricing.standard') }}</h4>
                     <div class="d-flex align-items-center justify-content-center">
                       <span class="price-monthly h2 text-primary fw-extrabold mb-0">$29</span>
                       <span class="price-yearly h2 text-primary fw-extrabold mb-0 d-none">$22</span>
-                      <sub class="h6 text-body-secondary mb-n1 ms-1">/mo</sub>
+                      <sub class="h6 text-body-secondary mb-n1 ms-1">{{ __('frontend.per_month') }}</sub>
                     </div>
                     <div class="position-relative pt-2">
                       <div class="price-yearly text-body-secondary price-yearly-toggle d-none">$ 264 / year</div>
@@ -717,7 +717,7 @@
                         <span class="badge badge-center rounded-pill bg-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Everything in basic
+                        {{ __('pricing.std_f1') }}
                       </h6>
                     </li>
                     <li>
@@ -725,7 +725,7 @@
                         <span class="badge badge-center rounded-pill bg-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Timeline with database
+                        {{ __('pricing.std_f2') }}
                       </h6>
                     </li>
                     <li>
@@ -733,7 +733,7 @@
                         <span class="badge badge-center rounded-pill bg-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Advanced search
+                        {{ __('pricing.std_f3') }}
                       </h6>
                     </li>
                     <li>
@@ -741,7 +741,7 @@
                         <span class="badge badge-center rounded-pill bg-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Marketing automation
+                        {{ __('pricing.std_f4') }}
                       </h6>
                     </li>
                     <li>
@@ -749,7 +749,7 @@
                         <span class="badge badge-center rounded-pill bg-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Advanced chatbot
+                        {{ __('pricing.std_f5') }}
                       </h6>
                     </li>
                     <li>
@@ -757,7 +757,7 @@
                         <span class="badge badge-center rounded-pill bg-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Campaign management
+                        {{ __('pricing.std_f6') }}
                       </h6>
                     </li>
                     <li>
@@ -765,12 +765,13 @@
                         <span class="badge badge-center rounded-pill bg-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Collaboration tools
+                        {{ __('pricing.std_f7') }}
                       </h6>
                     </li>
                   </ul>
                   <div class="d-grid mt-8">
-                    <a href="{{ url('payment-page') }}" class="btn btn-primary">Get Started</a>
+                    <a href="{{ route('frontend.payment') }}" class="btn btn-primary">{{ __('frontend.get_started') }}</a>
+
                   </div>
                 </div>
               </div>
@@ -786,11 +787,11 @@
                       src="{{ asset('frontend/img/front-pages/icons/shuttle-rocket.png') }}"
                       alt="shuttle rocket icon"
                       class="mb-8 pb-2" />
-                    <h4 class="mb-0">Enterprise</h4>
+                    <h4 class="mb-0">{{ __('pricing.enterprise') }}</h4>
                     <div class="d-flex align-items-center justify-content-center">
                       <span class="price-monthly h2 text-primary fw-extrabold mb-0">$49</span>
                       <span class="price-yearly h2 text-primary fw-extrabold mb-0 d-none">$37</span>
-                      <sub class="h6 text-body-secondary mb-n1 ms-1">/mo</sub>
+                      <sub class="h6 text-body-secondary mb-n1 ms-1">{{ __('frontend.per_month') }}</sub>
                     </div>
                     <div class="position-relative pt-2">
                       <div class="price-yearly text-body-secondary price-yearly-toggle d-none">$ 444 / year</div>
@@ -804,7 +805,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Everything in premium
+                        {{ __('pricing.ent_f1') }}
                       </h6>
                     </li>
                     <li>
@@ -812,7 +813,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Timeline with database
+                        {{ __('pricing.ent_f2') }}
                       </h6>
                     </li>
                     <li>
@@ -820,7 +821,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Fuzzy search
+                        {{ __('pricing.ent_f3') }}
                       </h6>
                     </li>
                     <li>
@@ -828,7 +829,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        A/B testing sanbox
+                        {{ __('pricing.ent_f4') }}
                       </h6>
                     </li>
                     <li>
@@ -836,7 +837,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Custom permissions
+                        {{ __('pricing.ent_f5') }}
                       </h6>
                     </li>
                     <li>
@@ -844,7 +845,7 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Social media automation
+                        {{ __('pricing.ent_f6') }}
                       </h6>
                     </li>
                     <li>
@@ -852,12 +853,12 @@
                         <span class="badge badge-center rounded-pill bg-label-primary p-0 me-3"
                           ><i class="icon-base bx bx-check icon-12px"></i
                         ></span>
-                        Sales automation tools
+                        {{ __('pricing.ent_f7') }}
                       </h6>
                     </li>
                   </ul>
                   <div class="d-grid mt-8">
-                    <a href="{{ url('payment-page') }}" class="btn btn-label-primary">Get Started</a>
+                    <a href="{{ url('payment-page') }}" class="btn btn-label-primary">{{ __('frontend.get_started') }}</a>
                   </div>
                 </div>
               </div>
@@ -891,8 +892,7 @@
                   </div>
                   <h3 class="mb-0">7.1k+</h3>
                   <p class="fw-medium mb-0">
-                    Support Tickets<br />
-                    Resolved
+                    {{ __('frontend.resolved_tickets') }}
                   </p>
                 </div>
               </div>
@@ -920,8 +920,7 @@
                   </div>
                   <h3 class="mb-0">50k+</h3>
                   <p class="fw-medium mb-0">
-                    Join Creatives<br />
-                    Community
+                    {{ __('frontend.join_community_stats') }}
                   </p>
                 </div>
               </div>
@@ -950,8 +949,7 @@
                   </div>
                   <h3 class="mb-0">4.8/5</h3>
                   <p class="fw-medium mb-0">
-                    Highly Rated<br />
-                    Products
+                    {{ __('frontend.highly_rated') }}
                   </p>
                 </div>
               </div>
@@ -975,8 +973,7 @@
                   </div>
                   <h3 class="mb-0">100%</h3>
                   <p class="fw-medium mb-0">
-                    Money Back<br />
-                    Guarantee
+                    {{ __('frontend.money_back') }}
                   </p>
                 </div>
               </div>
@@ -990,12 +987,12 @@
       <section id="landingFAQ" class="section-py bg-body landing-faq">
         <div class="container">
           <div class="text-center mb-4">
-            <span class="badge bg-label-primary">FAQ</span>
+            <span class="badge bg-label-primary">{{ __('frontend.faq_badge') }}</span>
           </div>
           <h4 class="text-center mb-1">
-            Frequently asked
+            {{ __('frontend.faq_title') }}
             <span class="position-relative fw-extrabold z-1"
-              >questions
+              >
               <img
                 src="{{ asset('frontend/img/front-pages/icons/section-title-icon.png') }}"
                 alt="laptop charging"
@@ -1003,7 +1000,7 @@
             </span>
           </h4>
           <p class="text-center mb-12 pb-md-4">
-            Browse through these FAQs to find answers to commonly asked questions.
+            {{ __('frontend.faq_subtitle') }}
           </p>
           <div class="row gy-12 align-items-center">
             <div class="col-lg-5">
@@ -1025,15 +1022,13 @@
                       data-bs-target="#accordionOne"
                       aria-expanded="true"
                       aria-controls="accordionOne">
-                      Do you charge for each upgrade?
+                      {{ __('frontend.faq_q1') }}
                     </button>
                   </h2>
 
                   <div id="accordionOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      Lemon drops chocolate cake gummies carrot cake chupa chups muffin topping. Sesame snaps icing
-                      marzipan gummi bears macaroon dragée danish caramels powder. Bear claw dragée pastry topping
-                      soufflé. Wafer gummi bears marshmallow pastry pie.
+                      {{ __('frontend.faq_a1') }}
                     </div>
                   </div>
                 </div>
@@ -1046,7 +1041,7 @@
                       data-bs-target="#accordionTwo"
                       aria-expanded="false"
                       aria-controls="accordionTwo">
-                      Do I need to purchase a license for each website?
+                      {{ __('frontend.faq_q2') }}
                     </button>
                   </h2>
                   <div
@@ -1055,9 +1050,7 @@
                     aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      Dessert ice cream donut oat cake jelly-o pie sugar plum cheesecake. Bear claw dragée oat cake
-                      dragée ice cream halvah tootsie roll. Danish cake oat cake pie macaroon tart donut gummies. Jelly
-                      beans candy canes carrot cake. Fruitcake chocolate chupa chups.
+                      {{ __('frontend.faq_a2') }}
                     </div>
                   </div>
                 </div>
@@ -1070,7 +1063,7 @@
                       data-bs-target="#accordionThree"
                       aria-expanded="false"
                       aria-controls="accordionThree">
-                      What is regular license?
+                      {{ __('frontend.faq_q3') }}
                     </button>
                   </h2>
                   <div
@@ -1079,12 +1072,7 @@
                     aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      Regular license can be used for end products that do not charge users for access or service(access
-                      is free and there will be no monthly subscription fee). Single regular license can be used for
-                      single end product and end product can be used by you or your client. If you want to sell end
-                      product to multiple clients then you will need to purchase separate license for each client. The
-                      same rule applies if you want to use the same end product on multiple domains(unique setup). For
-                      more info on regular license you can check official description.
+                      {{ __('frontend.faq_a3') }}
                     </div>
                   </div>
                 </div>
@@ -1097,7 +1085,7 @@
                       data-bs-target="#accordionFour"
                       aria-expanded="false"
                       aria-controls="accordionFour">
-                      What is extended license?
+                      {{ __('frontend.faq_q4') }}
                     </button>
                   </h2>
                   <div
@@ -1106,9 +1094,7 @@
                     aria-labelledby="headingFour"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis et aliquid quaerat possimus maxime!
-                      Mollitia reprehenderit neque repellat deleniti delectus architecto dolorum maxime, blanditiis
-                      earum ea, incidunt quam possimus cumque.
+                      {{ __('frontend.faq_a4') }}
                     </div>
                   </div>
                 </div>
@@ -1121,7 +1107,7 @@
                       data-bs-target="#accordionFive"
                       aria-expanded="false"
                       aria-controls="accordionFive">
-                      Which license is applicable for SASS application?
+                      {{ __('frontend.faq_q5') }}
                     </button>
                   </h2>
                   <div
@@ -1130,9 +1116,7 @@
                     aria-labelledby="headingFive"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi molestias exercitationem ab cum
-                      nemo facere voluptates veritatis quia, eveniet veniam at et repudiandae mollitia ipsam quasi
-                      labore enim architecto non!
+                      {{ __('frontend.faq_a5') }}
                     </div>
                   </div>
                 </div>
@@ -1154,9 +1138,9 @@
         <div class="container">
           <div class="row align-items-center gy-12">
             <div class="col-lg-6 text-start text-sm-center text-lg-start">
-              <h3 class="cta-title text-primary fw-bold mb-1">Ready to Get Started?</h3>
-              <h5 class="text-body mb-8">Start your project with a 14-day free trial</h5>
-              <a href="{{ url('payment-page') }}" class="btn btn-lg btn-primary">Get Started</a>
+              <h3 class="cta-title text-primary fw-bold mb-1">{{ __('frontend.cta_title') }}</h3>
+              <h5 class="text-body mb-8">{{ __('frontend.cta_subtitle') }}</h5>
+              <a href="{{ url('payment-page') }}" class="btn btn-lg btn-primary">{{ __('frontend.get_started') }}</a>
             </div>
             <div class="col-lg-6 pt-lg-12 text-center text-lg-end">
               <img
@@ -1173,19 +1157,18 @@
       <section id="landingContact" class="section-py bg-body landing-contact">
         <div class="container">
           <div class="text-center mb-4">
-            <span class="badge bg-label-primary">Contact US</span>
+            <span class="badge bg-label-primary">{{ __('frontend.contact_badge') }}</span>
           </div>
           <h4 class="text-center mb-1">
             <span class="position-relative fw-extrabold z-1"
-              >Let's work
+              >{{ __('frontend.contact_title') }}
               <img
                 src="{{ asset('frontend/img/front-pages/icons/section-title-icon.png') }}"
                 alt="laptop charging"
                 class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
             </span>
-            together
           </h4>
-          <p class="text-center mb-12 pb-md-4">Any question or remark? just write us a message</p>
+          <p class="text-center mb-12 pb-md-4">{{ __('frontend.contact_subtitle') }}</p>
           <div class="row g-6">
             <div class="col-lg-5">
               <div class="contact-img-box position-relative border p-2 h-100">
@@ -1205,7 +1188,7 @@
                           <i class="icon-base bx bx-envelope icon-lg"></i>
                         </div>
                         <div>
-                          <p class="mb-0">Email</p>
+                          <p class="mb-0">{{ __('frontend.email') }}</p>
                           <h6 class="mb-0">
                             <a href="mailto:example@gmail.com" class="text-heading">example@gmail.com</a>
                           </h6>
@@ -1218,7 +1201,7 @@
                           <i class="icon-base bx bx-phone-call icon-lg"></i>
                         </div>
                         <div>
-                          <p class="mb-0">Phone</p>
+                          <p class="mb-0">{{ __('frontend.phone') }}</p>
                           <h6 class="mb-0"><a href="tel:+1234-568-963" class="text-heading">+1234 568 963</a></h6>
                         </div>
                       </div>
@@ -1230,20 +1213,18 @@
             <div class="col-lg-7">
               <div class="card h-100">
                 <div class="card-body">
-                  <h4 class="mb-2">Send a message</h4>
+                  <h4 class="mb-2">{{ __('frontend.send_message') }}</h4>
                   <p class="mb-6">
-                    If you would like to discuss anything related to payment, account, licensing,<br
-                      class="d-none d-lg-block" />
-                    partnerships, or have pre-sales questions, you’re at the right place.
+                    {{ __('frontend.contact_desc') }}
                   </p>
                   <form>
                     <div class="row g-4">
                       <div class="col-md-6">
-                        <label class="form-label" for="contact-form-fullname">Full Name</label>
+                        <label class="form-label" for="contact-form-fullname">{{ __('frontend.full_name') }}</label>
                         <input type="text" class="form-control" id="contact-form-fullname" placeholder="john" />
                       </div>
                       <div class="col-md-6">
-                        <label class="form-label" for="contact-form-email">Email</label>
+                        <label class="form-label" for="contact-form-email">{{ __('frontend.email') }}</label>
                         <input
                           type="text"
                           id="contact-form-email"
@@ -1251,15 +1232,15 @@
                           placeholder="johndoe@gmail.com" />
                       </div>
                       <div class="col-12">
-                        <label class="form-label" for="contact-form-message">Message</label>
+                        <label class="form-label" for="contact-form-message">{{ __('frontend.message') }}</label>
                         <textarea
                           id="contact-form-message"
                           class="form-control"
                           rows="11"
-                          placeholder="Write a message"></textarea>
+                          placeholder="{{ __('frontend.contact_subtitle') }}"></textarea>
                       </div>
                       <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Send inquiry</button>
+                        <button type="submit" class="btn btn-primary">{{ __('frontend.send_inquiry') }}</button>
                       </div>
                     </div>
                   </form>

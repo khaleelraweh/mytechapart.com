@@ -12,6 +12,28 @@ class FrontendController extends Controller
         return view('frontend.index');
     }
 
+    public function pricing()
+    {
+        return view('frontend.pricing-page');
+    }
 
+    public function payment()
+    {
+        return view('frontend.payment-page');
+    }
 
+    public function checkout()
+    {
+        return view('frontend.checkout-page');
+    }
+
+    public function helpCenter()
+    {
+        return view('frontend.help-center-landing');
+    }
+
+    public function helpCenterArticle()
+    {
+        return view('frontend.help-center-article');
+    }
 }

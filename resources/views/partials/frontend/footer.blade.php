@@ -60,10 +60,10 @@
                     </svg>
                   </span>
                 </span>
-                <span class="app-brand-text demo text-white fw-bold ms-2 ps-1">Sneat</span>
+                <span class="app-brand-text demo text-white fw-bold ms-2 ps-1">{{ __('frontend.brand_name') }}</span>
               </a>
               <p class="footer-text footer-logo-description mb-6">
-                Most developer friendly & highly customisable Admin Dashboard Template.
+                {{ __('frontend.footer_desc') }}
               </p>
               <form class="footer-form">
                 <label for="footer-email" class="small">{{ __('frontend.subscribe_newsletter') }}</label>
@@ -85,21 +85,21 @@
               <h6 class="footer-title mb-6">{{ __('frontend.demos') }}</h6>
               <ul class="list-unstyled">
                 <li class="mb-4">
-                  <a href="{{ url('') }}" target="_blank" class="footer-link">Vertical Layout</a>
+                  <a href="{{ url('') }}" target="_blank" class="footer-link">{{ __('frontend.vertical_layout') }}</a>
                 </li>
                 <li class="mb-4">
-                  <a href="{{ url('') }}" target="_blank" class="footer-link">Horizontal Layout</a>
+                  <a href="{{ url('') }}" target="_blank" class="footer-link">{{ __('frontend.horizontal_layout') }}</a>
                 </li>
                 <li class="mb-4">
-                  <a href="{{ url('') }}" target="_blank" class="footer-link">Bordered Layout</a>
+                  <a href="{{ url('') }}" target="_blank" class="footer-link">{{ __('frontend.bordered_layout') }}</a>
                 </li>
                 <li class="mb-4">
                   <a href="{{ url('-dark/') }}" target="_blank" class="footer-link"
-                    >Semi Dark Layout</a
+                    >{{ __('frontend.semi_dark_layout') }}</a
                   >
                 </li>
                 <li>
-                  <a href="{{ url('') }}" target="_blank" class="footer-link">Dark Layout</a>
+                  <a href="{{ url('') }}" target="_blank" class="footer-link">{{ __('frontend.dark_layout') }}</a>
                 </li>
               </ul>
             </div>
@@ -107,18 +107,18 @@
               <h6 class="footer-title mb-6">{{ __('frontend.pages') }}</h6>
               <ul class="list-unstyled">
                 <li class="mb-4">
-                  <a href="{{ url('pricing-page') }}" class="footer-link">Pricing</a>
+                  <a href="{{ route('frontend.pricing') }}" class="footer-link">{{ __('frontend.pricing') }}</a>
                 </li>
                 <li class="mb-4">
-                  <a href="{{ url('payment-page') }}" class="footer-link"
-                    >Payment<span class="badge bg-primary ms-2">New</span></a
+                  <a href="{{ route('frontend.payment') }}" class="footer-link"
+                    >{{ __('frontend.payment') }}<span class="badge bg-primary ms-2">{{ __('frontend.new') }}</span></a
                   >
                 </li>
                 <li class="mb-4">
-                  <a href="{{ url('checkout-page') }}" class="footer-link">Checkout</a>
+                  <a href="{{ route('frontend.checkout') }}" class="footer-link">{{ __('frontend.checkout') }}</a>
                 </li>
                 <li class="mb-4">
-                  <a href="{{ url('help-center-landing') }}" class="footer-link">Help Center</a>
+                  <a href="{{ route('frontend.help_center') }}" class="footer-link">{{ __('frontend.help_center') }}</a>
                 </li>
                 <li>
                   <a href="{{ route('login') }}" target="_blank" class="footer-link"
@@ -150,7 +150,7 @@
               </script>
             </span>
             <a href="https://themeselection.com" target="_blank" class="text-white">ThemeSelection,</a>
-            <span class="footer-bottom-text"> Made with ❤️ for a better web.</span>
+            <span class="footer-bottom-text"> {{ __('frontend.made_with') }}</span>
           </div>
           <div>
             <a href="https://github.com/themeselection" class="me-4 text-white" target="_blank">

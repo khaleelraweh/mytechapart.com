@@ -75,18 +75,18 @@
                     <label class="form-label" for="billings-country">{{ __('payment.country') }}</label>
                     <select id="billings-country" class="form-select" data-allow-clear="true">
                       <option value="">{{ __('payment.select') }}</option>
-                      <option value="Australia">Australia</option>
-                      <option value="Brazil">Brazil</option>
-                      <option value="Canada">Canada</option>
-                      <option value="China">China</option>
-                      <option value="France">France</option>
-                      <option value="Germany">Germany</option>
-                      <option value="India">India</option>
-                      <option value="Turkey">Turkey</option>
-                      <option value="Ukraine">Ukraine</option>
-                      <option value="United Arab Emirates">United Arab Emirates</option>
-                      <option value="United Kingdom">United Kingdom</option>
-                      <option value="United States">United States</option>
+                      <option value="Australia">{{ __('payment.australia') }}</option>
+                      <option value="Brazil">{{ __('payment.brazil') }}</option>
+                      <option value="Canada">{{ __('payment.canada') }}</option>
+                      <option value="China">{{ __('payment.china') }}</option>
+                      <option value="France">{{ __('payment.france') }}</option>
+                      <option value="Germany">{{ __('payment.germany') }}</option>
+                      <option value="India">{{ __('payment.india') }}</option>
+                      <option value="Turkey">{{ __('payment.turkey') }}</option>
+                      <option value="Ukraine">{{ __('payment.ukraine') }}</option>
+                      <option value="United Arab Emirates">{{ __('payment.uae') }}</option>
+                      <option value="United Kingdom">{{ __('payment.uk') }}</option>
+                      <option value="United States">{{ __('payment.us') }}</option>
                     </select>
                   </div>
                   <div class="col-md-6">

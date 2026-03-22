@@ -75,7 +75,8 @@
                     ><span>{{ __('pricing.basic_f5') }}</span>
                   </li>
                 </ul>
-                <a href="{{ url('payment-page') }}" class="btn btn-label-success d-grid w-100">{{ __('pricing.your_current_plan') }}</a>
+                <a href="{{ route('frontend.payment') }}" class="btn btn-label-success d-grid w-100">{{ __('pricing.your_current_plan') }}</a>
+
               </div>
             </div>
           </div>
@@ -129,7 +130,8 @@
                     ><span>{{ __('pricing.std_f5') }}</span>
                   </li>
                 </ul>
-                <a href="{{ url('payment-page') }}" class="btn btn-primary d-grid w-100">{{ __('pricing.upgrade') }}</a>
+                <a href="{{ route('frontend.payment') }}" class="btn btn-primary d-grid w-100">{{ __('pricing.upgrade') }}</a>
+
               </div>
             </div>
           </div>
@@ -183,7 +185,8 @@
                     ><span>{{ __('pricing.ent_f5') }}</span>
                   </li>
                 </ul>
-                <a href="{{ url('payment-page') }}" class="btn btn-label-primary d-grid w-100">{{ __('pricing.upgrade') }}</a>
+                <a href="{{ route('frontend.payment') }}" class="btn btn-label-primary d-grid w-100">{{ __('pricing.upgrade') }}</a>
+
               </div>
             </div>
           </div>
@@ -199,7 +202,8 @@
             <div class="text-center text-lg-start">
               <h4 class="text-primary mb-2">{{ __('pricing.free_trial_title') }}</h4>
               <p class="text-body mb-6 mb-md-11">{{ __('pricing.free_trial_desc') }}</p>
-              <a href="{{ url('payment-page') }}" class="btn btn-primary">{{ __('pricing.start_free_trial') }}</a>
+              <a href="{{ route('frontend.payment') }}" class="btn btn-primary">{{ __('pricing.start_free_trial') }}</a>
+
             </div>
             <!-- image -->
             <div class="text-center">
@@ -415,13 +419,16 @@
                   <tr>
                     <td></td>
                     <td>
-                      <a href="{{ url('payment-page') }}" class="btn text-nowrap btn-label-primary">{{ __('pricing.choose_plan') }}</a>
+                      <a href="{{ route('frontend.payment') }}" class="btn text-nowrap btn-label-primary">{{ __('pricing.choose_plan') }}</a>
+
                     </td>
                     <td>
-                      <a href="{{ url('payment-page') }}" class="btn text-nowrap btn-primary">{{ __('pricing.choose_plan') }}</a>
+                      <a href="{{ route('frontend.payment') }}" class="btn text-nowrap btn-primary">{{ __('pricing.choose_plan') }}</a>
+
                     </td>
                     <td>
-                      <a href="{{ url('payment-page') }}" class="btn text-nowrap btn-label-primary">{{ __('pricing.choose_plan') }}</a>
+                      <a href="{{ route('frontend.payment') }}" class="btn text-nowrap btn-label-primary">{{ __('pricing.choose_plan') }}</a>
+
                     </td>
                   </tr>
                 </tbody>

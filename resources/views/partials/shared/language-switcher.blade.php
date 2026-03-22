@@ -3,7 +3,7 @@
   <a class="nav-link dropdown-toggle hide-arrow d-flex align-items-center gap-1"
      href="javascript:void(0);"
      data-bs-toggle="dropdown"
-     title="{{ app()->getLocale() === 'ar' ? 'تغيير اللغة' : 'Change Language' }}">
+     title="{{ __('frontend.change_language') }}">
     <i class="icon-base bx bx-globe icon-md"></i>
     <span class="small d-none d-xl-inline fw-semibold">{{ strtoupper(app()->getLocale()) }}</span>
   </a>
