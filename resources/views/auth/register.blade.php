@@ -18,20 +18,20 @@
         <!-- Register -->
         <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg p-sm-12 p-6">
           <div class="w-px-400 mx-auto mt-sm-12 mt-8">
-            <h4 class="mb-1">Adventure starts here 🚀</h4>
-            <p class="mb-6">Make your app management easy and fun!</p>
+            <h4 class="mb-1">{{ __('auth_custom.adventure_starts_here') }}</h4>
+            <p class="mb-6">{{ __('auth_custom.make_app_management_easy') }}</p>
 
             <form id="formAuthentication" class="mb-6" action="{{ route('register') }}" method="POST">
               @csrf
               <div class="mb-6 form-control-validation">
-                <label for="name" class="form-label">Name</label>
+                <label for="name" class="form-label">{{ __('auth_custom.name') }}</label>
                 <input
                   type="text"
                   class="form-control @error('name') is-invalid @enderror"
                   id="name"
                   name="name"
                   value="{{ old('name') }}"
-                  placeholder="Enter your name"
+                  placeholder="{{ __('auth_custom.enter_name') }}"
                   required autocomplete="name" autofocus />
                   @error('name')
                       <span class="invalid-feedback" role="alert">
@@ -40,8 +40,8 @@
                   @enderror
               </div>
               <div class="mb-6 form-control-validation">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" placeholder="Enter your email" required autocomplete="email" />
+                <label for="email" class="form-label">{{ __('auth_custom.email') }}</label>
+                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" placeholder="{{ __('auth_custom.enter_email') }}" required autocomplete="email" />
                   @error('email')
                       <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>
@@ -49,7 +49,7 @@
                   @enderror
               </div>
               <div class="form-password-toggle mb-6 form-control-validation">
-                <label class="form-label" for="password">Password</label>
+                <label class="form-label" for="password">{{ __('auth_custom.password') }}</label>
                 <div class="input-group input-group-merge">
                   <input
                     type="password"
@@ -68,7 +68,7 @@
               </div>
 
               <div class="form-password-toggle form-control-validation">
-                <label class="form-label" for="password-confirm">Confirm Password</label>
+                <label class="form-label" for="password-confirm">{{ __('auth_custom.confirm_password') }}</label>
                 <div class="input-group input-group-merge">
                   <input
                     type="password"
@@ -84,18 +84,18 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
                   <label class="form-check-label" for="terms-conditions">
-                    I agree to
-                    <a href="javascript:void(0);">privacy policy & terms</a>
+                    {{ __('auth_custom.i_agree_to') }}
+                    <a href="javascript:void(0);">{{ __('auth_custom.privacy_policy_terms') }}</a>
                   </label>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary d-grid w-100">Sign up</button>
+              <button type="submit" class="btn btn-primary d-grid w-100">{{ __('auth_custom.sign_up') }}</button>
             </form>
 
             <p class="text-center">
-              <span>Already have an account?</span>
+              <span>{{ __('auth_custom.already_have_account') }}</span>
               <a href="{{ route('login') }}">
-                <span>Sign in instead</span>
+                <span>{{ __('auth_custom.sign_in_instead') }}</span>
               </a>
             </p>
 

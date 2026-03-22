@@ -14,7 +14,7 @@
                     <i class="bx bx-buildings bx-lg"></i>
                 </div>
                 <div>
-                    <p class="mb-0 text-muted small">Total Properties</p>
+                    <p class="mb-0 text-muted small">{{ __('tenant.total_properties') }}</p>
                     <h3 class="mb-0 fw-bold">{{ $metrics['total_properties'] }}</h3>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <i class="bx bx-door-open bx-lg"></i>
                 </div>
                 <div>
-                    <p class="mb-0 text-muted small">Total Units / Rooms</p>
+                    <p class="mb-0 text-muted small">{{ __('tenant.total_units_rooms') }}</p>
                     <h3 class="mb-0 fw-bold">{{ $metrics['total_units'] }}</h3>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                     <i class="bx bx-calendar-star bx-lg"></i>
                 </div>
                 <div>
-                    <p class="mb-0 text-muted small">Total Reservations</p>
+                    <p class="mb-0 text-muted small">{{ __('tenant.total_reservations') }}</p>
                     <h3 class="mb-0 fw-bold">{{ $metrics['total_reservations'] }}</h3>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <i class="bx bx-bar-chart-alt-2 bx-lg"></i>
                 </div>
                 <div>
-                    <p class="mb-0 text-muted small">Occupancy Rate</p>
+                    <p class="mb-0 text-muted small">{{ __('tenant.occupancy_rate') }}</p>
                     <h3 class="mb-0 fw-bold">{{ $metrics['occupancy_rate'] }}%</h3>
                 </div>
             </div>

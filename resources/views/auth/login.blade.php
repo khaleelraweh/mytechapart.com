@@ -23,24 +23,24 @@
                 <i class="bx bx-buildings fs-4 text-primary"></i>
                 <span class="badge bg-label-primary fs-6 px-3 py-2">{{ tenant('name') }}</span>
               </div>
-              <h4 class="mb-1">Hotel Admin Login 🏨</h4>
-              <p class="mb-6">Sign in to manage <strong>{{ tenant('name') }}</strong></p>
+              <h4 class="mb-1">{{ __('auth_custom.hotel_admin_login') }}</h4>
+              <p class="mb-6">{{ __('auth_custom.sign_in_to_manage') }} <strong>{{ tenant('name') }}</strong></p>
             @else
-              <h4 class="mb-1">Admin Panel Login 👋</h4>
-              <p class="mb-6">Sign in to the system administration panel</p>
+              <h4 class="mb-1">{{ __('auth_custom.admin_panel_login') }}</h4>
+              <p class="mb-6">{{ __('auth_custom.sign_in_system_admin') }}</p>
             @endif
 
             <form id="formAuthentication" class="mb-6" action="{{ route('login') }}" method="POST">
               @csrf
               <div class="mb-6 form-control-validation">
-                <label for="email" class="form-label">Email</label>
+                <label for="email" class="form-label">{{ __('auth_custom.email') }}</label>
                 <input
                   type="email"
                   class="form-control @error('email') is-invalid @enderror"
                   id="email"
                   name="email"
                   value="{{ old('email') }}"
-                  placeholder="Enter your email"
+                  placeholder="{{ __('auth_custom.enter_email') }}"
                   required autocomplete="email" autofocus />
                   @error('email')
                       <span class="invalid-feedback" role="alert">
@@ -49,7 +49,7 @@
                   @enderror
               </div>
               <div class="form-password-toggle form-control-validation">
-                <label class="form-label" for="password">Password</label>
+                <label class="form-label" for="password">{{ __('auth_custom.password') }}</label>
                 <div class="input-group input-group-merge">
                   <input
                     type="password"
@@ -70,16 +70,16 @@
                 <div class="d-flex justify-content-between">
                   <div class="form-check mb-0">
                     <input class="form-check-input" type="checkbox" name="remember" id="remember-me" {{ old('remember') ? 'checked' : '' }} />
-                    <label class="form-check-label" for="remember-me">Remember Me</label>
+                    <label class="form-check-label" for="remember-me">{{ __('auth_custom.remember_me') }}</label>
                   </div>
                   @if (Route::has('password.request'))
                   <a href="{{ route('password.request') }}">
-                    <p class="mb-0">Forgot Password?</p>
+                    <p class="mb-0">{{ __('auth_custom.forgot_password') }}</p>
                   </a>
                   @endif
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary d-grid w-100">Sign in</button>
+              <button type="submit" class="btn btn-primary d-grid w-100">{{ __('auth_custom.sign_in') }}</button>
             </form>
 
             {{-- <p class="text-center">

@@ -18,12 +18,12 @@
         <!-- Two Steps Verification -->
         <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg p-sm-12 p-6">
           <div class="w-px-400 mx-auto mt-sm-12 mt-8">
-            <h4 class="mb-1">Two Step Verification 💬</h4>
+            <h4 class="mb-1">{{ __('auth_custom.two_step_verification') }}</h4>
             <p class="text-start mb-6">
-              We sent a verification code to your mobile. Enter the code from the mobile in the field below.
+              {{ __('auth_custom.we_sent_verification_code') }}
               <span class="fw-medium d-block mt-1 text-heading">******1234</span>
             </p>
-            <p class="mb-0">Type your 6 digit security code</p>
+            <p class="mb-0">{{ __('auth_custom.type_security_code') }}</p>
             <form id="twoStepsForm" action="index.html" method="GET">
               <div class="mb-6 form-control-validation">
                 <div class="auth-input-wrapper d-flex align-items-center justify-content-between numeral-mask-wrapper">
@@ -56,10 +56,10 @@
                 <!-- Create a hidden field which is combined by 3 fields above -->
                 <input type="hidden" name="otp" />
               </div>
-              <button class="btn btn-primary d-grid w-100 mb-6">Verify my account</button>
+              <button class="btn btn-primary d-grid w-100 mb-6">{{ __('auth_custom.verify_my_account') }}</button>
               <div class="text-center">
-                Didn't get the code?
-                <a href="javascript:void(0);">Resend</a>
+                {{ __('auth_custom.didnt_get_code') }}
+                <a href="javascript:void(0);">{{ __('auth_custom.resend') }}</a>
               </div>
             </form>
           </div>

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="py-3 mb-4"><span class="text-muted fw-light">SaaS Management /</span> Hotels (Tenants)</h4>
+    <h4 class="py-3 mb-4"><span class="text-muted fw-light">{{ __('backend.saas_management') }}</span> {{ __('backend.hotels_tenants') }}</h4>
     
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
@@ -10,19 +10,19 @@
 
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">Registered Hotels</h5>
-            <a href="{{ route('backend.tenants.create') }}" class="btn btn-primary btn-sm">Register New Hotel</a>
+            <h5 class="mb-0">{{ __('backend.registered_hotels') }}</h5>
+            <a href="{{ route('backend.tenants.create') }}" class="btn btn-primary btn-sm">{{ __('backend.register_new_hotel') }}</a>
         </div>
         <div class="table-responsive text-nowrap">
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Hotel Name</th>
-                        <th>Domain</th>
-                        <th>Admin Email</th>
-                        <th>Subscription</th>
-                        <th>Join Date</th>
-                        <th>Actions</th>
+                        <th>{{ __('backend.hotel_name') }}</th>
+                        <th>{{ __('backend.domain') }}</th>
+                        <th>{{ __('backend.admin_email') }}</th>
+                        <th>{{ __('backend.subscription') }}</th>
+                        <th>{{ __('backend.join_date') }}</th>
+                        <th>{{ __('backend.actions') }}</th>
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
@@ -37,24 +37,24 @@
                         <td>{{ $tenant->email }}</td>
                         <td>
                             @if($tenant->subscriptions->count() > 0)
-                                <span class="badge bg-label-success">Active</span>
+                                <span class="badge bg-label-success">{{ __('backend.active') }}</span>
                             @else
-                                <span class="badge bg-label-warning">None</span>
+                                <span class="badge bg-label-warning">{{ __('backend.none') }}</span>
                             @endif
                         </td>
                         <td>{{ $tenant->created_at->format('Y-m-d') }}</td>
                         <td>
-                            <a href="{{ route('backend.tenants.edit', $tenant) }}" class="btn btn-sm btn-info"><i class="bx bx-edit"></i> Edit</a>
-                            <form action="{{ route('backend.tenants.destroy', $tenant) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this hotel and all its data?');">
+                            <a href="{{ route('backend.tenants.edit', $tenant) }}" class="btn btn-sm btn-info"><i class="bx bx-edit"></i> {{ __('backend.edit') }}</a>
+                            <form action="{{ route('backend.tenants.destroy', $tenant) }}" method="POST" class="d-inline" onsubmit="return confirm('{{ __('backend.are_you_sure_delete_hotel') }}');">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger"><i class="bx bx-trash"></i> Delete</button>
+                                <button type="submit" class="btn btn-sm btn-danger"><i class="bx bx-trash"></i> {{ __('backend.delete') }}</button>
                             </form>
                         </td>
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="6" class="text-center">No hotels registered yet.</td>
+                        <td colspan="6" class="text-center">{{ __('backend.no_hotels_registered') }}</td>
                     </tr>
                     @endforelse
                 </tbody>

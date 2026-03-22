@@ -5,12 +5,12 @@
     <div class="d-flex justify-content-between align-items-center py-3 mb-4">
         <h4 class="mb-0">
             <span class="text-muted fw-light">
-                <a href="{{ route('properties.index') }}" class="text-muted">Hotels</a> / 
+                <a href="{{ route('properties.index') }}" class="text-muted">{{ __('tenant.hotels') }}</a> / 
                 <a href="{{ route('floors.index', ['property_id' => $floor->property_id]) }}" class="text-muted">{{ $floor->property->name }}</a> / 
             </span>
-            Floor {{ $floor->floor_number }} - Rooms
+            {{ __('tenant.floor_prefix') }} {{ $floor->floor_number }} {{ __('tenant.rooms_suffix') }}
         </h4>
-        <a href="{{ route('floors.index', ['property_id' => $floor->property_id]) }}" class="btn btn-secondary btn-sm">Back to Floors</a>
+        <a href="{{ route('floors.index', ['property_id' => $floor->property_id]) }}" class="btn btn-secondary btn-sm">{{ __('tenant.back_to_floors') }}</a>
     </div>
 
     @if(session('success'))
@@ -25,7 +25,7 @@
         <div class="col-md-4">
             <div class="card mb-4">
                 <div class="card-header border-bottom mb-3">
-                    <h5 class="mb-0">Add New Room</h5>
+                    <h5 class="mb-0">{{ __('tenant.add_new_room') }}</h5>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('units.store') }}" method="POST">
@@ -33,15 +33,15 @@
                         <input type="hidden" name="floor_id" value="{{ $floor->id }}">
                         
                         <div class="mb-3">
-                            <label class="form-label">Room Number</label>
-                            <input type="text" name="unit_number" class="form-control" required placeholder="e.g. 101">
+                            <label class="form-label">{{ __('tenant.room_number') }}</label>
+                            <input type="text" name="unit_number" class="form-control" required placeholder="{{ __('tenant.eg_101') }}">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Room Type</label>
-                            <input type="text" name="type" class="form-control" required placeholder="e.g. Suite, Standard">
+                            <label class="form-label">{{ __('tenant.room_type') }}</label>
+                            <input type="text" name="type" class="form-control" required placeholder="{{ __('tenant.eg_suite') }}">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Price per Night</label>
+                            <label class="form-label">{{ __('tenant.price_per_night') }}</label>
                             <div class="input-group">
                                 <span class="input-group-text">$</span>
                                 <input type="number" step="0.01" name="price" class="form-control" required>
@@ -49,23 +49,23 @@
                         </div>
                         <div class="row">
                             <div class="col-6 mb-3">
-                                <label class="form-label">Capacity (Pax)</label>
+                                <label class="form-label">{{ __('tenant.capacity_pax') }}</label>
                                 <input type="number" name="capacity" class="form-control" required min="1" value="2">
                             </div>
                             <div class="col-6 mb-3">
-                                <label class="form-label">Beds</label>
+                                <label class="form-label">{{ __('tenant.beds') }}</label>
                                 <input type="number" name="beds" class="form-control" required min="1" value="1">
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Status</label>
+                            <label class="form-label">{{ __('tenant.status') }}</label>
                             <select name="status" class="form-select">
-                                <option value="available">Available</option>
-                                <option value="booked">Booked</option>
-                                <option value="maintenance">Under Maintenance</option>
+                                <option value="available">{{ __('tenant.available') }}</option>
+                                <option value="booked">{{ __('tenant.booked') }}</option>
+                                <option value="maintenance">{{ __('tenant.under_maintenance') }}</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100"><i class="bx bx-plus"></i> Add Room</button>
+                        <button type="submit" class="btn btn-primary w-100"><i class="bx bx-plus"></i> {{ __('tenant.add_room') }}</button>
                     </form>
                 </div>
             </div>
@@ -75,18 +75,18 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header border-bottom">
-                    <h5 class="mb-0">Rooms on Floor {{ $floor->floor_number }}</h5>
+                    <h5 class="mb-0">{{ __('tenant.rooms_on_floor') }} {{ $floor->floor_number }}</h5>
                 </div>
                 <div class="table-responsive text-nowrap">
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th>Room #</th>
-                                <th>Type</th>
-                                <th>Price</th>
-                                <th>Capacity</th>
-                                <th>Status</th>
-                                <th>Actions</th>
+                                <th>{{ __('tenant.room_hash') }}</th>
+                                <th>{{ __('tenant.type') }}</th>
+                                <th>{{ __('tenant.price') }}</th>
+                                <th>{{ __('tenant.capacity') }}</th>
+                                <th>{{ __('tenant.status') }}</th>
+                                <th>{{ __('tenant.actions') }}</th>
                             </tr>
                         </thead>
                         <tbody class="table-border-bottom-0">
@@ -95,21 +95,21 @@
                                 <td><strong><i class="bx bx-key"></i> {{ $unit->unit_number }}</strong></td>
                                 <td>{{ $unit->type }}</td>
                                 <td>${{ number_format($unit->price, 2) }}</td>
-                                <td>{{ $unit->capacity }} Pax / {{ $unit->beds }} Beds</td>
+                                <td>{{ $unit->capacity }} {{ __('tenant.pax') }} / {{ $unit->beds }} {{ __('tenant.beds') }}</td>
                                 <td>
                                     <span class="badge bg-label-{{ $unit->status == 'available' ? 'success' : ($unit->status == 'booked' ? 'danger' : 'warning') }}">
-                                        {{ ucfirst($unit->status) }}
+                                        {{ __('tenant.'.$unit->status) }}
                                     </span>
                                 </td>
                                 <td>
-                                    <form action="{{ route('units.destroy', $unit) }}" method="POST" class="d-inline" onsubmit="return confirm('Delete this room completely?');">
+                                    <form action="{{ route('units.destroy', $unit) }}" method="POST" class="d-inline" onsubmit="return confirm('{{ __('tenant.delete_room_completely') }}');">
                                         @csrf @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger px-2"><i class="bx bx-trash"></i></button>
                                     </form>
                                 </td>
                             </tr>
                             @empty
-                            <tr><td colspan="6" class="text-center py-4">No rooms added to this floor yet.</td></tr>
+                            <tr><td colspan="6" class="text-center py-4">{{ __('tenant.no_rooms_added') }}</td></tr>
                             @endforelse
                         </tbody>
                     </table>

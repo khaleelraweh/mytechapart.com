@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Register your Hotel</h1>
+        <h1>{{ __('central.register_your_hotel') }}</h1>
         @if(session('success'))
             <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
         @endif
@@ -22,14 +22,14 @@
         @endif
         <form method="POST" action="{{ route('central.register.submit') }}">
             @csrf
-            <div><input type="text" name="name" placeholder="Hotel Name" required></div>
-            <div><input type="text" name="slug" placeholder="Subdomain (e.g. hilton)" required></div>
-            <div><input type="email" name="email" placeholder="Admin Email" required></div>
-            <div><input type="text" name="phone" placeholder="Phone Number"></div>
-            <div><input type="text" name="admin_name" placeholder="Admin Full Name" required></div>
-            <div><input type="password" name="password" placeholder="Password" required></div>
-            <div><input type="password" name="password_confirmation" placeholder="Confirm Password" required></div>
-            <button type="submit">Create Tenant</button>
+            <div><input type="text" name="name" placeholder="{{ __('central.hotel_name') }}" required></div>
+            <div><input type="text" name="slug" placeholder="{{ __('central.subdomain') }}" required></div>
+            <div><input type="email" name="email" placeholder="{{ __('central.admin_email') }}" required></div>
+            <div><input type="text" name="phone" placeholder="{{ __('central.phone_number') }}"></div>
+            <div><input type="text" name="admin_name" placeholder="{{ __('central.admin_full_name') }}" required></div>
+            <div><input type="password" name="password" placeholder="{{ __('central.password') }}" required></div>
+            <div><input type="password" name="password_confirmation" placeholder="{{ __('central.confirm_password') }}" required></div>
+            <button type="submit">{{ __('central.create_tenant') }}</button>
         </form>
     </div>
 </body>
