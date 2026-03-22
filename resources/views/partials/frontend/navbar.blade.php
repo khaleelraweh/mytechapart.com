@@ -335,9 +335,12 @@
                   </div>
                 </div>
               </li>
+              @auth
               <li class="nav-item">
                 <a class="nav-link fw-medium" href="{{ route('backend.index') }}" target="_blank">{{ __('frontend.admin') }}</a>
               </li>
+              @endauth
+
             </ul>
           </div>
           <div class="landing-menu-overlay d-lg-none"></div>
@@ -389,6 +392,7 @@
             </li>
             <!-- / Style Switcher-->
 
+            @guest
             <!-- navbar button: Start -->
             <li>
               <a href="{{ route('login') }}" class="btn btn-primary" target="_blank"
@@ -397,6 +401,8 @@
               >
             </li>
             <!-- navbar button: End -->
+            @endguest
+
           </ul>
           <!-- Toolbar: End -->
         </div>

@@ -1,5 +1,5 @@
 {{-- Language Switcher Dropdown --}}
-<li class="nav-item dropdown dropdown-language me-2">
+<li class="nav-item dropdown dropdown-language me-1 me-sm-2">
   <a class="nav-link dropdown-toggle hide-arrow d-flex align-items-center gap-1"
      href="javascript:void(0);"
      data-bs-toggle="dropdown"

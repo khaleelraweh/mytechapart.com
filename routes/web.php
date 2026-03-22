@@ -52,6 +52,8 @@ Route::middleware([PreventAccessFromTenantDomains::class])->group(function() {
 });
 
 Auth::routes();
+Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout.get');
+
 
 Route::middleware([PreventAccessFromTenantDomains::class])->group(function() {
     Route::get('/register-company', [TenantRegistrationController::class, 'showRegistrationForm'])->name('central.register');
