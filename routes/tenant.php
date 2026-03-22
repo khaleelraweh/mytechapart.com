@@ -27,7 +27,12 @@ Route::middleware([
     // All other routes require the user to be logged in
     Route::middleware('auth')->group(function() {
         Route::get('/', [TenantDashboardController::class, 'index'])->name('tenant.dashboard');
+        Route::get('/dashboard', [TenantDashboardController::class, 'index']);
+        
         Route::resource('properties', PropertyController::class);
+
+
+
         Route::resource('floors', FloorController::class);
         Route::resource('units', UnitController::class);
         Route::resource('reservations', ReservationController::class);

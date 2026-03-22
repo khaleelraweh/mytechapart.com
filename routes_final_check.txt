@@ -1,0 +1,114 @@
+
+  GET|HEAD        127.0.0.1/ ...................................... frontend.index › Frontend\FrontendController@index
+  GET|HEAD        localhost/ ...................................... frontend.index › Frontend\FrontendController@index
+  GET|HEAD        mytechapart.com/ ................................ frontend.index › Frontend\FrontendController@index
+  GET|HEAD        mytechapart.test/ ............................... frontend.index › Frontend\FrontendController@index
+  GET|HEAD        / ........................................ tenant.dashboard › Tenant\TenantDashboardController@index
+  POST            _ignition/execute-solution ignition.executeSolution › Spatie\LaravelIgnition › ExecuteSolutionContr…
+  GET|HEAD        _ignition/health-check ....... ignition.healthCheck › Spatie\LaravelIgnition › HealthCheckController
+  POST            _ignition/update-config .... ignition.updateConfig › Spatie\LaravelIgnition › UpdateConfigController
+  GET|HEAD        admin/forgot-password .......... backend.forgot_password › Backend\BackendController@forgot_password
+  GET|HEAD        admin/index ........................................ backend.index › Backend\BackendController@index
+  GET|HEAD        admin/login ........................................ backend.login › Backend\BackendController@login
+  GET|HEAD        admin/permissions ................... backend.permissions.index › Backend\PermissionController@index
+  POST            admin/permissions ................... backend.permissions.store › Backend\PermissionController@store
+  GET|HEAD        admin/permissions/create .......... backend.permissions.create › Backend\PermissionController@create
+  GET|HEAD        admin/permissions/{permission} ........ backend.permissions.show › Backend\PermissionController@show
+  PUT|PATCH       admin/permissions/{permission} .... backend.permissions.update › Backend\PermissionController@update
+  DELETE          admin/permissions/{permission} .. backend.permissions.destroy › Backend\PermissionController@destroy
+  GET|HEAD        admin/permissions/{permission}/edit ... backend.permissions.edit › Backend\PermissionController@edit
+  GET|HEAD        admin/roles ..................................... backend.roles.index › Backend\RoleController@index
+  POST            admin/roles ..................................... backend.roles.store › Backend\RoleController@store
+  GET|HEAD        admin/roles/create ............................ backend.roles.create › Backend\RoleController@create
+  GET|HEAD        admin/roles/{role} ................................ backend.roles.show › Backend\RoleController@show
+  PUT|PATCH       admin/roles/{role} ............................ backend.roles.update › Backend\RoleController@update
+  DELETE          admin/roles/{role} .......................... backend.roles.destroy › Backend\RoleController@destroy
+  GET|HEAD        admin/roles/{role}/edit ........................... backend.roles.edit › Backend\RoleController@edit
+  GET|HEAD        admin/tenants ........................ backend.tenants.index › Backend\TenantManagerController@index
+  POST            admin/tenants ........................ backend.tenants.store › Backend\TenantManagerController@store
+  GET|HEAD        admin/tenants/create ............... backend.tenants.create › Backend\TenantManagerController@create
+  GET|HEAD        admin/tenants/{tenant} ................. backend.tenants.show › Backend\TenantManagerController@show
+  PUT|PATCH       admin/tenants/{tenant} ............. backend.tenants.update › Backend\TenantManagerController@update
+  DELETE          admin/tenants/{tenant} ........... backend.tenants.destroy › Backend\TenantManagerController@destroy
+  GET|HEAD        admin/tenants/{tenant}/edit ............ backend.tenants.edit › Backend\TenantManagerController@edit
+  GET|HEAD        admin/users ..................................... backend.users.index › Backend\UserController@index
+  POST            admin/users ..................................... backend.users.store › Backend\UserController@store
+  GET|HEAD        admin/users/create ............................ backend.users.create › Backend\UserController@create
+  GET|HEAD        admin/users/{user} ................................ backend.users.show › Backend\UserController@show
+  PUT|PATCH       admin/users/{user} ............................ backend.users.update › Backend\UserController@update
+  DELETE          admin/users/{user} .......................... backend.users.destroy › Backend\UserController@destroy
+  GET|HEAD        admin/users/{user}/edit ........................... backend.users.edit › Backend\UserController@edit
+  GET|HEAD        api/user ........................................................................................... 
+  GET|HEAD        checkout-page ............................. frontend.checkout › Frontend\FrontendController@checkout
+  GET|HEAD        customers ........................................ customers.index › Tenant\CustomerController@index
+  POST            customers ........................................ customers.store › Tenant\CustomerController@store
+  GET|HEAD        customers/create ............................... customers.create › Tenant\CustomerController@create
+  GET|HEAD        customers/{customer} ............................... customers.show › Tenant\CustomerController@show
+  PUT|PATCH       customers/{customer} ........................... customers.update › Tenant\CustomerController@update
+  DELETE          customers/{customer} ......................... customers.destroy › Tenant\CustomerController@destroy
+  GET|HEAD        customers/{customer}/edit .......................... customers.edit › Tenant\CustomerController@edit
+  GET|HEAD        dashboard ................................................... Tenant\TenantDashboardController@index
+  GET|HEAD        floors ................................................. floors.index › Tenant\FloorController@index
+  POST            floors ................................................. floors.store › Tenant\FloorController@store
+  GET|HEAD        floors/create ........................................ floors.create › Tenant\FloorController@create
+  GET|HEAD        floors/{floor} ........................................... floors.show › Tenant\FloorController@show
+  PUT|PATCH       floors/{floor} ....................................... floors.update › Tenant\FloorController@update
+  DELETE          floors/{floor} ..................................... floors.destroy › Tenant\FloorController@destroy
+  GET|HEAD        floors/{floor}/edit ...................................... floors.edit › Tenant\FloorController@edit
+  GET|HEAD        help-center-article ... frontend.help_center_article › Frontend\FrontendController@helpCenterArticle
+  GET|HEAD        help-center-landing .................. frontend.help_center › Frontend\FrontendController@helpCenter
+  GET|HEAD        home ...................................................... home › Frontend\FrontendController@index
+  GET|HEAD        127.0.0.1/index .................................................. Frontend\FrontendController@index
+  GET|HEAD        localhost/index .................................................. Frontend\FrontendController@index
+  GET|HEAD        mytechapart.com/index ............................................ Frontend\FrontendController@index
+  GET|HEAD        mytechapart.test/index ........................................... Frontend\FrontendController@index
+  GET|HEAD        index ............................................................ Frontend\FrontendController@index
+  GET|HEAD        lang/{locale} .............................................. lang.switch › LanguageController@switch
+  GET|HEAD        login ................................................... login › Auth\LoginController@showLoginForm
+  POST            login ................................................................... Auth\LoginController@login
+  POST            logout ........................................................ logout › Auth\LoginController@logout
+  GET|HEAD        password/confirm ................. password.confirm › Auth\ConfirmPasswordController@showConfirmForm
+  POST            password/confirm ............................................ Auth\ConfirmPasswordController@confirm
+  POST            password/email ................... password.email › Auth\ForgotPasswordController@sendResetLinkEmail
+  GET|HEAD        password/reset ................ password.request › Auth\ForgotPasswordController@showLinkRequestForm
+  POST            password/reset ................................ password.update › Auth\ResetPasswordController@reset
+  GET|HEAD        password/reset/{token} ................. password.reset › Auth\ResetPasswordController@showResetForm
+  GET|HEAD        payment-page ................................ frontend.payment › Frontend\FrontendController@payment
+  GET|HEAD        payments ........................................... payments.index › Tenant\PaymentController@index
+  POST            payments ........................................... payments.store › Tenant\PaymentController@store
+  GET|HEAD        payments/create .................................. payments.create › Tenant\PaymentController@create
+  GET|HEAD        payments/{payment} ................................... payments.show › Tenant\PaymentController@show
+  PUT|PATCH       payments/{payment} ............................... payments.update › Tenant\PaymentController@update
+  DELETE          payments/{payment} ............................. payments.destroy › Tenant\PaymentController@destroy
+  GET|HEAD        payments/{payment}/edit .............................. payments.edit › Tenant\PaymentController@edit
+  GET|HEAD        pricing-page ................................ frontend.pricing › Frontend\FrontendController@pricing
+  GET|HEAD        properties ...................................... properties.index › Tenant\PropertyController@index
+  POST            properties ...................................... properties.store › Tenant\PropertyController@store
+  GET|HEAD        properties/create ............................. properties.create › Tenant\PropertyController@create
+  GET|HEAD        properties/{property} ............................. properties.show › Tenant\PropertyController@show
+  PUT|PATCH       properties/{property} ......................... properties.update › Tenant\PropertyController@update
+  DELETE          properties/{property} ....................... properties.destroy › Tenant\PropertyController@destroy
+  GET|HEAD        properties/{property}/edit ........................ properties.edit › Tenant\PropertyController@edit
+  GET|HEAD        register ................................... register › Auth\RegisterController@showRegistrationForm
+  POST            register .......................................................... Auth\RegisterController@register
+  GET|HEAD        register-company ...... central.register › Central\TenantRegistrationController@showRegistrationForm
+  POST            register-company ........... central.register.submit › Central\TenantRegistrationController@register
+  GET|HEAD        reservations ............................... reservations.index › Tenant\ReservationController@index
+  POST            reservations ............................... reservations.store › Tenant\ReservationController@store
+  GET|HEAD        reservations/create ...................... reservations.create › Tenant\ReservationController@create
+  GET|HEAD        reservations/{reservation} ................... reservations.show › Tenant\ReservationController@show
+  PUT|PATCH       reservations/{reservation} ............... reservations.update › Tenant\ReservationController@update
+  DELETE          reservations/{reservation} ............. reservations.destroy › Tenant\ReservationController@destroy
+  GET|HEAD        reservations/{reservation}/edit .............. reservations.edit › Tenant\ReservationController@edit
+  GET|HEAD        sanctum/csrf-cookie .............. sanctum.csrf-cookie › Laravel\Sanctum › CsrfCookieController@show
+  GET|HEAD        tenancy/assets/{path?} ........ stancl.tenancy.asset › Stancl\Tenancy › TenantAssetsController@asset
+  GET|HEAD        units .................................................... units.index › Tenant\UnitController@index
+  POST            units .................................................... units.store › Tenant\UnitController@store
+  GET|HEAD        units/create ........................................... units.create › Tenant\UnitController@create
+  GET|HEAD        units/{unit} ............................................... units.show › Tenant\UnitController@show
+  PUT|PATCH       units/{unit} ........................................... units.update › Tenant\UnitController@update
+  DELETE          units/{unit} ......................................... units.destroy › Tenant\UnitController@destroy
+  GET|HEAD        units/{unit}/edit .......................................... units.edit › Tenant\UnitController@edit
+
+                                                                                                  Showing [110] routes
+

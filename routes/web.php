@@ -12,9 +12,18 @@ use App\Http\Middleware\PreventAccessFromTenantDomains;
 use App\Http\Controllers\Central\TenantRegistrationController;
 
 // Frontend
-// Route::get('/', [FrontendController::class, 'index'])->name('frontend.index');
-Route::get('/', [FrontendController::class, 'index'])->name('frontend.index');
-Route::get('/index', [FrontendController::class, 'index'])->name('frontend.index');
+foreach (config('tenancy.central_domains', []) as $domain) {
+    Route::domain($domain)->group(function () {
+        Route::get('/', [FrontendController::class, 'index'])->name('frontend.index');
+        Route::get('/index', [FrontendController::class, 'index']);
+    });
+}
+
+// Fallback for cases where domain matching might not be perfect (optional but safer)
+Route::get('/', [FrontendController::class, 'index'])->name('frontend.index.global');
+Route::get('/index', [FrontendController::class, 'index']);
+
+
 Route::get('/pricing-page', [FrontendController::class, 'pricing'])->name('frontend.pricing');
 Route::get('/payment-page', [FrontendController::class, 'payment'])->name('frontend.payment');
 Route::get('/checkout-page', [FrontendController::class, 'checkout'])->name('frontend.checkout');
