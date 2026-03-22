@@ -48,4 +48,20 @@ return [
     'admin_name' => 'اسم المسؤول',
     'phone' => 'الهاتف',
     'register_hotel' => 'تسجيل الفندق',
+
+    // Roles & Permissions
+    'roles_management' => 'إدارة الأدوار',
+    'create_new_role' => 'إنشاء دور جديد',
+    'edit_role' => 'تعديل الدور',
+    'role_name' => 'اسم الدور',
+    'assign_permissions' => 'تعيين الصلاحيات',
+    'create_role' => 'إنشاء دور',
+    'update_role' => 'تحديث الدور',
+    'permissions_management' => 'إدارة الصلاحيات',
+    'create_new_permission' => 'إنشاء صلاحية جديدة',
+    'edit_permission' => 'تعديل الصلاحية',
+    'permission_name' => 'اسم الصلاحية',
+    'create_permission' => 'إنشاء صلاحية',
+    'update_permission' => 'تحديث الصلاحية',
 ];
+

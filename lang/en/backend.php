@@ -48,4 +48,20 @@ return [
     'admin_name' => 'Admin Name',
     'phone' => 'Phone',
     'register_hotel' => 'Register Hotel',
+
+    // Roles & Permissions
+    'roles_management' => 'Roles Management',
+    'create_new_role' => 'Create New Role',
+    'edit_role' => 'Edit Role',
+    'role_name' => 'Role Name',
+    'assign_permissions' => 'Assign Permissions',
+    'create_role' => 'Create Role',
+    'update_role' => 'Update Role',
+    'permissions_management' => 'Permissions Management',
+    'create_new_permission' => 'Create New Permission',
+    'edit_permission' => 'Edit Permission',
+    'permission_name' => 'Permission Name',
+    'create_permission' => 'Create Permission',
+    'update_permission' => 'Update Permission',
 ];
+

@@ -5,13 +5,13 @@
     <div class="col-xl">
         <div class="card mb-4">
             <div class="card-header d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">Create New Permission</h5>
-                <a href="{{ route('backend.permissions.index') }}" class="btn btn-secondary btn-sm">Back</a>
+                <h5 class="mb-0">{{ __('backend.create_new_permission') }}</h5>
+                <a href="{{ route('backend.permissions.index') }}" class="btn btn-secondary btn-sm">{{ __('backend.back') }}</a>
             </div>
             <div class="card-body">
                 @if (count($errors) > 0)
                     <div class="alert alert-danger">
-                        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                        {{ __('backend.whoops_errors') }}<br><br>
                         <ul>
                             @foreach ($errors->all() as $error)
                                 <li>{{ $error }}</li>
@@ -23,11 +23,12 @@
                 <form method="POST" action="{{ route('backend.permissions.store') }}">
                     @csrf
                     <div class="mb-3">
-                        <label class="form-label" for="permission-name">Permission Name</label>
-                        <input type="text" class="form-control" id="permission-name" name="name" placeholder="Enter Permission Name" required />
+                        <label class="form-label" for="permission-name">{{ __('backend.permission_name') }}</label>
+                        <input type="text" class="form-control" id="permission-name" name="name" placeholder="{{ __('backend.permission_name') }}" required />
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Create Permission</button>
+                    <button type="submit" class="btn btn-primary">{{ __('backend.create_permission') }}</button>
+
                 </form>
             </div>
         </div>
