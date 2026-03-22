@@ -13,21 +13,20 @@
           <div class="container">
             <div class="hero-text-box text-center position-relative">
               <h1 class="text-primary hero-title display-6 fw-extrabold">
-                One dashboard to manage all your businesses
+                {{ __('frontend.hero_title') }}
               </h1>
               <h2 class="hero-sub-title h6 mb-6">
-                Production-ready & easy to use Admin Template<br class="d-none d-lg-block" />
-                for Reliability and Customizability.
+                {{ __('frontend.hero_subtitle') }}
               </h2>
               <div class="landing-hero-btn d-inline-block position-relative">
                 <span class="hero-btn-item position-absolute d-none d-md-flex fw-medium"
-                  >Join community
+                  >{{ __('frontend.join_community') }}
                   <img
                     src="{{ asset('frontend/img/front-pages/icons/Join-community-arrow.png') }}"
                     alt="Join community arrow"
                     class="scaleX-n1-rtl"
                 /></span>
-                <a href="#landingPricing" class="btn btn-primary btn-lg">Get early access</a>
+                <a href="#landingPricing" class="btn btn-primary btn-lg">{{ __('frontend.hero_cta') }}</a>
               </div>
             </div>
             <div id="heroDashboardAnimation" class="hero-animation-img">
@@ -58,17 +57,17 @@
       <section id="landingFeatures" class="section-py landing-features">
         <div class="container">
           <div class="text-center mb-4">
-            <span class="badge bg-label-primary">Useful Features</span>
+            <span class="badge bg-label-primary">{{ __('frontend.useful_features') }}</span>
           </div>
           <h4 class="text-center mb-1">
             <span class="position-relative fw-extrabold z-1"
-              >Everything you need
+              >{{ __('frontend.features_title') }}
               <img
                 src="{{ asset('frontend/img/front-pages/icons/section-title-icon.png') }}"
                 alt="laptop charging"
                 class="section-title-img position-absolute object-fit-contain bottom-0 z-n1" />
             </span>
-            to start your next project
+            {{ __('frontend.features_subtitle') }}
           </h4>
           <p class="text-center mb-12">
             Not just a set of tools, the package includes ready-to-deploy conceptual application.

@@ -66,23 +66,23 @@
                 Most developer friendly & highly customisable Admin Dashboard Template.
               </p>
               <form class="footer-form">
-                <label for="footer-email" class="small">Subscribe to newsletter</label>
+                <label for="footer-email" class="small">{{ __('frontend.subscribe_newsletter') }}</label>
                 <div class="d-flex mt-1">
                   <input
                     type="email"
                     class="form-control rounded-0 rounded-start-bottom rounded-start-top"
                     id="footer-email"
-                    placeholder="Your email" />
+                    placeholder="{{ __('frontend.your_email') }}" />
                   <button
                     type="submit"
                     class="btn btn-primary shadow-none rounded-0 rounded-end-bottom rounded-end-top">
-                    Subscribe
+                    {{ __('frontend.subscribe') }}
                   </button>
                 </div>
               </form>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6">
-              <h6 class="footer-title mb-6">Demos</h6>
+              <h6 class="footer-title mb-6">{{ __('frontend.demos') }}</h6>
               <ul class="list-unstyled">
                 <li class="mb-4">
                   <a href="{{ url('') }}" target="_blank" class="footer-link">Vertical Layout</a>
@@ -104,7 +104,7 @@
               </ul>
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6">
-              <h6 class="footer-title mb-6">Pages</h6>
+              <h6 class="footer-title mb-6">{{ __('frontend.pages') }}</h6>
               <ul class="list-unstyled">
                 <li class="mb-4">
                   <a href="{{ url('pricing-page') }}" class="footer-link">Pricing</a>
@@ -122,13 +122,13 @@
                 </li>
                 <li>
                   <a href="{{ route('login') }}" target="_blank" class="footer-link"
-                    >Login/Register</a
+                    >{{ __('frontend.login_register') }}</a
                   >
                 </li>
               </ul>
             </div>
             <div class="col-lg-3 col-md-4">
-              <h6 class="footer-title mb-6">Download our app</h6>
+              <h6 class="footer-title mb-6">{{ __('frontend.download_app') }}</h6>
               <a href="javascript:void(0);" class="d-block mb-4"
                 ><img src="{{ asset('frontend/img/front-pages/landing-page/apple-icon.png') }}" alt="apple icon"
               /></a>

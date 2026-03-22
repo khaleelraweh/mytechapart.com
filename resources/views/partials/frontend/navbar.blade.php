@@ -86,19 +86,19 @@
             </button>
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link fw-medium" aria-current="page" href="{{ url('/') }}#landingHero">Home</a>
+                <a class="nav-link fw-medium" aria-current="page" href="{{ url('/') }}#landingHero">{{ __('frontend.home') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="{{ url('/') }}#landingFeatures">Features</a>
+                <a class="nav-link fw-medium" href="{{ url('/') }}#landingFeatures">{{ __('frontend.features') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="{{ url('/') }}#landingTeam">Team</a>
+                <a class="nav-link fw-medium" href="{{ url('/') }}#landingTeam">{{ __('frontend.team') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="{{ url('/') }}#landingFAQ">FAQ</a>
+                <a class="nav-link fw-medium" href="{{ url('/') }}#landingFAQ">{{ __('frontend.faq') }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="{{ url('/') }}#landingContact">Contact us</a>
+                <a class="nav-link fw-medium" href="{{ url('/') }}#landingContact">{{ __('frontend.contact') }}</a>
               </li>
               <li class="nav-item mega-dropdown">
                 <a
@@ -107,7 +107,7 @@
                   aria-expanded="false"
                   data-bs-toggle="mega-dropdown"
                   data-trigger="hover">
-                  <span data-i18n="Pages">Pages</span>
+                  <span>{{ __('frontend.pages') }}</span>
                 </a>
                 <div class="dropdown-menu p-4 p-xl-8">
                   <div class="row gy-4">
@@ -336,7 +336,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="{{ route('backend.index') }}" target="_blank">Admin</a>
+                <a class="nav-link fw-medium" href="{{ route('backend.index') }}" target="_blank">{{ __('frontend.admin') }}</a>
               </li>
             </ul>
           </div>
@@ -344,6 +344,9 @@
           <!-- Menu wrapper: End -->
           <!-- Toolbar: Start -->
           <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <!-- Language Switcher -->
+            @include('partials.shared.language-switcher')
+
             <!-- Style Switcher -->
             <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
               <a
@@ -390,7 +393,7 @@
             <li>
               <a href="{{ route('login') }}" class="btn btn-primary" target="_blank"
                 ><span class="tf-icons icon-base bx bx-log-in-circle scaleX-n1-rtl me-md-1"></span
-                ><span class="d-none d-md-block">Login/Register</span></a
+                ><span class="d-none d-md-block">{{ __('frontend.login_register') }}</span></a
               >
             </li>
             <!-- navbar button: End -->

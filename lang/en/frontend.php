@@ -10,6 +10,10 @@ return [
     'get_started'     => 'Get Started',
     'login'           => 'Login',
     'register'        => 'Register',
+    'faq'             => 'FAQ',
+    'pages'           => 'Pages',
+    'admin'           => 'Admin',
+    'login_register'  => 'Login/Register',
 
     // Hero
     'hero_title'      => 'One dashboard to manage all your hotels',
@@ -55,4 +59,9 @@ return [
     'footer_rights'   => 'All rights reserved.',
     'privacy_policy'  => 'Privacy Policy',
     'terms'           => 'Terms of Service',
+    'demos'           => 'Demos',
+    'download_app'    => 'Download our app',
+    'subscribe_newsletter' => 'Subscribe to newsletter',
+    'your_email'      => 'Your email',
+    'subscribe'       => 'Subscribe',
 ];

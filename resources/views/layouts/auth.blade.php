@@ -56,6 +56,14 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
 
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <script>
+      const currentLaravelLocale = '{{ app()->getLocale() }}';
+      const tplName = document.documentElement.getAttribute('data-template');
+      if (tplName) {
+        localStorage.setItem('templateCustomizer-' + tplName + '--Lang', currentLaravelLocale);
+        localStorage.setItem('templateCustomizer-' + tplName + '--Rtl', currentLaravelLocale === 'ar' ? 'true' : 'false');
+      }
+    </script>
     <script src="{{ asset('frontend/vendor/js/template-customizer.js') }}"></script>
 
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
