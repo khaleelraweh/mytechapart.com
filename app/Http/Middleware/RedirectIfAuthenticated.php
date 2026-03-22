@@ -21,7 +21,10 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                if (function_exists('tenant') && tenant()) {
+                    return redirect(url('/'));
+                }
+                return redirect()->route('backend.index');
             }
         }
 

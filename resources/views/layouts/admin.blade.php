@@ -1,9 +1,9 @@
 <!doctype html>
 
 <html
-  lang="en"
+  lang="{{ app()->getLocale() }}"
   class="layout-navbar-fixed layout-menu-fixed layout-compact"
-  dir="ltr"
+  dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}"
   data-skin="default"
   data-assets-path="{{ asset('backend') }}/"
   data-template="vertical-menu-template-starter"

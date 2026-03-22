@@ -8,55 +8,42 @@
             </div>
 
             <div class="navbar-nav-right d-flex align-items-center justify-content-end" id="navbar-collapse">
-              <div class="navbar-nav align-items-center">
-                <div class="nav-item dropdown me-2 me-xl-0">
-                  <a
-                    class="nav-link dropdown-toggle hide-arrow"
-                    id="nav-theme"
-                    href="javascript:void(0);"
-                    data-bs-toggle="dropdown">
+
+              <ul class="navbar-nav align-items-center flex-row">
+                {{-- Language Switcher --}}
+                @include('partials.shared.language-switcher')
+
+                {{-- Theme Toggle --}}
+                <li class="nav-item dropdown me-2 me-xl-0">
+                  <a class="nav-link dropdown-toggle hide-arrow" id="nav-theme" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <i class="icon-base bx bx-sun icon-md theme-icon-active"></i>
                     <span class="d-none ms-2" id="nav-theme-text">Toggle theme</span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="nav-theme-text">
                     <li>
-                      <button
-                        type="button"
-                        class="dropdown-item align-items-center active"
-                        data-bs-theme-value="light"
-                        aria-pressed="false">
+                      <button type="button" class="dropdown-item align-items-center active" data-bs-theme-value="light" aria-pressed="false">
                         <span><i class="icon-base bx bx-sun icon-md me-3" data-icon="sun"></i>Light</span>
                       </button>
                     </li>
                     <li>
-                      <button
-                        type="button"
-                        class="dropdown-item align-items-center"
-                        data-bs-theme-value="dark"
-                        aria-pressed="true">
+                      <button type="button" class="dropdown-item align-items-center" data-bs-theme-value="dark" aria-pressed="true">
                         <span><i class="icon-base bx bx-moon icon-md me-3" data-icon="moon"></i>Dark</span>
                       </button>
                     </li>
                     <li>
-                      <button
-                        type="button"
-                        class="dropdown-item align-items-center"
-                        data-bs-theme-value="system"
-                        aria-pressed="false">
+                      <button type="button" class="dropdown-item align-items-center" data-bs-theme-value="system" aria-pressed="false">
                         <span><i class="icon-base bx bx-desktop icon-md me-3" data-icon="desktop"></i>System</span>
                       </button>
                     </li>
                   </ul>
-                </div>
-              </div>
+                </li>
+                {{-- / Theme Toggle --}}
+              </ul>
 
               <ul class="navbar-nav flex-row align-items-center ms-md-auto">
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                  <a
-                    class="nav-link dropdown-toggle hide-arrow p-0"
-                    href="javascript:void(0);"
-                    data-bs-toggle="dropdown">
+                  <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
                       <img src="{{ asset('backend/img/avatars/1.png') }}" alt class="rounded-circle" />
                     </div>
@@ -71,41 +58,28 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <h6 class="mb-0">John Doe</h6>
-                            <small class="text-body-secondary">Admin</small>
+                            <h6 class="mb-0">{{ auth()->user()->name ?? 'Admin' }}</h6>
+                            <small class="text-body-secondary">{{ __('app.dashboard') }}</small>
                           </div>
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <div class="dropdown-divider my-1"></div>
-                    </li>
+                    <li><div class="dropdown-divider my-1"></div></li>
                     <li>
                       <a class="dropdown-item" href="#">
-                        <i class="icon-base bx bx-user icon-md me-3"></i><span>My Profile</span>
+                        <i class="icon-base bx bx-user icon-md me-3"></i><span>{{ __('app.my_profile') }}</span>
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="#">
-                        <i class="icon-base bx bx-cog icon-md me-3"></i><span>Settings</span>
+                        <i class="icon-base bx bx-cog icon-md me-3"></i><span>{{ __('app.settings') }}</span>
                       </a>
                     </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 icon-base bx bx-credit-card icon-md me-3"></i
-                          ><span class="flex-grow-1 align-middle">Billing Plan</span>
-                          <span class="flex-shrink-0 badge rounded-pill bg-danger">4</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider my-1"></div>
-                    </li>
+                    <li><div class="dropdown-divider my-1"></div></li>
                     <li>
                       <a class="dropdown-item" href="{{ route('logout') }}"
                          onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        <i class="icon-base bx bx-power-off icon-md me-3"></i><span>Log Out</span>
+                        <i class="icon-base bx bx-power-off icon-md me-3"></i><span>{{ __('app.logout') }}</span>
                       </a>
                       <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                           @csrf
@@ -115,5 +89,6 @@
                 </li>
                 <!--/ User -->
               </ul>
+
             </div>
           </nav>

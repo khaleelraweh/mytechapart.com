@@ -18,8 +18,17 @@
         <!-- Login -->
         <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg p-sm-12 p-6">
           <div class="w-px-400 mx-auto mt-sm-12 mt-8">
-            <h4 class="mb-1">Welcome to Sneat! 👋</h4>
-            <p class="mb-6">Please sign-in to your account and start the adventure</p>
+            @if(function_exists('tenant') && tenant())
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bx bx-buildings fs-4 text-primary"></i>
+                <span class="badge bg-label-primary fs-6 px-3 py-2">{{ tenant('name') }}</span>
+              </div>
+              <h4 class="mb-1">Hotel Admin Login 🏨</h4>
+              <p class="mb-6">Sign in to manage <strong>{{ tenant('name') }}</strong></p>
+            @else
+              <h4 class="mb-1">Admin Panel Login 👋</h4>
+              <p class="mb-6">Sign in to the system administration panel</p>
+            @endif
 
             <form id="formAuthentication" class="mb-6" action="{{ route('login') }}" method="POST">
               @csrf
