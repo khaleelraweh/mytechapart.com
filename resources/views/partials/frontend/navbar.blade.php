@@ -340,8 +340,13 @@
                 <a class="nav-link fw-medium" href="{{ route('backend.index') }}" target="_blank">{{ __('frontend.admin') }}</a>
               </li>
               @endauth
-
+              @guest
+              <li class="nav-item d-lg-none">
+                <a class="nav-link fw-medium" href="{{ route('login') }}" target="_blank">{{ __('frontend.login_register') }}</a>
+              </li>
+              @endguest
             </ul>
+
           </div>
           <div class="landing-menu-overlay d-lg-none"></div>
           <!-- Menu wrapper: End -->
@@ -394,7 +399,7 @@
 
             @guest
             <!-- navbar button: Start -->
-            <li>
+            <li class="d-none d-lg-block">
               <a href="{{ route('login') }}" class="btn btn-primary" target="_blank"
                 ><span class="tf-icons icon-base bx bx-log-in-circle scaleX-n1-rtl me-md-1"></span
                 ><span class="d-none d-md-block">{{ __('frontend.login_register') }}</span></a
@@ -402,6 +407,7 @@
             </li>
             <!-- navbar button: End -->
             @endguest
+
 
           </ul>
           <!-- Toolbar: End -->

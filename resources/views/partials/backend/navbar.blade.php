@@ -77,13 +77,14 @@
                     </li>
                     <li><div class="dropdown-divider my-1"></div></li>
                     <li>
-                      <a class="dropdown-item" href="{{ route('logout') }}"
+                      <a class="dropdown-item" href="{{ route('backend.logout') }}"
                          onclick="event.preventDefault(); document.getElementById('admin-logout-form').submit();">
                         <i class="icon-base bx bx-power-off icon-md me-3"></i><span>{{ __('app.logout') }}</span>
                       </a>
-                      <form id="admin-logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                      <form id="admin-logout-form" action="{{ route('backend.logout') }}" method="POST" class="d-none">
                           @csrf
                       </form>
+
 
                     </li>
                   </ul>

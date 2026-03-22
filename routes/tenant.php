@@ -24,6 +24,10 @@ Route::middleware([
     // Auth routes (login/logout) — must be accessible without authentication
     Auth::routes(['register' => false, 'reset' => false, 'verify' => false]);
 
+
+
+
+
     // All other routes require the user to be logged in
     Route::middleware('auth')->group(function() {
         Route::get('/', [TenantDashboardController::class, 'index'])->name('tenant.dashboard');

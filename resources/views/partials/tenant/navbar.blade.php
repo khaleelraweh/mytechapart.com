@@ -82,9 +82,17 @@
                         <i class="icon-base bx bx-power-off icon-md me-3"></i><span>{{ __('app.logout') }}</span>
                       </a>
 
+
+
+
+
                       <form id="tenant-logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                           @csrf
                       </form>
+
+
+
+
                     </li>
                   </ul>
                 </li>

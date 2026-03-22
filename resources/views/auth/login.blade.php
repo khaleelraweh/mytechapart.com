@@ -30,7 +30,8 @@
               <p class="mb-6">{{ __('auth_custom.sign_in_system_admin') }}</p>
             @endif
 
-            <form id="formAuthentication" class="mb-6" action="{{ route('login') }}" method="POST">
+            <form id="formAuthentication" class="mb-6" action="{{ Route::has('backend.login.post') && request()->is('admin/*') ? route('backend.login.post') : route('login') }}" method="POST">
+
               @csrf
               <div class="mb-6 form-control-validation">
                 <label for="email" class="form-label">{{ __('auth_custom.email') }}</label>
