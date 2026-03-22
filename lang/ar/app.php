@@ -76,4 +76,10 @@ return [
     'total_units'     => 'إجمالي الوحدات / الغرف',
     'total_reservations' => 'إجمالي الحجوزات',
     'occupancy_rate'  => 'نسبة الإشغال',
+    'light'           => 'فاتح',
+    'dark'            => 'داكن',
+    'system'          => 'النظام',
+    'hotel_admin'     => 'مدير الفندق',
+    'hotel_management_system' => 'نظام إدارة الفنادق',
 ];
+

@@ -20,20 +20,21 @@
                         @csrf
                         <div class="mb-3">
                             <label class="form-label">{{ __('tenant.full_name') }}</label>
-                            <input type="text" name="name" class="form-control" required placeholder="John Doe">
+                            <input type="text" name="name" class="form-control" required placeholder="{{ __('tenant.eg_john_doe') }}">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">{{ __('tenant.phone_number') }}</label>
-                            <input type="text" name="phone" class="form-control" required placeholder="+1 234 567 890">
+                            <input type="text" name="phone" class="form-control" required placeholder="{{ __('tenant.eg_phone_sample') }}">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">{{ __('tenant.email_address_optional') }}</label>
-                            <input type="email" name="email" class="form-control" placeholder="john@example.com">
+                            <input type="email" name="email" class="form-control" placeholder="{{ __('tenant.eg_email_sample') }}">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">{{ __('tenant.identity_passport_optional') }}</label>
-                            <input type="text" name="identity_no" class="form-control" placeholder="ABC1234567">
+                            <input type="text" name="identity_no" class="form-control" placeholder="{{ __('tenant.eg_id_sample') }}">
                         </div>
+
                         <button type="submit" class="btn btn-primary w-100"><i class="bx bx-user-plus"></i> {{ __('tenant.save_customer') }}</button>
                     </form>
                 </div>

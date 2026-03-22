@@ -41,8 +41,9 @@
                     <tr>
                         <td><strong>{{ $property->name }}</strong></td>
                         <td>{{ $property->city }}</td>
-                        <td>{{ ucfirst($property->type) }}</td>
+                        <td>{{ __('tenant.'.$property->type) }}</td>
                         <td>{{ $property->floors_count ?? $property->total_floors }}</td>
+
                         <td>
                             <a href="{{ route('floors.index', ['property_id' => $property->id]) }}" class="btn btn-sm btn-info"><i class="bx bx-layer"></i> {{ __('tenant.manage_floors_units') }}</a>
                             <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editPropertyModal{{ $property->id }}">
@@ -70,12 +71,13 @@
                                         <div class="row">
                                             <div class="col-md-6 mb-3">
                                                 <label class="form-label">{{ __('tenant.property_name') }}</label>
-                                                <input type="text" name="name" class="form-control" required value="{{ $property->name }}">
+                                                <input type="text" name="name" class="form-control" required value="{{ $property->name }}" placeholder="{{ __('tenant.eg_property_name') }}">
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <label class="form-label">{{ __('tenant.city') }}</label>
-                                                <input type="text" name="city" class="form-control" required value="{{ $property->city }}">
+                                                <input type="text" name="city" class="form-control" required value="{{ $property->city }}" placeholder="{{ __('tenant.eg_city') }}">
                                             </div>
+
                                             <div class="col-md-6 mb-3">
                                                 <label class="form-label">{{ __('tenant.property_type') }}</label>
                                                 <select name="type" class="form-select" required>
@@ -126,12 +128,13 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label">{{ __('tenant.property_hotel_name') }}</label>
-                            <input type="text" name="name" class="form-control" required value="{{ old('name') }}">
+                            <input type="text" name="name" class="form-control" required value="{{ old('name') }}" placeholder="{{ __('tenant.eg_property_name') }}">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label">{{ __('tenant.city') }}</label>
-                            <input type="text" name="city" class="form-control" required value="{{ old('city') }}">
+                            <input type="text" name="city" class="form-control" required value="{{ old('city') }}" placeholder="{{ __('tenant.eg_city') }}">
                         </div>
+
                         <div class="col-md-6 mb-3">
                             <label class="form-label">{{ __('tenant.property_type') }}</label>
                             <select name="type" class="form-select" required>

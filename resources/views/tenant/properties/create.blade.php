@@ -23,12 +23,13 @@
                     <div class="col-md-6 mb-3">
                     <div class="col-md-6 mb-3">
                         <label class="form-label">{{ __('tenant.property_hotel_name') }}</label>
-                        <input type="text" name="name" class="form-control" required value="{{ old('name') }}">
+                        <input type="text" name="name" class="form-control" required value="{{ old('name') }}" placeholder="{{ __('tenant.eg_property_name') }}">
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="form-label">{{ __('tenant.city') }}</label>
-                        <input type="text" name="city" class="form-control" required value="{{ old('city') }}">
+                        <input type="text" name="city" class="form-control" required value="{{ old('city') }}" placeholder="{{ __('tenant.eg_city') }}">
                     </div>
+
                     <div class="col-md-6 mb-3">
                         <label class="form-label">{{ __('tenant.property_type') }}</label>
                         <select name="type" class="form-select" required>

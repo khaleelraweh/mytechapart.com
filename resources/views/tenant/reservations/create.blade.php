@@ -42,8 +42,9 @@
                             <option value="">{{ __('tenant.choose_room') }}</option>
                             @foreach($units as $unit)
                                 <option value="{{ $unit->id }}" {{ old('unit_id') == $unit->id ? 'selected' : '' }}>
-                                    {{ $unit->property->name }} - {{ $unit->type }} ({{ __('tenant.room_prefix') ?? 'Room' }} {{ $unit->unit_number }}) - ${{ $unit->price }}/{{ __('tenant.night') }}
+                                    {{ $unit->property->name }} - {{ __('tenant.'.$unit->type) }} ({{ __('tenant.room_prefix') }} {{ $unit->unit_number }}) - ${{ $unit->price }}/{{ __('tenant.night') }}
                                 </option>
+
                             @endforeach
                         </select>
                     </div>

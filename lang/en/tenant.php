@@ -142,6 +142,14 @@ return [
     'occupancy_rate' => 'Occupancy Rate',
     'edit_property' => 'Edit Property',
     'update_property_details' => 'Update Property Details',
+    'eg_john_doe' => 'John Doe',
+    'eg_phone_sample' => '+1 234 567 890',
+    'eg_email_sample' => 'john@example.com',
+    'eg_id_sample' => 'ABC1234567',
+    'eg_property_name' => 'Grand Hotel',
+    'eg_city' => 'New York',
 ];
+
+
 
 

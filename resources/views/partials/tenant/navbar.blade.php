@@ -27,20 +27,21 @@
                   <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="nav-theme-text">
                     <li>
                       <button type="button" class="dropdown-item align-items-center active" data-bs-theme-value="light">
-                        <span><i class="icon-base bx bx-sun icon-md me-3" data-icon="sun"></i>Light</span>
+                        <span><i class="icon-base bx bx-sun icon-md me-3" data-icon="sun"></i>{{ __('app.light') }}</span>
                       </button>
                     </li>
                     <li>
                       <button type="button" class="dropdown-item align-items-center" data-bs-theme-value="dark">
-                        <span><i class="icon-base bx bx-moon icon-md me-3" data-icon="moon"></i>Dark</span>
+                        <span><i class="icon-base bx bx-moon icon-md me-3" data-icon="moon"></i>{{ __('app.dark') }}</span>
                       </button>
                     </li>
                     <li>
                       <button type="button" class="dropdown-item align-items-center" data-bs-theme-value="system">
-                        <span><i class="icon-base bx bx-desktop icon-md me-3" data-icon="desktop"></i>System</span>
+                        <span><i class="icon-base bx bx-desktop icon-md me-3" data-icon="desktop"></i>{{ __('app.system') }}</span>
                       </button>
                     </li>
                   </ul>
+
                 </li>
 
                 {{-- User Dropdown --}}
@@ -60,24 +61,27 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <h6 class="mb-0">{{ auth()->user()->name ?? 'Hotel Admin' }}</h6>
+                            <h6 class="mb-0">{{ auth()->user()->name ?? __('app.hotel_admin') }}</h6>
                             <small class="text-body-secondary">{{ tenant('name') }}</small>
                           </div>
+
                         </div>
                       </a>
                     </li>
                     <li><div class="dropdown-divider my-1"></div></li>
                     <li>
                       <a class="dropdown-item" href="#">
-                        <i class="icon-base bx bx-user icon-md me-3"></i><span>My Profile</span>
+                        <i class="icon-base bx bx-user icon-md me-3"></i><span>{{ __('app.my_profile') }}</span>
                       </a>
+
                     </li>
                     <li><div class="dropdown-divider my-1"></div></li>
                     <li>
                       <a class="dropdown-item" href="{{ route('logout') }}"
                          onclick="event.preventDefault(); document.getElementById('tenant-logout-form').submit();">
-                        <i class="icon-base bx bx-power-off icon-md me-3"></i><span>Log Out</span>
+                        <i class="icon-base bx bx-power-off icon-md me-3"></i><span>{{ __('app.logout') }}</span>
                       </a>
+
                       <form id="tenant-logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                           @csrf
                       </form>

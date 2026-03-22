@@ -6,8 +6,9 @@
                     <strong>{{ tenant('name') }}</strong> &mdash; Powered by <span class="text-primary fw-semibold">MyTechApart</span>
                   </div>
                   <div class="d-none d-lg-inline-block text-muted small">
-                    Hotel Management System
+                    {{ __('app.hotel_management_system') }}
                   </div>
+
                 </div>
               </div>
             </footer>

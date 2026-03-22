@@ -142,6 +142,14 @@ return [
     'occupancy_rate' => 'نسبة الإشغال',
     'edit_property' => 'تعديل العقار',
     'update_property_details' => 'تحديث بيانات العقار',
+    'eg_john_doe' => 'محمد علي',
+    'eg_phone_sample' => '+966 50 123 4567',
+    'eg_email_sample' => 'example@domain.com',
+    'eg_id_sample' => '10XXXXXXX',
+    'eg_property_name' => 'فندق رويال',
+    'eg_city' => 'الرياض',
 ];
+
+
 
 

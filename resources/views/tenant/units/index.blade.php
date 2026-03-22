@@ -93,8 +93,9 @@
                             @forelse($units as $unit)
                             <tr>
                                 <td><strong><i class="bx bx-key"></i> {{ $unit->unit_number }}</strong></td>
-                                <td>{{ $unit->type }}</td>
+                                <td>{{ __('tenant.'.$unit->type) }}</td>
                                 <td>${{ number_format($unit->price, 2) }}</td>
+
                                 <td>{{ $unit->capacity }} {{ __('tenant.pax') }} / {{ $unit->beds }} {{ __('tenant.beds') }}</td>
                                 <td>
                                     <span class="badge bg-label-{{ $unit->status == 'available' ? 'success' : ($unit->status == 'booked' ? 'danger' : 'warning') }}">

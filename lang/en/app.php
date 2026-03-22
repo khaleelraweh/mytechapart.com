@@ -76,4 +76,10 @@ return [
     'total_units'     => 'Total Units / Rooms',
     'total_reservations' => 'Total Reservations',
     'occupancy_rate'  => 'Occupancy Rate',
+    'light'           => 'Light',
+    'dark'            => 'Dark',
+    'system'          => 'System',
+    'hotel_admin'     => 'Hotel Admin',
+    'hotel_management_system' => 'Hotel Management System',
 ];
+
