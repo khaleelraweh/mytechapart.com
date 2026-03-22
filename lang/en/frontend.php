@@ -73,9 +73,30 @@ return [
     'reviews_title'   => 'What people say',
     'reviews_badge'   => 'Real Customers Reviews',
     'reviews_subtitle'=> 'See what our customers have to say about their experience.',
+    'client1_name'    => 'Cecilia Payne',
+    'client1_role'    => 'CEO of Airbnb',
+    'client1_review'  => '“Vuexy is hands down the most useful front end Bootstrap theme I\'ve ever used. I can\'t wait to use it again for my next project.”',
+    'client2_name'    => 'Eugenia Moore',
+    'client2_role'    => 'Founder of Hubspot',
+    'client2_review'  => '“I\'ve never used a theme as versatile and flexible as Vuexy. It\'s my go to for building dashboard sites on almost any project.”',
+    'client3_name'    => 'Curtis Fletcher',
+    'client3_role'    => 'Design Lead at Dribbble',
+    'client3_review'  => 'This template is really clean & well documented. The docs are really easy to understand and it\'s always easy to find a screenshot from their website.',
+    'client4_name'    => 'Sara Smith',
+    'client4_role'    => 'Founder of Continental',
+    'client4_review'  => 'All the requirements for developers have been taken into consideration, so I’m able to build any interface I want.',
+    'client5_name'    => 'Eugenia Moore',
+    'client5_role'    => 'Founder of Hubspot',
+    'client5_review'  => '“I\'ve never used a theme as versatile and flexible as Vuexy. It\'s my go to for building dashboard sites on almost any project.”',
+    'client6_name'    => 'Sara Smith',
+    'client6_role'    => 'Founder of Continental',
+    'client6_review'  => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nemo mollitia, ad eum officia numquam nostrum repellendus consequuntur!',
+
 
     // Team
+    'supported'       => 'Supported',
     'team_title'      => 'Supported by Real People',
+
     'team_badge'      => 'Our Great Team',
     'team_subtitle'   => 'Who is behind these great-looking interfaces?',
 
@@ -144,6 +165,11 @@ return [
     'ui_designer' => 'UI Designer',
     'development_lead' => 'Development Lead',
     'marketing_manager' => 'Marketing Manager',
+    'team_member1_name' => 'Sophie Gilbert',
+    'team_member2_name' => 'Paul Miles',
+    'team_member3_name' => 'Nannie Ford',
+    'team_member4_name' => 'Chris Watkins',
+
     
     // Features Extension
     'starter_kit' => 'Starter-Kit',
@@ -160,4 +186,7 @@ return [
     'dark_layout'     => 'Dark Layout',
     'new'             => 'New',
     'made_with'       => 'Made with ❤️ for a better web.',
+    'fullname_placeholder' => 'john',
+    'email_placeholder' => 'johndoe@gmail.com',
+
 ];

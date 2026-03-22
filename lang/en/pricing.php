@@ -15,6 +15,9 @@ return [
     'basic_f3' => 'Unlimited fields',
     'basic_f4' => 'Basic form creation tools',
     'basic_f5' => 'Up to 2 subdomains',
+    'basic_f6' => 'Basic custom domain',
+    'basic_f7' => 'Unlimited fields',
+
     'your_current_plan' => 'Your Current Plan',
     
     'popular' => 'Popular',
@@ -26,6 +29,9 @@ return [
     'std_f3' => 'Instagram profile page',
     'std_f4' => 'Google Docs integration',
     'std_f5' => 'Custom "Thank you" page',
+    'std_f6' => 'Instagram profile page',
+    'std_f7' => 'Google Docs integration',
+
     'upgrade' => 'Upgrade',
     
     'enterprise' => 'Enterprise',
@@ -36,6 +42,9 @@ return [
     'ent_f3' => 'File upload with 5GB storage',
     'ent_f4' => 'Custom domain support',
     'ent_f5' => 'Stripe integration',
+    'ent_f6' => 'Custom domain support',
+    'ent_f7' => '24/7 Premium support',
+
     
     'free_trial_title' => 'Still not convinced? Start with a 14-day FREE trial!',
     'free_trial_desc' => 'You will get full access to with all the features for 14 days.',

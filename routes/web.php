@@ -12,14 +12,16 @@ use App\Http\Middleware\PreventAccessFromTenantDomains;
 use App\Http\Controllers\Central\TenantRegistrationController;
 
 // Frontend
+// Route::get('/', [FrontendController::class, 'index'])->name('frontend.index');
 Route::get('/', [FrontendController::class, 'index'])->name('frontend.index');
-Route::get('/index', [FrontendController::class, 'index'])->name('index');
+Route::get('/index', [FrontendController::class, 'index'])->name('frontend.index');
 Route::get('/pricing-page', [FrontendController::class, 'pricing'])->name('frontend.pricing');
 Route::get('/payment-page', [FrontendController::class, 'payment'])->name('frontend.payment');
 Route::get('/checkout-page', [FrontendController::class, 'checkout'])->name('frontend.checkout');
 Route::get('/help-center-landing', [FrontendController::class, 'helpCenter'])->name('frontend.help_center');
 Route::get('/help-center-article', [FrontendController::class, 'helpCenterArticle'])->name('frontend.help_center_article');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\Frontend\FrontendController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Language Switch (accessible from all panels)
 Route::get('/lang/{locale}', [App\Http\Controllers\LanguageController::class, 'switch'])

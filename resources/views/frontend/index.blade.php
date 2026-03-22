@@ -238,8 +238,7 @@
                               class="client-logo img-fluid" />
                           </div>
                           <p>
-                            “Vuexy is hands down the most useful front end Bootstrap theme I've ever used. I can't wait
-                            to use it again for my next project.”
+                            {{ __('frontend.client1_review') }}
                           </p>
                           <div class="text-warning mb-4">
                             <i class="icon-base bx bxs-star"></i>
@@ -253,8 +252,8 @@
                               <img src="{{ asset('frontend/img/avatars/1.png') }}" alt="Avatar" class="rounded-circle" />
                             </div>
                             <div>
-                              <h6 class="mb-0">Cecilia Payne</h6>
-                              <p class="small text-body-secondary mb-0">CEO of Airbnb</p>
+                              <h6 class="mb-0">{{ __('frontend.client1_name') }}</h6>
+                              <p class="small text-body-secondary mb-0">{{ __('frontend.client1_role') }}</p>
                             </div>
                           </div>
                         </div>
@@ -270,8 +269,7 @@
                               class="client-logo img-fluid" />
                           </div>
                           <p>
-                            “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building
-                            dashboard sites on almost any project.”
+                            {{ __('frontend.client2_review') }}
                           </p>
                           <div class="text-warning mb-4">
                             <i class="icon-base bx bxs-star"></i>
@@ -285,8 +283,8 @@
                               <img src="{{ asset('frontend/img/avatars/2.png') }}" alt="Avatar" class="rounded-circle" />
                             </div>
                             <div>
-                              <h6 class="mb-0">Eugenia Moore</h6>
-                              <p class="small text-body-secondary mb-0">Founder of Hubspot</p>
+                              <h6 class="mb-0">{{ __('frontend.client2_name') }}</h6>
+                              <p class="small text-body-secondary mb-0">{{ __('frontend.client2_role') }}</p>
                             </div>
                           </div>
                         </div>
@@ -302,8 +300,7 @@
                               class="client-logo img-fluid" />
                           </div>
                           <p>
-                            This template is really clean & well documented. The docs are really easy to understand and
-                            it's always easy to find a screenshot from their website.
+                            {{ __('frontend.client3_review') }}
                           </p>
                           <div class="text-warning mb-4">
                             <i class="icon-base bx bxs-star"></i>
@@ -317,8 +314,8 @@
                               <img src="{{ asset('frontend/img/avatars/3.png') }}" alt="Avatar" class="rounded-circle" />
                             </div>
                             <div>
-                              <h6 class="mb-0">Curtis Fletcher</h6>
-                              <p class="small text-body-secondary mb-0">Design Lead at Dribbble</p>
+                              <h6 class="mb-0">{{ __('frontend.client3_name') }}</h6>
+                              <p class="small text-body-secondary mb-0">{{ __('frontend.client3_role') }}</p>
                             </div>
                           </div>
                         </div>
@@ -334,8 +331,7 @@
                               class="client-logo img-fluid" />
                           </div>
                           <p>
-                            All the requirements for developers have been taken into consideration, so I’m able to build
-                            any interface I want.
+                            {{ __('frontend.client4_review') }}
                           </p>
                           <div class="text-warning mb-4">
                             <i class="icon-base bx bxs-star"></i>
@@ -349,8 +345,8 @@
                               <img src="{{ asset('frontend/img/avatars/4.png') }}" alt="Avatar" class="rounded-circle" />
                             </div>
                             <div>
-                              <h6 class="mb-0">Sara Smith</h6>
-                              <p class="small text-body-secondary mb-0">Founder of Continental</p>
+                              <h6 class="mb-0">{{ __('frontend.client4_name') }}</h6>
+                              <p class="small text-body-secondary mb-0">{{ __('frontend.client4_role') }}</p>
                             </div>
                           </div>
                         </div>
@@ -366,8 +362,7 @@
                               class="client-logo img-fluid" />
                           </div>
                           <p>
-                            “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building
-                            dashboard sites on almost any project.”
+                            {{ __('frontend.client5_review') }}
                           </p>
                           <div class="text-warning mb-4">
                             <i class="icon-base bx bxs-star"></i>
@@ -381,8 +376,8 @@
                               <img src="{{ asset('frontend/img/avatars/5.png') }}" alt="Avatar" class="rounded-circle" />
                             </div>
                             <div>
-                              <h6 class="mb-0">Eugenia Moore</h6>
-                              <p class="small text-body-secondary mb-0">Founder of Hubspot</p>
+                              <h6 class="mb-0">{{ __('frontend.client5_name') }}</h6>
+                              <p class="small text-body-secondary mb-0">{{ __('frontend.client5_role') }}</p>
                             </div>
                           </div>
                         </div>
@@ -398,8 +393,7 @@
                               class="client-logo img-fluid" />
                           </div>
                           <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nemo mollitia, ad eum
-                            officia numquam nostrum repellendus consequuntur!
+                            {{ __('frontend.client6_review') }}
                           </p>
                           <div class="text-warning mb-4">
                             <i class="icon-base bx bxs-star"></i>
@@ -413,8 +407,8 @@
                               <img src="{{ asset('frontend/img/avatars/1.png') }}" alt="Avatar" class="rounded-circle" />
                             </div>
                             <div>
-                              <h6 class="mb-0">Sara Smith</h6>
-                              <p class="small text-body-secondary mb-0">Founder of Continental</p>
+                              <h6 class="mb-0">{{ __('frontend.client6_name') }}</h6>
+                              <p class="small text-body-secondary mb-0">{{ __('frontend.client6_role') }}</p>
                             </div>
                           </div>
                         </div>
@@ -511,7 +505,7 @@
                     alt="human image" />
                 </div>
                 <div class="card-body border border-top-0 border-primary-subtle text-center py-5">
-                  <h5 class="card-title mb-0">Sophie Gilbert</h5>
+                  <h5 class="card-title mb-0">{{ __('frontend.team_member1_name') }}</h5>
                   <p class="text-body-secondary mb-0">{{ __('frontend.project_manager') }}</p>
                 </div>
               </div>
@@ -525,7 +519,7 @@
                     alt="human image" />
                 </div>
                 <div class="card-body border border-top-0 border-info-subtle text-center py-5">
-                  <h5 class="card-title mb-0">Paul Miles</h5>
+                  <h5 class="card-title mb-0">{{ __('frontend.team_member2_name') }}</h5>
                   <p class="text-body-secondary mb-0">{{ __('frontend.ui_designer') }}</p>
                 </div>
               </div>
@@ -540,7 +534,7 @@
                     alt="human image" />
                 </div>
                 <div class="card-body border border-top-0 border-danger-subtle text-center py-5">
-                  <h5 class="card-title mb-0">Nannie Ford</h5>
+                  <h5 class="card-title mb-0">{{ __('frontend.team_member3_name') }}</h5>
                   <p class="text-body-secondary mb-0">{{ __('frontend.development_lead') }}</p>
                 </div>
               </div>
@@ -555,7 +549,7 @@
                     alt="human image" />
                 </div>
                 <div class="card-body border border-top-0 border-success-subtle text-center py-5">
-                  <h5 class="card-title mb-0">Chris Watkins</h5>
+                  <h5 class="card-title mb-0">{{ __('frontend.team_member4_name') }}</h5>
                   <p class="text-body-secondary mb-0">{{ __('frontend.marketing_manager') }}</p>
                 </div>
               </div>
@@ -1221,7 +1215,7 @@
                     <div class="row g-4">
                       <div class="col-md-6">
                         <label class="form-label" for="contact-form-fullname">{{ __('frontend.full_name') }}</label>
-                        <input type="text" class="form-control" id="contact-form-fullname" placeholder="john" />
+                        <input type="text" class="form-control" id="contact-form-fullname" placeholder="{{ __('frontend.fullname_placeholder') }}" />
                       </div>
                       <div class="col-md-6">
                         <label class="form-label" for="contact-form-email">{{ __('frontend.email') }}</label>
@@ -1229,7 +1223,7 @@
                           type="text"
                           id="contact-form-email"
                           class="form-control"
-                          placeholder="johndoe@gmail.com" />
+                          placeholder="{{ __('frontend.email_placeholder') }}" />
                       </div>
                       <div class="col-12">
                         <label class="form-label" for="contact-form-message">{{ __('frontend.message') }}</label>
