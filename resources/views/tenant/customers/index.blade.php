@@ -52,8 +52,9 @@
                             <tr>
                                 <th>{{ __('tenant.name') }}</th>
                                 <th>{{ __('tenant.phone') }}</th>
-                                <th>{{ __('tenant.id_ পাসপোর্ট') ?? __('tenant.id_passport') }}</th>
+                                <th>{{ __('tenant.id_passport') }}</th>
                                 <th>{{ __('tenant.actions') }}</th>
+
                             </tr>
                         </thead>
                         <tbody class="table-border-bottom-0">

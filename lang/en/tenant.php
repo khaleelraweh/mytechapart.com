@@ -32,8 +32,10 @@ return [
     'property_hotel_name' => 'Property/Hotel Name',
     'property_type' => 'Property Type',
     'hotel' => 'Hotel',
+    'apartment' => 'Apartment Complex',
     'apartment_complex' => 'Apartment Complex',
     'resort' => 'Resort',
+
     'total_number_of_floors' => 'Total Number of Floors',
     'floors_cannot_be_modified' => 'Floors cannot be modified here. Use Floor Manager.',
     'address' => 'Address',
@@ -132,4 +134,14 @@ return [
     'check_in_date' => 'Check-In Date',
     'check_out_date' => 'Check-Out Date',
     'confirm_booking' => 'Confirm Booking',
+
+    // New keys for missing translations
+    'phone' => 'Phone',
+    'room_prefix' => 'Room',
+    'total_reservations' => 'Total Reservations',
+    'occupancy_rate' => 'Occupancy Rate',
+    'edit_property' => 'Edit Property',
+    'update_property_details' => 'Update Property Details',
 ];
+
+

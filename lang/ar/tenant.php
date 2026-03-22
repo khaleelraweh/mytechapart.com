@@ -32,8 +32,10 @@ return [
     'property_hotel_name' => 'اسم العقار / الفندق',
     'property_type' => 'نوع العقار',
     'hotel' => 'فندق',
+    'apartment' => 'مجمع سكني',
     'apartment_complex' => 'مجمع سكني',
     'resort' => 'منتجع',
+
     'total_number_of_floors' => 'إجمالي عدد الطوابق',
     'floors_cannot_be_modified' => 'لا يمكن تعديل الطوابق من هنا. استخدم مدير الطوابق.',
     'address' => 'العنوان',
@@ -132,4 +134,14 @@ return [
     'check_in_date' => 'تاريخ تسجيل الدخول',
     'check_out_date' => 'تاريخ تسجيل الخروج',
     'confirm_booking' => 'تأكيد الحجز',
+
+    // New keys for missing translations
+    'phone' => 'الهاتف',
+    'room_prefix' => 'غرفة',
+    'total_reservations' => 'إجمالي الحجوزات',
+    'occupancy_rate' => 'نسبة الإشغال',
+    'edit_property' => 'تعديل العقار',
+    'update_property_details' => 'تحديث بيانات العقار',
 ];
+
+

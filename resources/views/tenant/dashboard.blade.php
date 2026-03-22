@@ -2,8 +2,9 @@
 
 @section('content')
 <h4 class="py-3 mb-4">
-  <span class="text-muted fw-light">Hotel /</span> Dashboard
+  <span class="text-muted fw-light">{{ __('tenant.hotel') }} /</span> {{ __('app.dashboard') }}
 </h4>
+
 
 <div class="row gy-4">
     <!-- Total Properties -->

@@ -33,7 +33,8 @@
                     @forelse($reservations as $res)
                     <tr>
                         <td><strong>{{ $res->customer->name }}</strong><br><small class="text-muted">{{ $res->customer->phone }}</small></td>
-                        <td>{{ $res->unit->property->name }}<br><span class="badge bg-label-info">{{ __('tenant.room_prefix') ?? 'Room' }} {{ $res->unit->unit_number }}</span></td>
+                        <td>{{ $res->unit->property->name }}<br><span class="badge bg-label-info">{{ __('tenant.room_prefix') }} {{ $res->unit->unit_number }}</span></td>
+
                         <td>{{ $res->check_in->format('M d, Y') }}<br>{{ __('tenant.to') }} {{ $res->check_out->format('M d, Y') }}</td>
                         <td>{{ $res->nights }}</td>
                         <td><strong>${{ number_format($res->total_price, 2) }}</strong></td>
