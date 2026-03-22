@@ -8,31 +8,28 @@
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb breadcrumb-style1 mb-2">
                 <li class="breadcrumb-item">
-                  <a href="javascript:void(0);">Help centre</a>
+                  <a href="javascript:void(0);">{{ __('help-center-article.help_centre') }}</a>
                 </li>
                 <li class="breadcrumb-item">
-                  <a href="javascript:void(0);">Buying and item support</a>
+                  <a href="javascript:void(0);">{{ __('help-center-article.buying_and_item_support') }}</a>
                 </li>
-                <li class="breadcrumb-item active">Template kits</li>
+                <li class="breadcrumb-item active">{{ __('help-center-article.template_kits') }}</li>
               </ol>
             </nav>
-            <h4 class="mb-2">How to add product in cart?</h4>
-            <p>1 month ago - Updated</p>
+            <h4 class="mb-2">{{ __('help-center-article.article_title') }}</h4>
+            <p>{{ __('help-center-article.last_updated') }}</p>
             <hr class="my-6" />
             <p>
-              If you’re after only one item, simply choose the ‘Buy Now’ option on the item page. This will take you
-              directly to Checkout.
+              {{ __('help-center-article.article_p1') }}
             </p>
             <p class="mb-0">
-              If you want several items, use the ‘Add to Cart’ button and then choose ‘Keep Browsing’ to continue
-              shopping or ‘Checkout’ to finalise your purchase.
+              {{ __('help-center-article.article_p2') }}
             </p>
             <div class="my-6">
               <img src="{{ asset('assets/img/front-pages/misc/product-image.png') }}" alt="product" class="img-fluid w-100" />
             </div>
             <p class="mb-0">
-              You can go back to your cart at any time by clicking on the shopping cart icon at the top right side of
-              the page.
+              {{ __('help-center-article.article_p3') }}
             </p>
             <div class="mt-6">
               <img src="{{ asset('assets/img/front-pages/misc/checkout-image.png') }}" alt="product" class="img-fluid w-100" />
@@ -44,41 +41,41 @@
               <input
                 type="text"
                 class="form-control"
-                placeholder="Search..."
-                aria-label="Search..."
+                placeholder="{{ __('help-center-article.search') }}"
+                aria-label="{{ __('help-center-article.search') }}"
                 aria-describedby="article-search" />
             </div>
             <div class="bg-lighter py-2 px-4 rounded">
-              <h5 class="mb-0">Articles in this section</h5>
+              <h5 class="mb-0">{{ __('help-center-article.articles_in_section') }}</h5>
             </div>
             <ul class="list-unstyled mt-4 mb-0">
               <li class="mb-4">
                 <a href="javascript:void(0)" class="text-heading d-flex justify-content-between">
-                  <span class="text-truncate me-2">Template Kits</span>
+                  <span class="text-truncate me-2">{{ __('help-center-article.article_1') }}</span>
                   <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                 </a>
               </li>
               <li class="mb-4">
                 <a href="javascript:void(0)" class="text-heading d-flex justify-content-between">
-                  <span class="text-truncate me-2">Envato Elements Template Kits - Importing Issues</span>
+                  <span class="text-truncate me-2">{{ __('help-center-article.article_2') }}</span>
                   <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                 </a>
               </li>
               <li class="mb-4">
                 <a href="javascript:void(0)" class="text-heading d-flex justify-content-between">
-                  <span class="text-truncate me-2">Envato Elements Template Kits - Troubleshooting</span>
+                  <span class="text-truncate me-2">{{ __('help-center-article.article_3') }}</span>
                   <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                 </a>
               </li>
               <li class="mb-4">
                 <a href="javascript:void(0)" class="text-heading d-flex justify-content-between">
-                  <span class="text-truncate me-2">How to use the template in WordPress</span>
+                  <span class="text-truncate me-2">{{ __('help-center-article.article_4') }}</span>
                   <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                 </a>
               </li>
               <li>
                 <a href="javascript:void(0)" class="text-heading d-flex justify-content-between">
-                  <span class="text-truncate me-2">How to use the Template Kit Import plugin</span>
+                  <span class="text-truncate me-2">{{ __('help-center-article.article_5') }}</span>
                   <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                 </a>
               </li>

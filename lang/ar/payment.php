@@ -1,0 +1,61 @@
+<?php
+
+return [
+    'checkout' => 'الدفع وإتمام الطلب',
+    'checkout_desc1' => 'جميع الخطط تشمل أكثر من 40 أداة وميزة متقدمة لتعزيز منتجك.',
+    'checkout_desc2' => 'اختر الخطة الأنسب لتلبية احتياجاتك.',
+    'credit_card' => 'بطاقة ائتمان',
+    'paypal' => 'باي بال (PayPal)',
+    'billing_details' => 'تفاصيل الدفع',
+    'email_address' => 'البريد الإلكتروني',
+    'email_placeholder' => 'john.doe@gmail.com',
+    'password' => 'كلمة المرور',
+    'password_placeholder' => 'كلمة المرور',
+    'country' => 'الدولة',
+    'select' => 'اختر',
+    'billing_zip' => 'الرمز البريدي للدفع',
+    'zip_placeholder' => 'الرمز البريدي',
+    
+    'credit_card_info' => 'معلومات بطاقة الائتمان',
+    'card_number' => 'رقم البطاقة',
+    'card_placeholder' => '7465 8374 5837 5067',
+    'name' => 'الاسم',
+    'name_placeholder' => 'جون دو',
+    'exp_date' => 'تاريخ الانتهاء',
+    'exp_placeholder' => 'MM/YY',
+    'cvv' => 'رمز التحقق (CVV)',
+    'cvv_placeholder' => '965',
+    
+    'order_summary' => 'ملخص الطلب',
+    'order_summary_desc1' => 'يمكن أن يساعدك في إدارة وخدمة الطلبات قبل،',
+    'order_summary_desc2' => 'أثناء وبعد التنفيذ.',
+    'plan_desc' => 'بداية بسيطة للجميع',
+    'month' => '/شهر',
+    'change_plan' => 'تغيير الخطة',
+    
+    'subtotal' => 'المجموع الفرعي',
+    'tax' => 'الضريبة',
+    'total' => 'الإجمالي',
+    'proceed_payment' => 'المتابعة للدفع',
+    'terms_accept' => 'بالمتابعة، أنت تقبل شروط الخدمة وسياسة الخصوصية الخاصة بنا. يُرجى ملاحظة أن المدفوعات غير قابلة للاسترداد.',
+    
+    'pricing_modal_title' => 'خطط الأسعار',
+    'pricing_modal_desc' => 'جميع الخطط تشمل أكثر من 40 أداة وميزة متقدمة لتعزيز منتجك. اختر الخطة الأنسب لتلبية احتياجاتك.',
+    'monthly' => 'شهرياً',
+    'annually' => 'سنوياً',
+    'save_up_to_10' => 'وفر حتى 10%',
+    
+    'basic' => 'أساسي',
+    'basic_desc' => 'بداية بسيطة للجميع',
+    'your_current_plan' => 'خطتك الحالية',
+    
+    'popular' => 'شائع',
+    'standard' => 'قياسي',
+    'standard_desc' => 'للشركات الصغيرة والمتوسطة',
+    'usd_480_year' => '480 دولار / السنة',
+    'upgrade' => 'ترقية',
+    
+    'enterprise' => 'مؤسسي',
+    'enterprise_desc' => 'حلول للمنظمات الكبيرة',
+    'usd_960_year' => '960 دولار / السنة',
+];

@@ -4,20 +4,20 @@
 <!-- Pricing Plans -->
     <section class="section-py first-section-pt">
       <div class="container">
-        <h2 class="text-center mb-2">Pricing Plans</h2>
+        <h2 class="text-center mb-2">{{ __('pricing.pricing_plans') }}</h2>
         <p class="text-center mb-0">
-          All plans include 40+ advanced tools and features to boost your product.<br />
-          Choose the best plan to fit your needs.
+          {{ __('pricing.pricing_desc1') }}<br />
+          {{ __('pricing.pricing_desc2') }}
         </p>
         <div class="d-flex align-items-center justify-content-center flex-wrap gap-2 pt-9 pb-3 mb-2">
           <label class="switch switch-sm ms-sm-12 ps-sm-12 me-0">
-            <span class="switch-label fs-6 text-body">Monthly</span>
+            <span class="switch-label fs-6 text-body">{{ __('pricing.monthly') }}</span>
             <input type="checkbox" class="switch-input price-duration-toggler" checked />
             <span class="switch-toggle-slider">
               <span class="switch-on"></span>
               <span class="switch-off"></span>
             </span>
-            <span class="switch-label fs-6 text-body">Annually</span>
+            <span class="switch-label fs-6 text-body">{{ __('pricing.annually') }}</span>
           </label>
           <div class="mt-n5 ms-n10 ml-2 mb-10 d-none d-sm-flex align-items-center gap-1">
             <img
@@ -26,7 +26,7 @@
               class="scaleX-n1-rtl pt-1"
               data-app-dark-img="pages/pricing-arrow-dark.png"
               data-app-light-img="pages/pricing-arrow-light.png" />
-            <span class="badge badge-sm bg-label-primary rounded-1 mb-3">Save up to 10%</span>
+            <span class="badge badge-sm bg-label-primary rounded-1 mb-3">{{ __('pricing.save_up_to_10') }}</span>
           </div>
         </div>
 
@@ -38,13 +38,13 @@
                 <div class="mt-3 mb-5 text-center">
                   <img src="{{ asset('assets/img/icons/unicons/bookmark.png') }}" alt="Basic Image" width="120" />
                 </div>
-                <h4 class="card-title text-center text-capitalize mb-1">Basic</h4>
-                <p class="text-center mb-5">A simple start for everyone</p>
+                <h4 class="card-title text-center text-capitalize mb-1">{{ __('pricing.basic') }}</h4>
+                <p class="text-center mb-5">{{ __('pricing.basic_desc') }}</p>
                 <div class="text-center h-px-50">
                   <div class="d-flex justify-content-center">
                     <sup class="h6 text-body pricing-currency mt-2 mb-0 me-1">$</sup>
                     <h1 class="mb-0 text-primary">0</h1>
-                    <sub class="h6 text-body pricing-duration mt-auto mb-1 ms-1">/month</sub>
+                    <sub class="h6 text-body pricing-duration mt-auto mb-1 ms-1">{{ __('pricing.month') }}</sub>
                   </div>
                 </div>
 
@@ -52,30 +52,30 @@
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>100 responses a month</span>
+                    ><span>{{ __('pricing.basic_f1') }}</span>
                   </li>
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Unlimited forms and surveys</span>
+                    ><span>{{ __('pricing.basic_f2') }}</span>
                   </li>
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Unlimited fields</span>
+                    ><span>{{ __('pricing.basic_f3') }}</span>
                   </li>
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Basic form creation tools</span>
+                    ><span>{{ __('pricing.basic_f4') }}</span>
                   </li>
                   <li class="mb-0 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Up to 2 subdomains</span>
+                    ><span>{{ __('pricing.basic_f5') }}</span>
                   </li>
                 </ul>
-                <a href="{{ url('payment-page') }}" class="btn btn-label-success d-grid w-100">Your Current Plan</a>
+                <a href="{{ url('payment-page') }}" class="btn btn-label-success d-grid w-100">{{ __('pricing.your_current_plan') }}</a>
               </div>
             </div>
           </div>
@@ -85,51 +85,51 @@
             <div class="card border-primary border shadow-none">
               <div class="card-body position-relative pt-4">
                 <div class="position-absolute end-0 me-5 top-0 mt-4">
-                  <span class="badge bg-label-primary rounded-1">Popular</span>
+                  <span class="badge bg-label-primary rounded-1">{{ __('pricing.popular') }}</span>
                 </div>
                 <div class="my-5 pt-6 text-center">
                   <img src="{{ asset('assets/img/icons/unicons/wallet-round.png') }}" alt="Pro Image" width="120" />
                 </div>
-                <h4 class="card-title text-center text-capitalize mb-1">Standard</h4>
-                <p class="text-center mb-5">For small to medium businesses</p>
+                <h4 class="card-title text-center text-capitalize mb-1">{{ __('pricing.standard') }}</h4>
+                <p class="text-center mb-5">{{ __('pricing.standard_desc') }}</p>
                 <div class="text-center h-px-50">
                   <div class="d-flex justify-content-center">
                     <sup class="h6 text-body pricing-currency mt-2 mb-0 me-1">$</sup>
                     <h1 class="price-toggle price-yearly text-primary mb-0">7</h1>
                     <h1 class="price-toggle price-monthly text-primary mb-0 d-none">9</h1>
-                    <sub class="h6 text-body pricing-duration mt-auto mb-1 ms-1">/month</sub>
+                    <sub class="h6 text-body pricing-duration mt-auto mb-1 ms-1">{{ __('pricing.month') }}</sub>
                   </div>
-                  <small class="price-yearly price-yearly-toggle text-body-secondary">USD 480 / year</small>
+                  <small class="price-yearly price-yearly-toggle text-body-secondary">{{ __('pricing.usd_480_year') }}</small>
                 </div>
 
                 <ul class="list-group my-5 pt-9">
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Unlimited responses</span>
+                    ><span>{{ __('pricing.std_f1') }}</span>
                   </li>
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Unlimited forms and surveys</span>
+                    ><span>{{ __('pricing.std_f2') }}</span>
                   </li>
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Instagram profile page</span>
+                    ><span>{{ __('pricing.std_f3') }}</span>
                   </li>
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Google Docs integration</span>
+                    ><span>{{ __('pricing.std_f4') }}</span>
                   </li>
                   <li class="mb-0 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Custom “Thank you” page</span>
+                    ><span>{{ __('pricing.std_f5') }}</span>
                   </li>
                 </ul>
-                <a href="{{ url('payment-page') }}" class="btn btn-primary d-grid w-100">Upgrade</a>
+                <a href="{{ url('payment-page') }}" class="btn btn-primary d-grid w-100">{{ __('pricing.upgrade') }}</a>
               </div>
             </div>
           </div>
@@ -138,49 +138,52 @@
           <div class="col-lg">
             <div class="card border rounded shadow-none">
               <div class="card-body pt-12">
+                <div class="position-absolute end-0 me-5 top-0 mt-4">
+                  <span class="badge bg-label-primary rounded-1">{{ __('pricing.popular') }}</span>
+                </div>
                 <div class="mt-3 mb-5 text-center">
                   <img src="{{ asset('assets/img/icons/unicons/briefcase-round.png') }}" alt="Pro Image" width="120" />
                 </div>
-                <h4 class="card-title text-center text-capitalize mb-1">Enterprise</h4>
-                <p class="text-center mb-5">Solution for big organizations</p>
+                <h4 class="card-title text-center text-capitalize mb-1">{{ __('pricing.enterprise') }}</h4>
+                <p class="text-center mb-5">{{ __('pricing.enterprise_desc') }}</p>
 
                 <div class="text-center h-px-50">
                   <div class="d-flex justify-content-center">
                     <sup class="h6 text-body pricing-currency mt-2 mb-0 me-1">$</sup>
                     <h1 class="price-toggle price-yearly text-primary mb-0">16</h1>
                     <h1 class="price-toggle price-monthly text-primary mb-0 d-none">19</h1>
-                    <sub class="h6 text-body pricing-duration mt-auto mb-1 ms-1">/month</sub>
+                    <sub class="h6 text-body pricing-duration mt-auto mb-1 ms-1">{{ __('pricing.month') }}</sub>
                   </div>
-                  <small class="price-yearly price-yearly-toggle text-body-secondary">USD 960 / year</small>
+                  <small class="price-yearly price-yearly-toggle text-body-secondary">{{ __('pricing.usd_960_year') }}</small>
                 </div>
                 <ul class="list-group my-5 pt-9">
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>PayPal payments</span>
+                    ><span>{{ __('pricing.ent_f1') }}</span>
                   </li>
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Logic Jumps</span>
+                    ><span>{{ __('pricing.ent_f2') }}</span>
                   </li>
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>File upload with 5GB storage</span>
+                    ><span>{{ __('pricing.ent_f3') }}</span>
                   </li>
                   <li class="mb-4 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Custom domain support</span>
+                    ><span>{{ __('pricing.ent_f4') }}</span>
                   </li>
                   <li class="mb-0 d-flex align-items-center">
                     <span class="badge p-50 w-px-20 h-px-20 rounded-pill bg-label-primary me-2"
                       ><i class="icon-base bx bx-check icon-xs"></i></span
-                    ><span>Stripe integration</span>
+                    ><span>{{ __('pricing.ent_f5') }}</span>
                   </li>
                 </ul>
-                <a href="{{ url('payment-page') }}" class="btn btn-label-primary d-grid w-100">Upgrade</a>
+                <a href="{{ url('payment-page') }}" class="btn btn-label-primary d-grid w-100">{{ __('pricing.upgrade') }}</a>
               </div>
             </div>
           </div>
@@ -194,9 +197,9 @@
         <div class="position-relative">
           <div class="d-flex justify-content-between flex-column-reverse flex-lg-row align-items-center pt-12 pb-10">
             <div class="text-center text-lg-start">
-              <h4 class="text-primary mb-2">Still not convinced? Start with a 14-day FREE trial!</h4>
-              <p class="text-body mb-6 mb-md-11">You will get full access to with all the features for 14 days.</p>
-              <a href="{{ url('payment-page') }}" class="btn btn-primary">Start 14-day free trial</a>
+              <h4 class="text-primary mb-2">{{ __('pricing.free_trial_title') }}</h4>
+              <p class="text-body mb-6 mb-md-11">{{ __('pricing.free_trial_desc') }}</p>
+              <a href="{{ url('payment-page') }}" class="btn btn-primary">{{ __('pricing.start_free_trial') }}</a>
             </div>
             <!-- image -->
             <div class="text-center">
@@ -217,8 +220,8 @@
     <section class="section-py pricing-plans-comparison">
       <div class="container">
         <div class="col-12 text-center mb-6">
-          <h3 class="mb-2">Pick a plan that works best for you</h3>
-          <p>Stay cool, we have a 48-hour money back guarantee!</p>
+          <h3 class="mb-2">{{ __('pricing.compare_title') }}</h3>
+          <p>{{ __('pricing.compare_desc') }}</p>
         </div>
         <div class="row">
           <div class="col-12">
@@ -227,31 +230,31 @@
                 <thead>
                   <tr>
                     <th scope="col">
-                      <p class="mb-50">Features</p>
-                      <small class="text-body fw-normal text-capitalize">Native front features</small>
+                      <p class="mb-50">{{ __('pricing.features') }}</p>
+                      <small class="text-body fw-normal text-capitalize">{{ __('pricing.native_front_features') }}</small>
                     </th>
                     <th scope="col">
-                      <p class="mb-50">Starter</p>
-                      <small class="text-body fw-normal text-capitalize">Free</small>
+                      <p class="mb-50">{{ __('pricing.starter') }}</p>
+                      <small class="text-body fw-normal text-capitalize">{{ __('pricing.free') }}</small>
                     </th>
                     <th scope="col">
                       <p class="mb-50 position-relative">
-                        Pro
+                        {{ __('pricing.pro') }}
                         <span class="badge badge-center rounded-pill bg-primary position-absolute mt-n2 ms-1"
                           ><i class="icon-base bx bx-star"></i
                         ></span>
                       </p>
-                      <small class="text-body fw-normal text-capitalize">$7.5/month</small>
+                      <small class="text-body fw-normal text-capitalize">{{ __('pricing.7_5_month') }}</small>
                     </th>
                     <th scope="col">
-                      <p class="mb-50">Enterprise</p>
-                      <small class="text-body fw-normal text-capitalize">$16/month</small>
+                      <p class="mb-50">{{ __('pricing.enterprise') }}</p>
+                      <small class="text-body fw-normal text-capitalize">{{ __('pricing.16_month') }}</small>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="text-heading">14-days free trial</td>
+                    <td class="text-heading">{{ __('pricing.14_days_free_trial') }}</td>
                     <td>
                       <span class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-primary p-0">
                         <i class="icon-base bx bx-check"></i>
@@ -269,7 +272,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="text-heading">No user limit</td>
+                    <td class="text-heading">{{ __('pricing.no_user_limit') }}</td>
                     <td>
                       <span
                         class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-secondary p-0 d-inline-flex align-items-center justify-content-center">
@@ -290,7 +293,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="text-heading">Product Support</td>
+                    <td class="text-heading">{{ __('pricing.product_support') }}</td>
                     <td>
                       <span
                         class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-secondary p-0 d-inline-flex align-items-center justify-content-center">
@@ -311,7 +314,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="text-heading">Email Support</td>
+                    <td class="text-heading">{{ __('pricing.email_support') }}</td>
                     <td>
                       <span
                         class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-secondary p-0 d-inline-flex align-items-center justify-content-center">
@@ -319,7 +322,7 @@
                       </span>
                     </td>
                     <td>
-                      <span class="badge bg-label-primary badge-sm">Add-On-Available</span>
+                      <span class="badge bg-label-primary badge-sm">{{ __('pricing.add_on_available') }}</span>
                     </td>
                     <td>
                       <span
@@ -329,7 +332,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="text-heading">Integrations</td>
+                    <td class="text-heading">{{ __('pricing.integrations') }}</td>
                     <td>
                       <span
                         class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-secondary p-0 d-inline-flex align-items-center justify-content-center">
@@ -340,45 +343,6 @@
                       <span
                         class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-primary p-0 d-inline-flex align-items-center justify-content-center">
                         <i class="icon-base bx bx-check"></i>
-                      </span>
-                    </td>
-                    <td>
-                      <span
-                        class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-primary p-0 d-inline-flex align-items-center justify-content-center">
-                        <i class="icon-base bx bx-check"></i>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-heading">Removal of Front branding</td>
-                    <td>
-                      <span
-                        class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-secondary p-0 d-inline-flex align-items-center justify-content-center">
-                        <i class="icon-base bx bx-x"></i>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="badge bg-label-primary badge-sm">Add-On-Available</span>
-                    </td>
-                    <td>
-                      <span
-                        class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-primary p-0 d-inline-flex align-items-center justify-content-center">
-                        <i class="icon-base bx bx-check"></i>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-heading">Active maintenance & support</td>
-                    <td>
-                      <span
-                        class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-secondary p-0 d-inline-flex align-items-center justify-content-center">
-                        <i class="icon-base bx bx-x"></i>
-                      </span>
-                    </td>
-                    <td>
-                      <span
-                        class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-secondary p-0 d-inline-flex align-items-center justify-content-center">
-                        <i class="icon-base bx bx-x"></i>
                       </span>
                     </td>
                     <td>
@@ -389,7 +353,46 @@
                     </td>
                   </tr>
                   <tr>
-                    <td class="text-heading">Data storage for 365 days</td>
+                    <td class="text-heading">{{ __('pricing.removal_of_front_branding') }}</td>
+                    <td>
+                      <span
+                        class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-secondary p-0 d-inline-flex align-items-center justify-content-center">
+                        <i class="icon-base bx bx-x"></i>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="badge bg-label-primary badge-sm">{{ __('pricing.add_on_available') }}</span>
+                    </td>
+                    <td>
+                      <span
+                        class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-primary p-0 d-inline-flex align-items-center justify-content-center">
+                        <i class="icon-base bx bx-check"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-heading">{{ __('pricing.active_maintenance') }}</td>
+                    <td>
+                      <span
+                        class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-secondary p-0 d-inline-flex align-items-center justify-content-center">
+                        <i class="icon-base bx bx-x"></i>
+                      </span>
+                    </td>
+                    <td>
+                      <span
+                        class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-secondary p-0 d-inline-flex align-items-center justify-content-center">
+                        <i class="icon-base bx bx-x"></i>
+                      </span>
+                    </td>
+                    <td>
+                      <span
+                        class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-primary p-0 d-inline-flex align-items-center justify-content-center">
+                        <i class="icon-base bx bx-check"></i>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-heading">{{ __('pricing.data_storage') }}</td>
                     <td>
                       <span
                         class="badge badge-center rounded-pill w-px-20 h-px-20 bg-label-secondary p-0 d-inline-flex align-items-center justify-content-center">
@@ -412,13 +415,13 @@
                   <tr>
                     <td></td>
                     <td>
-                      <a href="{{ url('payment-page') }}" class="btn text-nowrap btn-label-primary">Choose Plan</a>
+                      <a href="{{ url('payment-page') }}" class="btn text-nowrap btn-label-primary">{{ __('pricing.choose_plan') }}</a>
                     </td>
                     <td>
-                      <a href="{{ url('payment-page') }}" class="btn text-nowrap btn-primary">Choose Plan</a>
+                      <a href="{{ url('payment-page') }}" class="btn text-nowrap btn-primary">{{ __('pricing.choose_plan') }}</a>
                     </td>
                     <td>
-                      <a href="{{ url('payment-page') }}" class="btn text-nowrap btn-label-primary">Choose Plan</a>
+                      <a href="{{ url('payment-page') }}" class="btn text-nowrap btn-label-primary">{{ __('pricing.choose_plan') }}</a>
                     </td>
                   </tr>
                 </tbody>
@@ -433,8 +436,8 @@
     <section class="section-py pricing-faqs rounded-bottom bg-body">
       <div class="container">
         <div class="text-center mb-6">
-          <h4 class="mb-2">FAQs</h4>
-          <p>Let us help answer the most common questions you might have.</p>
+          <h4 class="mb-2">{{ __('pricing.faqs') }}</h4>
+          <p>{{ __('pricing.faqs_desc') }}</p>
         </div>
         <div class="accordion" id="pricingFaq">
           <div class="card accordion-item">
@@ -446,7 +449,7 @@
                 data-bs-target="#faq-1"
                 aria-expanded="false"
                 aria-controls="faq-1">
-                What counts towards the 100 responses limit?
+                {{ __('pricing.faq1_q') }}
               </button>
             </h2>
             <div
@@ -455,8 +458,7 @@
               aria-labelledby="headingone"
               data-bs-parent="#pricingFaq">
               <div class="accordion-body">
-                We accept Visa®, MasterCard®, American Express®, and PayPal®. So you can be confident that your
-                credit card information will be kept safe and secure.
+                {{ __('pricing.faq1_a') }}
               </div>
             </div>
           </div>
@@ -469,7 +471,7 @@
                 data-bs-target="#faq-2"
                 aria-expanded="false"
                 aria-controls="faq-2">
-                How do you process payments?
+                {{ __('pricing.faq2_q') }}
               </button>
             </h2>
             <div
@@ -478,9 +480,7 @@
               aria-labelledby="headingTwo"
               data-bs-parent="#pricingFaq">
               <div class="accordion-body">
-                Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar diam eros in
-                elit. Pellentesque convallis laoreet laoreet.Donec placerat, lectus sed mattis semper, neque lectus
-                feugiat lectus, varius pulvinar diam eros in elit. Pellentesque convallis laoreet laoreet.
+                {{ __('pricing.faq2_a') }}
               </div>
             </div>
           </div>
@@ -493,7 +493,7 @@
                 data-bs-target="#faq-3"
                 aria-expanded="false"
                 aria-controls="faq-3">
-                Do you have a money-back guarantee?
+                {{ __('pricing.faq3_q') }}
               </button>
             </h2>
             <div
@@ -502,9 +502,7 @@
               aria-labelledby="headingThree"
               data-bs-parent="#pricingFaq">
               <div class="accordion-body">
-                We count all responses submitted through all your forms in a month. If you already received 100
-                responses this month, you won’t be able to receive any more of them until next month when the counter
-                resets.
+                {{ __('pricing.faq3_a') }}
               </div>
             </div>
           </div>
@@ -517,7 +515,7 @@
                 data-bs-target="#faq-4"
                 aria-expanded="false"
                 aria-controls="faq-4">
-                I have more questions. Where can I get help?
+                {{ __('pricing.faq4_q') }}
               </button>
             </h6>
             <div
@@ -525,7 +523,7 @@
               class="accordion-collapse collapse"
               aria-labelledby="headingFour"
               data-bs-parent="#pricingFaq">
-              <div class="accordion-body">2Checkout accepts all types of credit and debit cards.</div>
+              <div class="accordion-body">{{ __('pricing.faq4_a') }}</div>
             </div>
           </div>
         </div>

@@ -1,0 +1,61 @@
+<?php
+
+return [
+    'checkout' => 'Checkout',
+    'checkout_desc1' => 'All plans include 40+ advanced tools and features to boost your product.',
+    'checkout_desc2' => 'Choose the best plan to fit your needs.',
+    'credit_card' => 'Credit Card',
+    'paypal' => 'Paypal',
+    'billing_details' => 'Billing Details',
+    'email_address' => 'Email Address',
+    'email_placeholder' => 'john.doe@gmail.com',
+    'password' => 'Password',
+    'password_placeholder' => 'Password',
+    'country' => 'Country',
+    'select' => 'Select',
+    'billing_zip' => 'Billing Zip / Postal Code',
+    'zip_placeholder' => 'Zip / Postal Code',
+    
+    'credit_card_info' => 'Credit Card Info',
+    'card_number' => 'Card number',
+    'card_placeholder' => '7465 8374 5837 5067',
+    'name' => 'Name',
+    'name_placeholder' => 'John Doe',
+    'exp_date' => 'EXP. Date',
+    'exp_placeholder' => 'MM/YY',
+    'cvv' => 'CVV',
+    'cvv_placeholder' => '965',
+    
+    'order_summary' => 'Order Summary',
+    'order_summary_desc1' => 'It can help you manage and service orders before,',
+    'order_summary_desc2' => 'during and after fulfilment.',
+    'plan_desc' => 'A simple start for everyone',
+    'month' => '/month',
+    'change_plan' => 'Change Plan',
+    
+    'subtotal' => 'Subtotal',
+    'tax' => 'Tax',
+    'total' => 'Total',
+    'proceed_payment' => 'Proceed with Payment',
+    'terms_accept' => 'By continuing, you accept to our Terms of Services and Privacy Policy. Please note that payments are non-refundable.',
+    
+    'pricing_modal_title' => 'Pricing Plans',
+    'pricing_modal_desc' => 'All plans include 40+ advanced tools and features to boost your product. Choose the best plan to fit your needs.',
+    'monthly' => 'Monthly',
+    'annually' => 'Annually',
+    'save_up_to_10' => 'Save up to 10%',
+    
+    'basic' => 'Basic',
+    'basic_desc' => 'A simple start for everyone',
+    'your_current_plan' => 'Your Current Plan',
+    
+    'popular' => 'Popular',
+    'standard' => 'Standard',
+    'standard_desc' => 'For small to medium businesses',
+    'usd_480_year' => 'USD 480 / year',
+    'upgrade' => 'Upgrade',
+    
+    'enterprise' => 'Enterprise',
+    'enterprise_desc' => 'Solution for big organizations',
+    'usd_960_year' => 'USD 960 / year',
+];

@@ -4,24 +4,24 @@
 <!-- Help Center Header: Start -->
     <section class="section-py first-section-pt help-center-header position-relative overflow-hidden">
       <img class="banner-bg-img z-n1" src="{{ asset('assets/img/pages/header.png') }}" alt="Help center header" />
-      <h4 class="text-center text-primary">Hello, how can we help?</h4>
+      <h4 class="text-center text-primary">{{ __('help-center.title') }}</h4>
       <div class="input-wrapper mb-4 input-group input-group-merge position-relative mx-auto">
         <span class="input-group-text" id="basic-addon1"><i class="icon-base bx bx-search"></i></span>
         <input
           type="text"
           class="form-control"
-          placeholder="Search"
-          aria-label="Search"
+          placeholder="{{ __('help-center.search_placeholder') }}"
+          aria-label="{{ __('help-center.search_placeholder') }}"
           aria-describedby="basic-addon1" />
       </div>
-      <p class="text-center px-4 mb-0">Common troubleshooting topics: eCommerce, Blogging to payment</p>
+      <p class="text-center px-4 mb-0">{{ __('help-center.subtitle') }}</p>
     </section>
     <!-- Help Center Header: End -->
 
     <!-- Popular Articles: Start -->
     <section class="section-py">
       <div class="container">
-        <h4 class="text-center mb-6">Popular Articles</h4>
+        <h4 class="text-center mb-6">{{ __('help-center.popular_articles') }}</h4>
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <div class="row g-6">
@@ -54,9 +54,9 @@
                         fill="white"
                         fill-opacity="0.2" />
                     </svg>
-                    <h5 class="my-3">Getting Started</h5>
-                    <p class="mb-3">Whether you're new or you're a power user, this article will…</p>
-                    <a class="btn btn-sm btn-label-primary" href="{{ url('help-center-article') }}">Read More</a>
+                    <h5 class="my-3">{{ __('help-center.getting_started') }}</h5>
+                    <p class="mb-3">{{ __('help-center.getting_started_desc') }}</p>
+                    <a class="btn btn-sm btn-label-primary" href="{{ url('help-center-article') }}">{{ __('help-center.read_more') }}</a>
                   </div>
                 </div>
               </div>
@@ -86,9 +86,9 @@
                           fill-opacity="0.2" />
                       </g>
                     </svg>
-                    <h5 class="my-3">First Steps</h5>
-                    <p class="mb-3">Are you a new customer wondering how to get started?</p>
-                    <a class="btn btn-sm btn-label-primary" href="{{ url('help-center-article') }}">Read More</a>
+                    <h5 class="my-3">{{ __('help-center.first_steps') }}</h5>
+                    <p class="mb-3">{{ __('help-center.first_steps_desc') }}</p>
+                    <a class="btn btn-sm btn-label-primary" href="{{ url('help-center-article') }}">{{ __('help-center.read_more') }}</a>
                   </div>
                 </div>
               </div>
@@ -118,9 +118,9 @@
                         fill="white"
                         fill-opacity="0.2" />
                     </svg>
-                    <h5 class="my-3">Add External Content</h5>
-                    <p class="mb-3">This article will show you how to expand the functionality of...</p>
-                    <a class="btn btn-sm btn-label-primary" href="{{ url('help-center-article') }}">Read More</a>
+                    <h5 class="my-3">{{ __('help-center.add_external_content') }}</h5>
+                    <p class="mb-3">{{ __('help-center.add_external_content_desc') }}</p>
+                    <a class="btn btn-sm btn-label-primary" href="{{ url('help-center-article') }}">{{ __('help-center.read_more') }}</a>
                   </div>
                 </div>
               </div>
@@ -134,7 +134,7 @@
     <!-- Knowledge Base: Start -->
     <section class="section-py bg-body">
       <div class="container knowledge-base">
-        <h4 class="text-center mb-6">Knowledge Base</h4>
+        <h4 class="text-center mb-6">{{ __('help-center.knowledge_base') }}</h4>
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <div class="row g-6">
@@ -147,14 +147,14 @@
                           ><i class="icon-base bx bx-cart"></i
                         ></span>
                       </div>
-                      <h5 class="mb-0">Buying</h5>
+                      <h5 class="mb-0">{{ __('help-center.buying') }}</h5>
                     </div>
                     <ul class="list-unstyled my-6">
                       <li class="mb-2">
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> What are Favourites? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.buying_1') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -162,7 +162,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> How do I purchase an item? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.buying_2') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -170,7 +170,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> How do i add or change my details? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.buying_3') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -178,7 +178,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> How do refunds work? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.buying_4') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -186,7 +186,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> Can I Get A Refund? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.buying_5') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -194,14 +194,14 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> I'm trying to find a specific item </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.buying_6') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
                     </ul>
                     <p class="mb-0 fw-medium mt-6">
                       <a href="{{ url('help-center-article') }}" class="d-flex align-items-center">
-                        <span class="me-3">See all 10 articles</span>
+                        <span class="me-3">{{ __('help-center.buying_see_all') }}</span>
                         <i class="icon-base bx bx-right-arrow-alt scaleX-n1-rtl icon-sm fw-semibold"></i>
                       </a>
                     </p>
@@ -217,14 +217,14 @@
                           ><i class="icon-base bx bx-help-circle"></i
                         ></span>
                       </div>
-                      <h5 class="mb-0">Item Support</h5>
+                      <h5 class="mb-0">{{ __('help-center.item_support') }}</h5>
                     </div>
                     <ul class="list-unstyled my-6">
                       <li class="mb-2">
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> What is Item Support? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.item_support_1') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -232,7 +232,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> How to contact an author </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.item_support_2') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -240,7 +240,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> Where Is My Purchase Code? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.item_support_3') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -248,7 +248,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> Extend or renew Item Support </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.item_support_4') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -256,7 +256,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> Item Support FAQ </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.item_support_5') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -264,14 +264,14 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> Why has my item been removed? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.item_support_6') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
                     </ul>
                     <p class="mb-0 fw-medium mt-6">
                       <a href="{{ url('help-center-article') }}" class="d-flex align-items-center">
-                        <span class="me-3">See all 14 articles</span>
+                        <span class="me-3">{{ __('help-center.item_support_see_all') }}</span>
                         <i class="icon-base bx bx-right-arrow-alt scaleX-n1-rtl icon-sm fw-semibold"></i>
                       </a>
                     </p>
@@ -287,7 +287,7 @@
                           ><i class="icon-base bx bx-dollar"></i
                         ></span>
                       </div>
-                      <h5 class="mb-0">Licenses</h5>
+                      <h5 class="mb-0">{{ __('help-center.licenses') }}</h5>
                     </div>
                     <ul class="list-unstyled my-6">
                       <li class="mb-2">
@@ -295,7 +295,7 @@
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
                           <span class="text-truncate me-1">
-                            Can I use the same license for the same item on multiple sites?
+                            {{ __('help-center.licenses_1') }}
                           </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
@@ -304,7 +304,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> How do licenses work for any plugins </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.licenses_2') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -312,7 +312,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> For logo what license do I need? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.licenses_3') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -321,7 +321,7 @@
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
                           <span class="text-truncate me-1">
-                            I’m making a test site - it’s not for a client. Which license do I need?
+                            {{ __('help-center.licenses_4') }}
                           </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
@@ -330,7 +330,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> which license do I need? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.licenses_5') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -338,14 +338,14 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> I want to make multiple end products </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.licenses_6') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
                     </ul>
                     <p class="mb-0 fw-medium mt-6">
                       <a href="{{ url('help-center-article') }}" class="d-flex align-items-center">
-                        <span class="me-3">See all 8 articles</span>
+                        <span class="me-3">{{ __('help-center.licenses_see_all') }}</span>
                         <i class="icon-base bx bx-right-arrow-alt scaleX-n1-rtl icon-sm fw-semibold"></i>
                       </a>
                     </p>
@@ -361,14 +361,14 @@
                           ><i class="icon-base bx bx-brush"></i
                         ></span>
                       </div>
-                      <h5 class="mb-0">Template Kits</h5>
+                      <h5 class="mb-0">{{ __('help-center.template_kits') }}</h5>
                     </div>
                     <ul class="list-unstyled my-6">
                       <li class="mb-2">
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> Template Kits </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.template_kits_1') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -376,7 +376,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-1"> Elementor Template Kits: PHP Zip File Missing </span>
+                          <span class="text-truncate me-1"> {{ __('help-center.template_kits_2') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -384,7 +384,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-1"> Template Kits - Imported template is blank or broken </span>
+                          <span class="text-truncate me-1"> {{ __('help-center.template_kits_3') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -392,7 +392,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> Troubleshooting Import Problems </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.template_kits_4') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -400,7 +400,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> How to use the WordPress Plugin </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.template_kits_5') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -408,14 +408,14 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-1"> How to use the Template Kit Importer Plugin </span>
+                          <span class="text-truncate me-1"> {{ __('help-center.template_kits_6') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
                     </ul>
                     <p class="mb-0 fw-medium mt-6">
                       <a href="{{ url('help-center-article') }}" class="d-flex align-items-center">
-                        <span class="me-3">See all 5 articles</span>
+                        <span class="me-3">{{ __('help-center.template_kits_see_all') }}</span>
                         <i class="icon-base bx bx-right-arrow-alt scaleX-n1-rtl icon-sm fw-semibold"></i>
                       </a>
                     </p>
@@ -431,14 +431,14 @@
                           ><i class="icon-base bx bx-lock-open"></i
                         ></span>
                       </div>
-                      <h5 class="mb-0">Account & Password</h5>
+                      <h5 class="mb-0">{{ __('help-center.account_password') }}</h5>
                     </div>
                     <ul class="list-unstyled my-6">
                       <li class="mb-2">
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> Signing in with a social account </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_password_1') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -446,7 +446,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> Locked Out of Account </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_password_2') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -454,7 +454,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> I'm not receiving the verification email </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_password_3') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -462,7 +462,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> Forgotten Username Or Password </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_password_4') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -470,7 +470,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> New password not accepted </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_password_5') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -478,14 +478,14 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> What is Sign In Verification? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_password_6') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
                     </ul>
                     <p class="mb-0 fw-medium mt-6">
                       <a href="{{ url('help-center-article') }}" class="d-flex align-items-center">
-                        <span class="me-3">See all 16 articles</span>
+                        <span class="me-3">{{ __('help-center.account_password_see_all') }}</span>
                         <i class="icon-base bx bx-right-arrow-alt scaleX-n1-rtl icon-sm fw-semibold"></i>
                       </a>
                     </p>
@@ -501,14 +501,14 @@
                           ><i class="icon-base bx bx-user"></i
                         ></span>
                       </div>
-                      <h5 class="mb-0">Account Settings</h5>
+                      <h5 class="mb-0">{{ __('help-center.account_settings') }}</h5>
                     </div>
                     <ul class="list-unstyled my-6">
                       <li class="mb-2">
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> How do I change my password? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_settings_1') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -516,7 +516,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> How do I change my username? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_settings_2') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -524,7 +524,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> How do I close my account? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_settings_3') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -532,7 +532,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> How do I change my email address? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_settings_4') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -540,7 +540,7 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> How can I regain access to my account? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_settings_5') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
@@ -548,14 +548,14 @@
                         <a
                           href="{{ url('help-center-article') }}"
                           class="text-heading d-flex justify-content-between align-items-center">
-                          <span class="text-truncate me-2 me-lg-4"> Are RSS feeds available on Market? </span>
+                          <span class="text-truncate me-2 me-lg-4"> {{ __('help-center.account_settings_6') }} </span>
                           <i class="icon-base bx bx-chevron-right scaleX-n1-rtl text-body-secondary"></i>
                         </a>
                       </li>
                     </ul>
                     <p class="mb-0 fw-medium mt-6">
                       <a href="{{ url('help-center-article') }}" class="d-flex align-items-center">
-                        <span class="me-3">See all 12 articles</span>
+                        <span class="me-3">{{ __('help-center.account_settings_see_all') }}</span>
                         <i class="icon-base bx bx-right-arrow-alt scaleX-n1-rtl icon-sm fw-semibold"></i>
                       </a>
                     </p>
@@ -572,7 +572,7 @@
     <!-- Keep Learning: Start -->
     <section class="section-py">
       <div class="container">
-        <h4 class="text-center mb-6">Keep Learning</h4>
+        <h4 class="text-center mb-6">{{ __('help-center.keep_learning') }}</h4>
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <div class="row g-6">
@@ -597,9 +597,9 @@
                         fill="white"
                         fill-opacity="0.2" />
                     </svg>
-                    <h5 class="my-3">Blogging</h5>
-                    <p class="mb-3">Expert tips and tools to improve your website or online store using our blog.</p>
-                    <a href="{{ url('help-center-article') }}" class="btn btn-sm btn-label-primary">Read More</a>
+                    <h5 class="my-3">{{ __('help-center.blogging') }}</h5>
+                    <p class="mb-3">{{ __('help-center.blogging_desc') }}</p>
+                    <a href="{{ url('help-center-article') }}" class="btn btn-sm btn-label-primary">{{ __('help-center.read_more') }}</a>
                   </div>
                 </div>
               </div>
@@ -628,9 +628,9 @@
                         fill="white"
                         fill-opacity="0.2" />
                     </svg>
-                    <h5 class="my-3">Inspiration Center</h5>
-                    <p class="mb-3">Inspiration from experts to help you start and grow your big ideas.</p>
-                    <a href="{{ url('help-center-article') }}" class="btn btn-sm btn-label-primary">Read More</a>
+                    <h5 class="my-3">{{ __('help-center.inspiration_center') }}</h5>
+                    <p class="mb-3">{{ __('help-center.inspiration_center_desc') }}</p>
+                    <a href="{{ url('help-center-article') }}" class="btn btn-sm btn-label-primary">{{ __('help-center.read_more') }}</a>
                   </div>
                 </div>
               </div>
@@ -672,9 +672,9 @@
                         stroke-linecap="round"
                         stroke-linejoin="round" />
                     </svg>
-                    <h5 class="my-3">Community</h5>
-                    <p class="mb-3">A group of people living in the same place or having a particular.</p>
-                    <a href="{{ url('help-center-article') }}" class="btn btn-sm btn-label-primary">Read More</a>
+                    <h5 class="my-3">{{ __('help-center.community') }}</h5>
+                    <p class="mb-3">{{ __('help-center.community_desc') }}</p>
+                    <a href="{{ url('help-center-article') }}" class="btn btn-sm btn-label-primary">{{ __('help-center.read_more') }}</a>
                   </div>
                 </div>
               </div>
@@ -690,14 +690,13 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-lg-6 text-center">
-            <h4>Still need help?</h4>
+            <h4>{{ __('help-center.still_need_help') }}</h4>
             <p>
-              Our specialists are always happy to help.<br />Contact us during standard business hours or email us 24/7
-              and we'll get back to you.
+              {!! __('help-center.still_need_help_desc') !!}
             </p>
             <div class="d-flex justify-content-center flex-wrap gap-4">
-              <a href="javascript:void(0);" class="btn btn-primary">Visit our community</a>
-              <a href="javascript:void(0);" class="btn btn-primary">Contact us</a>
+              <a href="javascript:void(0);" class="btn btn-primary">{{ __('help-center.visit_our_community') }}</a>
+              <a href="javascript:void(0);" class="btn btn-primary">{{ __('help-center.contact_us') }}</a>
             </div>
           </div>
         </div>
