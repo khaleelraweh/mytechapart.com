@@ -24,26 +24,27 @@
                 @method('PUT')
                 
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs mb-4" role="tablist">
-                    <li class="nav-item">
-                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#tab-basic" aria-controls="tab-basic" aria-selected="true">
-                            البيانات الأساسية ومعلومات الزكاة
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#tab-location" aria-controls="tab-location" aria-selected="false">
-                            الموقع ومعلومات التواصل
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#tab-commercial" aria-controls="tab-commercial" aria-selected="false">
-                            إدارة ترخيص السياحة والتفاصيل التجارية
-                        </button>
-                    </li>
-                </ul>
+                <div class="nav-align-top mb-4">
+                    <ul class="nav nav-tabs nav-fill" role="tablist">
+                        <li class="nav-item">
+                            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#tab-basic" aria-controls="tab-basic" aria-selected="true">
+                                <i class="tf-icons bx bx-building me-1"></i> البيانات الأساسية ومعلومات الزكاة
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#tab-location" aria-controls="tab-location" aria-selected="false">
+                                <i class="tf-icons bx bx-map-pin me-1"></i> الموقع ومعلومات التواصل
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#tab-commercial" aria-controls="tab-commercial" aria-selected="false">
+                                <i class="tf-icons bx bx-briefcase me-1"></i> إدارة ترخيص السياحة والتفاصيل التجارية
+                            </button>
+                        </li>
+                    </ul>
 
-                <!-- Tab panes -->
-                <div class="tab-content border-0 p-0">
+                    <!-- Tab panes -->
+                    <div class="tab-content border-0 p-0">
                     
                     <!-- Tab 1: Basic Info & ZATCA -->
                     <div class="tab-pane fade show active" id="tab-basic" role="tabpanel">

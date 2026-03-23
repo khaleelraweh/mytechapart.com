@@ -2,120 +2,295 @@
 
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="py-3 mb-4"><span class="text-muted fw-light">{{ __('tenant.company') }} /</span> {{ __('tenant.edit') }}</h4>
-
-    @if(session('success'))
-        <div class="alert alert-success">{{ session('success') }}</div>
-    @endif
-    
-    @if($errors->any())
-        <div class="alert alert-danger">
-            <ul class="mb-0">
-                @foreach($errors->all() as $e)
-                    <li>{{ $e }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    <h4 class="py-3 mb-4"><span class="text-muted fw-light">{{ __('tenant.company') }} /</span> تعديل بيانات المنشأة</h4>
 
     <div class="card mb-4">
-        <div class="card-header border-bottom">
-            <h5 class="mb-0">{{ __('tenant.company_details') }}</h5>
-            <small class="text-muted">{{ __('tenant.some_fields_readonly') }}</small>
+        <div class="card-header border-bottom d-flex justify-content-between">
+            <h5 class="mb-0 text-primary"><i class="bx mx-1 bx-edit"></i>تحديث بيانات المنشأة التابعة لك</h5>
         </div>
         <div class="card-body pt-4">
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <form action="{{ route('companies.update', $company->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
-                <div class="row g-3 mb-4">
-                    <h6 class="mb-0 text-primary">Editable Information (معلومات قابلة للتعديل)</h6>
+                <!-- Nav tabs -->
+                <div class="nav-align-top mb-4">
+                    <ul class="nav nav-tabs nav-fill" role="tablist">
+                        <li class="nav-item">
+                            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#tab-basic" aria-controls="tab-basic" aria-selected="true">
+                                <i class="tf-icons bx bx-building me-1"></i> البيانات الأساسية ومعلومات الزكاة
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#tab-location" aria-controls="tab-location" aria-selected="false">
+                                <i class="tf-icons bx bx-map-pin me-1"></i> الموقع ومعلومات التواصل
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#tab-commercial" aria-controls="tab-commercial" aria-selected="false">
+                                <i class="tf-icons bx bx-briefcase me-1"></i> إدارة ترخيص السياحة والتفاصيل التجارية
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content border-0 p-0">
                     
-                    <div class="col-md-6">
-                        <label class="form-label">{{ __('tenant.name') }} <span class="text-danger">*</span></label>
-                        <input type="text" name="name" class="form-control" required value="{{ old('name', $company->name) }}">
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <label class="form-label">{{ __('tenant.phone_number') }}</label>
-                        <input type="text" name="phone" class="form-control" value="{{ old('phone', $company->phone) }}">
+                    <!-- Tab 1: Basic Info & ZATCA -->
+                    <div class="tab-pane fade show active" id="tab-basic" role="tabpanel">
+                        <div class="row g-3">
+                            <h6 class="mb-0 mt-3 text-muted">حقول مخصصة للإدارة المركزية فقط (للقراءة)</h6>
+                            <div class="col-md-6">
+                                <label class="form-label text-muted">الشركة التابعة لها (Parent Company)</label>
+                                <input type="text" class="form-control" disabled value="{{ $company->parent_company_id ? \App\Models\Company::find($company->parent_company_id)?->name : 'لا يوجد (هذه هي الشركة الرئيسية)' }}">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label text-muted">حالة حساب نزيل</label>
+                                <input type="text" class="form-control" disabled value="{{ $company->status }}">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-muted">تاريخ انتهاء صلاحية حساب نزيل</label>
+                                <input type="text" class="form-control" disabled value="{{ $company->nazeel_account_expiry }}">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-muted">رمز المنشأة</label>
+                                <input type="text" class="form-control" disabled value="{{ $company->facility_code }}">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-muted">أقصى عدد للوحدات</label>
+                                <input type="text" class="form-control" disabled value="{{ $company->max_units }}">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-muted">اصدار الحساب</label>
+                                <input type="text" class="form-control" disabled value="{{ $company->account_type }}">
+                            </div>
+
+                            <div class="col-12"><hr class="my-4"></div>
+                            <h6 class="mb-0 text-muted">البيانات القابلة للتعديل</h6>
+
+                            <div class="col-md-6">
+                                <label class="form-label">اسم المنشأة <span class="text-danger">*</span></label>
+                                <input type="text" name="name" class="form-control" required value="{{ old('name', $company->name) }}">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">الاسم المستخدم</label>
+                                <input type="text" name="username" class="form-control" value="{{ old('username', $company->username) }}">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">نوع المنشأة <span class="text-danger">*</span></label>
+                                <select name="property_type" class="form-select" required>
+                                    <option value="أجنحة فندقية" {{ old('property_type', $company->property_type) == 'أجنحة فندقية' ? 'selected' : '' }}>أجنحة فندقية</option>
+                                    <option value="فندق" {{ old('property_type', $company->property_type) == 'فندق' ? 'selected' : '' }}>فندق</option>
+                                    <option value="شقق مفروشة" {{ old('property_type', $company->property_type) == 'شقق مفروشة' ? 'selected' : '' }}>شقق مفروشة</option>
+                                    <option value="شاليهات" {{ old('property_type', $company->property_type) == 'شاليهات' ? 'selected' : '' }}>شاليهات</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label">الشعار</label>
+                                @if($company->logo)
+                                    <div class="mb-2"><img src="{{ asset('storage/'.$company->logo) }}" width="60" class="rounded border"></div>
+                                @endif
+                                <input type="file" name="logo" class="form-control" accept="image/*">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">نوع معرف هيئة الزكاة والضريبة والجمارك</label>
+                                <input type="text" name="tax_authority_id_type" class="form-control" value="{{ old('tax_authority_id_type', $company->tax_authority_id_type) }}">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">رقم معرف هيئة الزكاة والضريبة والجمارك</label>
+                                <input type="text" name="tax_authority_id" class="form-control" value="{{ old('tax_authority_id', $company->tax_authority_id) }}">
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <label class="form-label">{{ __('tenant.manager_mobile') }}</label>
-                        <input type="text" name="manager_name" class="form-control" value="{{ old('manager_name', $company->manager_name) }}">
+                    <!-- Tab 2: Location & Contact -->
+                    <div class="tab-pane fade" id="tab-location" role="tabpanel">
+                        <div class="row g-3">
+                            <h6 class="mb-0 mt-3 text-muted">بيانات الموقع</h6>
+                            <div class="col-md-4">
+                                <label class="form-label">الدولة <span class="text-danger">*</span></label>
+                                <input type="text" name="country" class="form-control" required value="{{ old('country', $company->country) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">المنطقة <span class="text-danger">*</span></label>
+                                <input type="text" name="region" class="form-control" required value="{{ old('region', $company->region) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">المدينة <span class="text-danger">*</span></label>
+                                <input type="text" name="city" class="form-control" required value="{{ old('city', $company->city) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">الحيّ <span class="text-danger">*</span></label>
+                                <input type="text" name="district" class="form-control" required value="{{ old('district', $company->district) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">الشارع</label>
+                                <input type="text" name="street" class="form-control" value="{{ old('street', $company->street) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">المنطقة الزمنية <span class="text-danger">*</span></label>
+                                <input type="text" name="timezone" class="form-control" required value="{{ old('timezone', $company->timezone) }}">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label">خط العرض</label>
+                                <input type="text" name="latitude" class="form-control" value="{{ old('latitude', $company->latitude) }}">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">خط الطول</label>
+                                <input type="text" name="longitude" class="form-control" value="{{ old('longitude', $company->longitude) }}">
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="form-label">العنوان <span class="text-danger">*</span></label>
+                                <input type="text" name="address" class="form-control" required value="{{ old('address', $company->address) }}">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">رقم المبنى <span class="text-danger">*</span></label>
+                                <input type="text" name="building_number" class="form-control" required value="{{ old('building_number', $company->building_number) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">الرقم الفرعي</label>
+                                <input type="text" name="sub_number" class="form-control" value="{{ old('sub_number', $company->sub_number) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">الرمز البريدي <span class="text-danger">*</span></label>
+                                <input type="text" name="postal_code" class="form-control" required value="{{ old('postal_code', $company->postal_code) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">صندوق البريد</label>
+                                <input type="text" name="po_box" class="form-control" value="{{ old('po_box', $company->po_box) }}">
+                            </div>
+                            <div class="col-md-8">
+                                <label class="form-label">العنوان المختصر</label>
+                                <input type="text" name="short_address" class="form-control" value="{{ old('short_address', $company->short_address) }}">
+                            </div>
+
+                            <h6 class="mb-0 mt-4 text-muted">بيانات التواصل</h6>
+                            <div class="col-md-4">
+                                <label class="form-label">رقم الهاتف <span class="text-danger">*</span></label>
+                                <input type="text" name="phone" class="form-control" required value="{{ old('phone', $company->phone) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">رقم الجوال</label>
+                                <input type="text" name="mobile" class="form-control" value="{{ old('mobile', $company->mobile) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">رقم الفاكس</label>
+                                <input type="text" name="fax" class="form-control" value="{{ old('fax', $company->fax) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">الخط الساخن</label>
+                                <input type="text" name="hotline" class="form-control" value="{{ old('hotline', $company->hotline) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">البريد الإلكتروني <span class="text-danger">*</span></label>
+                                <input type="email" name="email" class="form-control" required value="{{ old('email', $company->email) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">الموقع الإلكتروني</label>
+                                <input type="text" name="website" class="form-control" value="{{ old('website', $company->website) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">جوال مدير الفندق</label>
+                                <input type="text" name="manager_name" class="form-control" value="{{ old('manager_name', $company->manager_name) }}">
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="col-md-12">
-                        <label class="form-label">{{ __('tenant.logo') }}</label>
-                        <div class="d-flex align-items-center gap-3">
-                            @if($company->logo)
-                                <img src="{{ asset('storage/'.$company->logo) }}" alt="Logo" class="rounded border" style="height:80px;object-fit:contain;">
-                            @endif
-                            <input type="file" name="logo" class="form-control" accept="image/jpg,image/jpeg,image/png">
+
+                    <!-- Tab 3: Commercial & Tourism -->
+                    <div class="tab-pane fade" id="tab-commercial" role="tabpanel">
+                        <div class="row g-3">
+                            <h6 class="mb-0 mt-3 text-muted">ترخيص السياحة والمرافق</h6>
+                            <div class="col-md-4">
+                                <label class="form-label">نوع النشاط السياحي</label>
+                                <input type="text" name="tourism_activity_type" class="form-control" value="{{ old('tourism_activity_type', $company->tourism_activity_type) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">رقم رخصة السياحة</label>
+                                <input type="text" name="tourism_license_no" class="form-control" value="{{ old('tourism_license_no', $company->tourism_license_no) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">تاريخ انتهاء رخصة السياحة</label>
+                                <input type="date" name="tourism_license_expiry" class="form-control" value="{{ old('tourism_license_expiry', $company->tourism_license_expiry) }}">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label">عدد الغرف</label>
+                                <input type="number" name="rooms_count" class="form-control" value="{{ old('rooms_count', $company->rooms_count) }}">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">عدد الأسرة</label>
+                                <input type="number" name="beds_count" class="form-control" value="{{ old('beds_count', $company->beds_count) }}">
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <label class="form-label">ملف رخصة السياحة</label>
+                                @if($company->tourism_license_file)
+                                    <div class="mb-2"><a href="{{ asset('storage/'.$company->tourism_license_file) }}" target="_blank">عرض المرفق الحالي</a></div>
+                                @endif
+                                <input type="file" name="tourism_license_file" class="form-control" accept=".pdf,.tiff,.jpg,.png">
+                            </div>
+
+                            <h6 class="mb-0 mt-4 text-muted">التفاصيل التجارية</h6>
+                            <div class="col-md-4">
+                                <label class="form-label">رقم السجل التجاري <span class="text-danger">*</span></label>
+                                <input type="text" name="commercial_register_no" class="form-control" required value="{{ old('commercial_register_no', $company->commercial_register_no) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">رقم رخصة النشاط التجاري</label>
+                                <input type="text" name="business_license_no" class="form-control" value="{{ old('business_license_no', $company->business_license_no) }}">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">رقم التسجيل الضريبي (ضريبة القيمة المضافة) <span class="text-danger">*</span></label>
+                                <input type="text" name="vat_registration_no" class="form-control" required value="{{ old('vat_registration_no', $company->vat_registration_no) }}">
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="form-label">ملف السجل التجاري</label>
+                                @if($company->commercial_register_file)
+                                    <div class="mb-2"><a href="{{ asset('storage/'.$company->commercial_register_file) }}" target="_blank">عرض المرفق الحالي</a></div>
+                                @endif
+                                <input type="file" name="commercial_register_file" class="form-control" accept=".pdf,.tiff,.jpg,.png">
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="form-label">المسافة من الحرم (كم؟)</label>
+                                <input type="number" step="0.01" name="distance_from_haram" class="form-control" value="{{ old('distance_from_haram', $company->distance_from_haram) }}">
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <label class="form-label">وصف المنشأة</label>
+                                <textarea name="property_description" class="form-control" rows="3">{{ old('property_description', $company->property_description) }}</textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <hr>
-
-                <div class="row g-3">
-                    <h6 class="mb-0 text-muted">Administrative Information (معلومات إدارية القراءة فقط)</h6>
-
-                    <div class="col-md-4">
-                        <label class="form-label">{{ __('tenant.status') }}</label>
-                        <input type="text" class="form-control" readonly value="{{ $company->status }}">
-                    </div>
-
-                    <div class="col-md-4">
-                        <label class="form-label">{{ __('tenant.guest_account_expiry') }}</label>
-                        <input type="text" class="form-control" readonly value="{{ $company->nazeel_account_expiry ? \Carbon\Carbon::parse($company->nazeel_account_expiry)->format('Y-m-d') : '' }}">
-                    </div>
-
-                    <div class="col-md-4">
-                        <label class="form-label">{{ __('tenant.property_code') }}</label>
-                        <input type="text" class="form-control" readonly value="{{ $company->facility_code }}">
-                    </div>
-
-                    <div class="col-md-4">
-                        <label class="form-label">{{ __('tenant.max_units') }}</label>
-                        <input type="text" class="form-control" readonly value="{{ $company->max_units }}">
-                    </div>
-
-                    <div class="col-md-4">
-                        <label class="form-label">{{ __('tenant.account_type') }}</label>
-                        <input type="text" class="form-control" readonly value="{{ $company->account_type }}">
-                    </div>
-
-                    <div class="col-md-4">
-                        <label class="form-label">{{ __('tenant.email') }}</label>
-                        <input type="text" class="form-control" readonly value="{{ $company->email }}">
-                    </div>
-
-                    <div class="col-md-12">
-                        <label class="form-label">{{ __('tenant.address') }}</label>
-                        <textarea class="form-control" readonly rows="2">{{ $company->address }}</textarea>
-                    </div>
-
-                    <div class="col-md-4">
-                        <label class="form-label">{{ __('tenant.building_number') }}</label>
-                        <input type="text" class="form-control" readonly value="{{ $company->building_number }}">
-                    </div>
-
-                    <div class="col-md-4">
-                        <label class="form-label">{{ __('tenant.sub_number') }}</label>
-                        <input type="text" class="form-control" readonly value="{{ $company->sub_number }}">
-                    </div>
-
-                    <div class="col-md-4">
-                        <label class="form-label">{{ __('tenant.postal_code') }}</label>
-                        <input type="text" class="form-control" readonly value="{{ $company->postal_code }}">
-                    </div>
-                </div>
-
-                <div class="mt-4 d-flex justify-content-end gap-2">
-                    <a href="{{ route('companies.index') }}" class="btn btn-secondary">{{ __('tenant.back') }}</a>
-                    <button type="submit" class="btn btn-primary">{{ __('tenant.save_changes') }}</button>
+                <div class="mt-4 pt-4 border-top">
+                    <button type="submit" class="btn btn-primary d-inline-flex align-items-center"><i class="bx bx-save me-1"></i> حفظ وتحديث البيانات</button>
+                    <a href="{{ route('companies.index') }}" class="btn btn-outline-secondary">إلغاء</a>
                 </div>
             </form>
         </div>
