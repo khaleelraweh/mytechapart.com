@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('properties', function (Blueprint $table) {
-            $table->foreignId('company_id')->constrained('companies')->cascadeOnDelete();
-        });
+        if (!Schema::hasColumn('properties', 'company_id')) {
+            Schema::table('properties', function (Blueprint $table) {
+                $table->unsignedBigInteger('company_id')->nullable();
+                $table->foreign('company_id')->references('id')->on('companies')->cascadeOnDelete();
+            });
+        }
     }
 
     /**
