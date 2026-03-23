@@ -60,7 +60,9 @@
                             <div class="col-md-6">
                                 <label class="form-label">حالة حساب نزيل <span class="text-danger">*</span></label>
                                 <select name="status" class="form-select" required>
-                                    <option value="فعال" {{ old('status') == 'فعال' ? 'selected' : '' }}>فعال</option>
+                                    <option value="نشط (أساسي)" {{ old('status') == 'نشط (أساسي)' ? 'selected' : '' }}>نشط (أساسي)</option>
+                                    <option value="نشط (Premium)" {{ old('status') == 'نشط (Premium)' ? 'selected' : '' }}>نشط (Premium)</option>
+                                    <option value="فرعي" {{ old('status') == 'فرعي' ? 'selected' : '' }}>فرعي</option>
                                     <option value="موقوف" {{ old('status') == 'موقوف' ? 'selected' : '' }}>موقوف</option>
                                 </select>
                             </div>
