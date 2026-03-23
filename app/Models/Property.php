@@ -26,4 +26,9 @@ class Property extends Model
     {
         return $this->hasMany(Floor::class);
     }
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
 }

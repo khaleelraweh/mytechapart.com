@@ -48,6 +48,21 @@ class TenantService
                 // Ensure 'admin' role exists in the tenant database
                 $role = Role::firstOrCreate(['name' => 'admin', 'guard_name' => 'web']);
                 $admin->assignRole($role);
+
+                // 5. Create Initial Company
+                \App\Models\Company::create([
+                    'name' => $data['company_name'],
+                    'status' => $data['status'],
+                    'nazeel_account_expiry' => $data['nazeel_account_expiry'] ?? null,
+                    'facility_code' => $data['facility_code'] ?? null,
+                    'max_units' => $data['max_units'],
+                    'account_type' => $data['account_type'],
+                    'address' => $data['address'],
+                    'building_number' => $data['building_number'] ?? null,
+                    'sub_number' => $data['sub_number'] ?? null,
+                    'postal_code' => $data['postal_code'] ?? null,
+                    'email' => $data['email'],
+                ]);
             });
 
             return $tenant;

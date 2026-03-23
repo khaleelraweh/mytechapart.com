@@ -44,6 +44,8 @@
                         </td>
                         <td>{{ $tenant->created_at->format('Y-m-d') }}</td>
                         <td>
+                            <a href="{{ route('backend.tenants.companies.index', $tenant) }}" class="btn btn-sm btn-primary"><i class="bx bx-building"></i>الشركات</a>
+                            <a href="{{ route('backend.tenants.companies.create', $tenant) }}" class="btn btn-sm btn-success" title="Add Company"><i class="bx bx-plus"></i></a>
                             <a href="{{ route('backend.tenants.edit', $tenant) }}" class="btn btn-sm btn-info"><i class="bx bx-edit"></i> {{ __('backend.edit') }}</a>
                             <form action="{{ route('backend.tenants.destroy', $tenant) }}" method="POST" class="d-inline" onsubmit="return confirm('{{ __('backend.are_you_sure_delete_hotel') }}');">
                                 @csrf

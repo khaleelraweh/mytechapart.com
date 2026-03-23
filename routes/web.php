@@ -53,6 +53,7 @@ Route::middleware(['auth', PreventAccessFromTenantDomains::class])->prefix('admi
     Route::resource('permissions', PermissionController::class);
     Route::resource('users', UserController::class);
     Route::resource('tenants', TenantManagerController::class);
+    Route::resource('tenants.companies', \App\Http\Controllers\Backend\TenantCompanyController::class);
 });
 
 Route::middleware([PreventAccessFromTenantDomains::class])->group(function() {
@@ -77,7 +78,5 @@ Route::middleware([
     \Stancl\Tenancy\Middleware\InitializeTenancyByDomain::class,
     \Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains::class,
 ])->group(function() {
-    Route::get('/company/settings', [App\Http\Controllers\Tenant\CompanySettingsController::class, 'edit'])->name('company.settings');
-    Route::put('/company/settings', [App\Http\Controllers\Tenant\CompanySettingsController::class, 'update'])->name('company.settings.update');
-    Route::put('/company/settings/business', [App\Http\Controllers\Tenant\CompanySettingsController::class, 'updateBusinessData'])->name('company.settings.business.update');
+// Removed company settings controller calls as it is now specific to Tenants
 });

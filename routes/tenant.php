@@ -14,7 +14,7 @@ use App\Http\Controllers\Tenant\CustomerController;
 use App\Http\Controllers\Tenant\PaymentController;
 
 use App\Http\Controllers\Tenant\TenantDashboardController;
-use App\Http\Controllers\Tenant\CompanySettingsController;
+// use App\Http\Controllers\Tenant\CompanySettingsController;
 
 Route::middleware([
     'web',
@@ -29,6 +29,7 @@ Route::middleware([
         Route::get('/', [TenantDashboardController::class, 'index'])->name('tenant.dashboard');
         Route::get('/dashboard', [TenantDashboardController::class, 'index']);
         
+        Route::resource('companies', \App\Http\Controllers\Tenant\CompanyController::class)->except(['create', 'store', 'destroy']);
         Route::resource('properties', PropertyController::class);
 
 
