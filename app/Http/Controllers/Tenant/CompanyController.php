@@ -108,4 +108,18 @@ class CompanyController extends Controller
 
         return redirect()->route('companies.index')->with('success', __('tenant.company_updated'));
     }
+
+    /**
+     * Change the active company context and store in session.
+     */
+    public function changeActiveCompany(Request $request)
+    {
+        $request->validate([
+            'company_id' => 'required|exists:companies,id'
+        ]);
+
+        session(['active_company_id' => $request->company_id]);
+
+        return redirect()->back()->with('success', 'تم تغيير المنشأة النشطة بنجاح.');
+    }
 }

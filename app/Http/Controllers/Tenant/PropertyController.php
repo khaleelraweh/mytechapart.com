@@ -10,7 +10,7 @@ class PropertyController extends Controller
 {
     public function index()
     {
-        $properties = Property::withCount('floors')->get();
+        $properties = Property::where('company_id', session('active_company_id'))->withCount('floors')->get();
         return view('tenant.properties.index', compact('properties'));
     }
 
@@ -29,6 +29,7 @@ class PropertyController extends Controller
             'total_floors' => 'required|integer|min:1'
         ]);
 
+        $validated['company_id'] = session('active_company_id');
         $property = Property::create($validated);
         
         // Auto-generate floors according to Total Floors specified

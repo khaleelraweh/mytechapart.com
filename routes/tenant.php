@@ -30,10 +30,9 @@ Route::middleware([
         Route::get('/dashboard', [TenantDashboardController::class, 'index']);
         
         Route::resource('companies', \App\Http\Controllers\Tenant\CompanyController::class)->except(['create', 'store', 'destroy']);
+        Route::post('change-company', [\App\Http\Controllers\Tenant\CompanyController::class, 'changeActiveCompany'])->name('tenant.change_company');
+
         Route::resource('properties', PropertyController::class);
-
-
-
         Route::resource('floors', FloorController::class);
         Route::resource('units', UnitController::class);
         Route::resource('reservations', ReservationController::class);

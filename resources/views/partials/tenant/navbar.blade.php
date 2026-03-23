@@ -8,11 +8,27 @@
             </div>
 
             <div class="navbar-nav-right d-flex align-items-center justify-content-between w-100" id="navbar-collapse">
-              {{-- Tenant hotel name badge --}}
-              <div class="d-none d-xl-flex align-items-center">
-                <span class="badge bg-label-primary fs-6 px-3 py-2">
-                  <i class="bx bx-buildings me-1"></i> {{ tenant('name') }}
-                </span>
+              {{-- Context Switcher --}}
+              <div class="d-none d-xl-flex align-items-center dropdown">
+                  <button class="btn btn-outline-primary dropdown-toggle {{ isset($tenantCompanies) && $tenantCompanies->count() > 1 ? '' : 'disabled' }}" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bx bx-buildings me-1"></i> 
+                      {{ isset($activeCompany) ? $activeCompany->name : tenant('name') }}
+                  </button>
+                  @if(isset($tenantCompanies) && $tenantCompanies->count() > 1)
+                  <ul class="dropdown-menu">
+                      @foreach($tenantCompanies as $comp)
+                          <li>
+                              <form action="{{ route('tenant.change_company') }}" method="POST">
+                                  @csrf
+                                  <input type="hidden" name="company_id" value="{{ $comp->id }}">
+                                  <button type="submit" class="dropdown-item {{ isset($activeCompany) && $activeCompany->id == $comp->id ? 'active' : '' }}">
+                                      <i class="bx bx-building-house me-2"></i>{{ $comp->name }}
+                                  </button>
+                              </form>
+                          </li>
+                      @endforeach
+                  </ul>
+                  @endif
               </div>
 
               <ul class="navbar-nav flex-row align-items-center ms-md-auto">

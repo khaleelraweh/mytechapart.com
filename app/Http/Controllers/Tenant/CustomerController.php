@@ -10,7 +10,7 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        $customers = Customer::orderBy('name')->get();
+        $customers = Customer::where('company_id', session('active_company_id'))->orderBy('name')->get();
         return view('tenant.customers.index', compact('customers'));
     }
 
@@ -23,6 +23,7 @@ class CustomerController extends Controller
             'identity_no' => 'nullable|string|max:100',
         ]);
 
+        $validated['company_id'] = session('active_company_id');
         Customer::create($validated);
         return back()->with('success', 'Customer saved successfully.');
     }

@@ -15,7 +15,7 @@ class FloorController extends Controller
         if (!$property_id) {
             return redirect()->route('properties.index')->with('error', 'Please select a hotel first to manage its floors.');
         }
-        $property = Property::findOrFail($property_id);
+        $property = Property::where('company_id', session('active_company_id'))->findOrFail($property_id);
         $floors = $property->floors()->withCount('units')->orderBy('floor_number')->get();
         
         return view('tenant.floors.index', compact('property', 'floors'));

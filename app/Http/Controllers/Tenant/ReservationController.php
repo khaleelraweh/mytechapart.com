@@ -13,15 +13,21 @@ class ReservationController extends Controller
 {
     public function index()
     {
-        $reservations = Reservation::with(['unit.property', 'customer'])->orderBy('check_in', 'desc')->get();
+        $reservations = Reservation::where('company_id', session('active_company_id'))->with(['unit.property', 'customer'])->orderBy('check_in', 'desc')->get();
         return view('tenant.reservations.index', compact('reservations'));
     }
 
     public function create()
     {
         // Fetch units not marked as maintenance
-        $units = Unit::with('property', 'floor')->where('status', '!=', 'maintenance')->get();
-        $customers = Customer::orderBy('name')->get();
+        $units = Unit::with(['property', 'floor'])
+            ->whereHas('property', function($q) {
+                $q->where('company_id', session('active_company_id'));
+            })
+            ->where('status', '!=', 'maintenance')
+            ->get();
+            
+        $customers = Customer::where('company_id', session('active_company_id'))->orderBy('name')->get();
         return view('tenant.reservations.create', compact('units', 'customers'));
     }
 
@@ -59,6 +65,7 @@ class ReservationController extends Controller
         $total_price = $unit->price * $nights;
 
         Reservation::create([
+            'company_id' => session('active_company_id'),
             'unit_id' => $unit->id,
             'customer_id' => $validated['customer_id'],
             'check_in' => $validated['check_in'],

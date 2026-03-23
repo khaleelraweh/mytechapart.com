@@ -15,7 +15,11 @@ class UnitController extends Controller
         if (!$floor_id) {
             return redirect()->route('properties.index')->with('error', 'Please select a hotel and its floor first.');
         }
-        $floor = Floor::with('property')->findOrFail($floor_id);
+        $floor = Floor::with('property')
+            ->whereHas('property', function($q) {
+                $q->where('company_id', session('active_company_id'));
+            })->findOrFail($floor_id);
+            
         $units = $floor->units()->orderBy('unit_number')->get();
         
         return view('tenant.units.index', compact('floor', 'units'));
