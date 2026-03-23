@@ -81,5 +81,7 @@ return [
     'system'          => 'System',
     'hotel_admin'     => 'Hotel Admin',
     'hotel_management_system' => 'Hotel Management System',
+    'company'         => 'Company',
+    'properties_data' => 'Properties Data',
 ];
 

@@ -14,19 +14,15 @@ use App\Http\Controllers\Tenant\CustomerController;
 use App\Http\Controllers\Tenant\PaymentController;
 
 use App\Http\Controllers\Tenant\TenantDashboardController;
+use App\Http\Controllers\Tenant\CompanySettingsController;
 
 Route::middleware([
     'web',
     InitializeTenancyByDomain::class,
     PreventAccessFromCentralDomains::class,
 ])->group(function () {
-
     // Auth routes (login/logout) — must be accessible without authentication
     Auth::routes(['register' => false, 'reset' => false, 'verify' => false]);
-
-
-
-
 
     // All other routes require the user to be logged in
     Route::middleware('auth')->group(function() {

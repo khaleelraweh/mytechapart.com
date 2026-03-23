@@ -69,3 +69,15 @@ Route::middleware([PreventAccessFromTenantDomains::class])->group(function() {
 // Add Auth::routes() to the bottom
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout.get');
 Auth::routes();
+
+// Company Settings (Moved to web.php for visibility)
+Route::middleware([
+    'web',
+    'auth',
+    \Stancl\Tenancy\Middleware\InitializeTenancyByDomain::class,
+    \Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains::class,
+])->group(function() {
+    Route::get('/company/settings', [App\Http\Controllers\Tenant\CompanySettingsController::class, 'edit'])->name('company.settings');
+    Route::put('/company/settings', [App\Http\Controllers\Tenant\CompanySettingsController::class, 'update'])->name('company.settings.update');
+    Route::put('/company/settings/business', [App\Http\Controllers\Tenant\CompanySettingsController::class, 'updateBusinessData'])->name('company.settings.business.update');
+});

@@ -12,6 +12,7 @@
         "laravel/tinker": "^2.8",
         "laravel/ui": "^4.6",
         "spatie/laravel-permission": "^6.24",
+        "spatie/laravel-translatable": "^6.11",
         "stancl/tenancy": "^3.10"
     },
     "require-dev": {

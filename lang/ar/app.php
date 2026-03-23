@@ -81,5 +81,7 @@ return [
     'system'          => 'النظام',
     'hotel_admin'     => 'مدير الفندق',
     'hotel_management_system' => 'نظام إدارة الفنادق',
+    'company'         => 'الشركة',
+    'properties_data' => 'بيانات المنشآت',
 ];
 

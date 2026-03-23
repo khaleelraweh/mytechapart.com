@@ -71,6 +71,17 @@
               </a>
             </li>
 
+            <!-- Company -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">{{ __('app.company') }}</span>
+            </li>
+            <li class="menu-item {{ request()->routeIs('company.settings') ? 'active' : '' }}">
+              <a href="{{ route('company.settings') }}" class="menu-link">
+                <i class="menu-icon icon-base bx bx-building"></i>
+                <div data-i18n="Layouts">{{ __('app.properties_data') }}</div>
+              </a>
+            </li>
+
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">{{ __('app.hotel_management') }}</span>
             </li>
