@@ -8,27 +8,11 @@
             </div>
 
             <div class="navbar-nav-right d-flex align-items-center justify-content-between w-100" id="navbar-collapse">
-              {{-- Context Switcher --}}
-              <div class="d-none d-xl-flex align-items-center dropdown">
-                  <button class="btn btn-outline-primary dropdown-toggle {{ isset($tenantCompanies) && $tenantCompanies->count() > 1 ? '' : 'disabled' }}" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="bx bx-buildings me-1"></i> 
-                      {{ isset($activeCompany) ? $activeCompany->name : tenant('name') }}
-                  </button>
-                  @if(isset($tenantCompanies) && $tenantCompanies->count() > 1)
-                  <ul class="dropdown-menu">
-                      @foreach($tenantCompanies as $comp)
-                          <li>
-                              <form action="{{ route('tenant.change_company') }}" method="POST">
-                                  @csrf
-                                  <input type="hidden" name="company_id" value="{{ $comp->id }}">
-                                  <button type="submit" class="dropdown-item {{ isset($activeCompany) && $activeCompany->id == $comp->id ? 'active' : '' }}">
-                                      <i class="bx bx-building-house me-2"></i>{{ $comp->name }}
-                                  </button>
-                              </form>
-                          </li>
-                      @endforeach
-                  </ul>
-                  @endif
+              {{-- Active Company Badge --}}
+              <div class="d-none d-xl-flex align-items-center">
+                <span class="badge bg-label-primary fs-6 px-3 py-2">
+                  <i class="bx bx-buildings me-1"></i> {{ isset($activeCompany) ? $activeCompany->name : tenant('name') }}
+                </span>
               </div>
 
               <ul class="navbar-nav flex-row align-items-center ms-md-auto">
@@ -89,8 +73,26 @@
                       <a class="dropdown-item" href="#">
                         <i class="icon-base bx bx-user icon-md me-3"></i><span>{{ __('app.my_profile') }}</span>
                       </a>
-
                     </li>
+                    
+                    @if(isset($tenantCompanies) && $tenantCompanies->count() > 1)
+                    <li><div class="dropdown-divider my-1"></div></li>
+                    <li>
+                      <h6 class="dropdown-header text-uppercase">تغيير المنشأة النشطة</h6>
+                    </li>
+                    @foreach($tenantCompanies as $comp)
+                        <li>
+                            <form action="{{ route('tenant.change_company') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="company_id" value="{{ $comp->id }}">
+                                <button type="submit" class="dropdown-item align-items-center {{ isset($activeCompany) && $activeCompany->id == $comp->id ? 'active' : '' }}">
+                                    <i class="icon-base bx bx-buildings icon-md me-3"></i><span>{{ $comp->name }}</span>
+                                </button>
+                            </form>
+                        </li>
+                    @endforeach
+                    @endif
+                    
                     <li><div class="dropdown-divider my-1"></div></li>
                     <li>
                       <a class="dropdown-item" href="{{ route('logout') }}"
