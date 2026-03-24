@@ -23,6 +23,7 @@
                 <li class="nav-item dropdown me-2 me-xl-0">
                   <a class="nav-link dropdown-toggle hide-arrow" id="nav-theme" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <i class="icon-base bx bx-sun icon-md theme-icon-active"></i>
+                    <span class="d-none ms-2" id="nav-theme-text">Toggle theme</span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="nav-theme-text">
                     <li>
@@ -78,19 +79,20 @@
                     @if(isset($tenantCompanies) && $tenantCompanies->count() > 1)
                     <li><div class="dropdown-divider my-1"></div></li>
                     <li>
-                      <h6 class="dropdown-header text-uppercase">تغيير المنشأة النشطة</h6>
+                      <div class="px-3 py-2">
+                        <label for="companySwitcher" class="form-label text-uppercase text-muted" style="font-size: 0.75rem;">تغيير المنشأة النشطة</label>
+                        <form action="{{ route('tenant.change_company') }}" method="POST" id="companySwitcherForm">
+                            @csrf
+                            <select name="company_id" id="companySwitcher" class="form-select form-select-sm" onchange="document.getElementById('companySwitcherForm').submit()">
+                                @foreach($tenantCompanies as $comp)
+                                    <option value="{{ $comp->id }}" {{ (isset($activeCompany) && $activeCompany->id == $comp->id) ? 'selected' : '' }}>
+                                        {{ $comp->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </form>
+                      </div>
                     </li>
-                    @foreach($tenantCompanies as $comp)
-                        <li>
-                            <form action="{{ route('tenant.change_company') }}" method="POST">
-                                @csrf
-                                <input type="hidden" name="company_id" value="{{ $comp->id }}">
-                                <button type="submit" class="dropdown-item align-items-center {{ isset($activeCompany) && $activeCompany->id == $comp->id ? 'active' : '' }}">
-                                    <i class="icon-base bx bx-buildings icon-md me-3"></i><span>{{ $comp->name }}</span>
-                                </button>
-                            </form>
-                        </li>
-                    @endforeach
                     @endif
                     
                     <li><div class="dropdown-divider my-1"></div></li>
