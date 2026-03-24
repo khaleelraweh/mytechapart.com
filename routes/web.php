@@ -54,6 +54,8 @@ Route::middleware(['auth', PreventAccessFromTenantDomains::class])->prefix('admi
     Route::resource('users', UserController::class);
     Route::resource('tenants', TenantManagerController::class);
     Route::resource('tenants.companies', \App\Http\Controllers\Backend\TenantCompanyController::class);
+    Route::resource('unit-types', \App\Http\Controllers\Backend\UnitTypeController::class);
+    Route::resource('unit-classifications', \App\Http\Controllers\Backend\UnitClassificationController::class);
 });
 
 Route::middleware([PreventAccessFromTenantDomains::class])->group(function() {

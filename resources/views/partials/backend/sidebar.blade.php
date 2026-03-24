@@ -100,5 +100,27 @@
                 <div>{{ __('app.permissions') }}</div>
               </a>
             </li>
+            
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">الإعدادات العامة</span>
+            </li>
+            <li class="menu-item {{ request()->routeIs('backend.unit-types.*', 'backend.unit-classifications.*') ? 'active open' : '' }}">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon icon-base bx bx-customize"></i>
+                <div>التخصيصات</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item {{ request()->routeIs('backend.unit-types.*') ? 'active' : '' }}">
+                  <a href="{{ route('backend.unit-types.index') }}" class="menu-link">
+                    <div>تخصيص النوع</div>
+                  </a>
+                </li>
+                <li class="menu-item {{ request()->routeIs('backend.unit-classifications.*') ? 'active' : '' }}">
+                  <a href="{{ route('backend.unit-classifications.index') }}" class="menu-link">
+                    <div>تصنيف الوحدات</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </aside>
