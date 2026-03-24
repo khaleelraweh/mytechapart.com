@@ -88,7 +88,7 @@
             <li class="menu-item {{ request()->routeIs('properties.*', 'floors.*', 'units.*') ? 'active open' : '' }}">
               <a href="{{ route('properties.index') }}" class="menu-link">
                 <i class="menu-icon icon-base bx bx-buildings"></i>
-                <div>{{ __('app.properties') }}</div>
+                <div>المباني والطوابق والوحدات</div>
               </a>
             </li>
 
