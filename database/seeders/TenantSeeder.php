@@ -25,6 +25,11 @@ class TenantSeeder extends Seeder
                 'phone' => '0501234567',
                 'password' => 'password',
                 'admin_name' => 'Grand Admin',
+                'company_name' => 'Grand Plaza Hotel Company',
+                'status' => 'active',
+                'max_units' => 100,
+                'account_type' => 'premium',
+                'address' => '123 Grand St',
             ],
             [
                 'name' => 'Blue Resort',
@@ -33,6 +38,11 @@ class TenantSeeder extends Seeder
                 'phone' => '0507654321',
                 'password' => 'password',
                 'admin_name' => 'Blue Admin',
+                'company_name' => 'Blue Resort Company',
+                'status' => 'active',
+                'max_units' => 50,
+                'account_type' => 'basic',
+                'address' => '456 Blue Ave',
             ]
         ];
 
